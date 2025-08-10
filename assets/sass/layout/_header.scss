@@ -17,6 +17,7 @@ header {
     flex-flow: row nowrap;
     gap: 22px;
     margin-right: auto;
+    font-size: 14px;
   }
 
   .language-dropdown,
@@ -31,7 +32,6 @@ header {
       padding-left: 0;
       z-index: 1000;
       width: fit-content;
-
       transform: translateY(-20px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       &.hidden {
@@ -53,6 +53,8 @@ header {
         padding-left: 0;
         gap: 10px;
         opacity: 0.6;
+        white-space: nowrap;
+        text-transform: uppercase;
         &:hover {
           opacity: 1;
         }
@@ -116,18 +118,67 @@ header {
 .main_menu {
   margin-top: 40px;
   ul {
+    list-style: none;
+  }
+  & > ul {
     display: flex;
     justify-content: center;
     gap: 3%;
-    list-style: none;
-
-    a {
-      font-size: 14px;
+    & > li {
+      position: relative;
+    }
+    & > li > a {
       font-weight: 600;
-      text-transform: uppercase;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    text-transform: uppercase;
+    &:hover {
+      color: $accentColor;
+      text-decoration: underline;
+    }
+  }
+  h6 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .dropdawnWrap {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: row;
+    width: fit-content;
+    padding: 27px 24px;
+    top: 200%;
+    left: -22px;
+    gap: 47px;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    .baner img {
+      border-radius: 12px;
+      margin-left: 28px;
+    }
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+  .sub_menu {
+    line-height: 1.6;
+    a {
+      font-family: "HelveticaNeueCyr", sans-serif;
+      font-size: 16px;
+      text-transform: none;
+      font-weight: 100;
       &:hover {
-        color: $accentColor;
-        text-decoration: underline;
+        color: rgba(131, 131, 131, 1);
       }
     }
   }
