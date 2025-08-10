@@ -1,0 +1,60 @@
+
+@mixin adaptiv-font($pcSize, $mobSixe){
+    $addSize : $pcSize - $mobSixe;
+    $addMobSize : $addSize + $addSize*0.7;
+    @media (max-width : #{$middleWidth - 1}px){
+        font-size: -moz-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+        font-size: -webkit-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+        font-size: calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media (min-width : #{$middleWidth}px){
+        font-size: -moz-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        font-size: -webkit-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        font-size: calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+    @media (min-width : #{$maxWidth}px){
+        font-size: #{$pcSize}px;
+    }
+}
+
+@mixin adaptiv-width($pcSize, $mobSixe){
+    $addSize : $pcSize - $mobSixe;
+    $addMobSize : $addSize + $addSize*0.7;
+    @media (max-width : #{$middleWidth - 1}px){
+        max-width: -moz-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+        max-width: -webkit-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+        max-width: calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+    }
+    @media (min-width : #{$middleWidth}px){
+        max-width: -moz-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        max-width: -webkit-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        max-width: calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+    @media (min-width : #{$maxWidth}px){
+        max-width: #{$pcSize}px;
+    }
+}
+
+@mixin adaptive($attr, $pcSize, $mobSixe){
+    $addSize : $pcSize - $mobSixe;
+    $addMobSize : $addSize + $addSize*0.7;
+    @media (max-width : #{$middleWidth - 1}px){
+        #{$attr}: -moz-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+        #{$attr}: -webkit-calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+        #{$attr}: calc(#{$mobSixe}px + #{$addMobSize} * ((100vw - #{$minWidth}px) / #{$maxWidth}));
+    }
+    @media (min-width : #{$middleWidth}px){
+        #{$attr}: -moz-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        #{$attr}: -webkit-calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+        #{$attr}: calc(#{$mobSixe}px + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+    @media (min-width : #{$maxWidth}px){
+        #{$attr}: #{$pcSize}px;
+    }
+}
+
+@mixin mobil_size{
+    @media (max-width : #{$middleWidth - 1}px){
+        @content;
+    }
+}

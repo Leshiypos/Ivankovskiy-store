@@ -1,0 +1,134 @@
+header {
+  padding: 30px 30px;
+
+  .logo {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 60px;
+    font-family: "Carattere", cursive;
+    color: $accentColor;
+  }
+
+  //   Начало Выпадающее меню
+  .options_block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 22px;
+    margin-right: auto;
+  }
+
+  .language-dropdown,
+  .сurrency-dropdown {
+    position: relative;
+
+    .dropdownMenu {
+      position: absolute;
+      top: 150%;
+      left: 0;
+      list-style: none;
+      padding-left: 0;
+      z-index: 1000;
+      width: fit-content;
+
+      transform: translateY(-20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      li.active a {
+        opacity: 1;
+      }
+
+      li a {
+        display: flex;
+        padding: 6px;
+        padding-left: 0;
+        gap: 10px;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  //   Конец Выпадающее меню
+
+  //   Блок иконок справа
+  .icons_block {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+      margin-left: auto;
+      list-style: none;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        width: 45px;
+        height: 45px;
+
+        &:hover {
+          background-color: rgba(217, 217, 217, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.top_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  & > div {
+    flex: 1;
+  }
+}
+
+// Главное меню
+
+.main_menu {
+  margin-top: 40px;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    list-style: none;
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      &:hover {
+        color: $accentColor;
+        text-decoration: underline;
+      }
+    }
+  }
+}
