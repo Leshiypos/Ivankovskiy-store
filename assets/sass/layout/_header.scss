@@ -32,17 +32,7 @@ header {
       padding-left: 0;
       z-index: 1000;
       width: fit-content;
-      transform: translateY(-20px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      &.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      &.visible {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
+
       li.active a {
         opacity: 1;
       }
@@ -158,16 +148,10 @@ header {
     top: 200%;
     left: -22px;
     gap: 47px;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
     .baner img {
       border-radius: 12px;
       margin-left: 28px;
-    }
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
     }
   }
   .sub_menu {

@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sliders.js"></script>
     <title>Ivankovskiy</title>
   </head>
   <body>
@@ -161,6 +164,94 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="video_baner">
+        <div class="wrap">
+          <img
+            src="./assets/images/baner_main.png"
+            alt=""
+            class="video_cover"
+          />
+        </div>
+      </section>
+      <section class="stripe_section">
+        <div class="wrap flex">
+          <div class="header_section">
+            <div>
+              <h2>Categories</h2>
+            </div>
+            <div>
+              <a href="#" class="btn_more">
+                Watch more
+                <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="wrap">
+            <!-- Slider main container -->
+            <div class="swiper stripe_slider">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <article class="swiper-slide cart">
+                  <div class="wrap_img">
+                    <img src="./assets/images/cat_1.png" alt="categoru_1" />
+                  </div>
+                  <h2>Rings</h2>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <div class="wrap_img">
+                    <img src="./assets/images/cat_2.png" alt="categoru_1" />
+                  </div>
+                  <h2>EARRINGS</h2>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <div class="wrap_img">
+                    <img src="./assets/images/cat_3.png" alt="categoru_1" />
+                  </div>
+                  <h2>NECKLACESS</h2>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <div class="wrap_img">
+                    <img src="./assets/images/cat_4.png" alt="categoru_1" />
+                  </div>
+                  <h2>BRACELETS</h2>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <div class="wrap_img">
+                    <img src="./assets/images/cat_5.png" alt="categoru_1" />
+                  </div>
+                  <h2>MEN’S DIAMOND RINGS</h2>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new_collection">
+        <div class="wrap">
+          <img src="./assets/images/sec_back3.png" alt="" class="video_cover" />
+          <div class="header_section">
+            <div>
+              <p class="description">Discover the new collection</p>
+              <h2>Blue Amettise</h2>
+            </div>
+            <div>
+              <a href="#" class="btn_more">
+                Discover
+                <img
+                  src="./assets/images/icons/arrow_in_circle_white.svg"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

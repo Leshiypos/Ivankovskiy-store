@@ -1,22 +1,33 @@
 function dropDownToogle(butSelect, menuSelect) {
   let butLang = document.querySelector(butSelect);
   let dropLang = document.querySelector(menuSelect);
-  let insideMenu = false; // флаг
+  let insideMenu = false;
+  let closeMenu;
 
   if (butLang && dropLang) {
     butLang.addEventListener("click", () => {
       dropLang.classList.toggle("visible");
     });
+    butLang.addEventListener("mouseenter", () => {
+      clearTimeout(closeMenu);
+    });
+
+    butLang.addEventListener("mouseleave", () => {
+      closeMenu = setTimeout(() => {
+        dropLang.classList.remove("visible");
+      }, 1000);
+    });
+
+    dropLang.addEventListener("mouseenter", () => {
+      clearTimeout(closeMenu);
+    });
+
+    dropLang.addEventListener("mouseleave", () => {
+      closeMenu = setTimeout(() => {
+        dropLang.classList.remove("visible");
+      }, 1000);
+    });
   }
-  dropLang.addEventListener("mouseenter", () => {
-    insideMenu = true; // зашли в меню
-  });
-  dropLang.addEventListener("mouseleave", () => {
-    if (insideMenu) {
-      dropLang.classList.remove("visible");
-      insideMenu = false; // сброс
-    }
-  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

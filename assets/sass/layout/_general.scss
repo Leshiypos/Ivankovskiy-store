@@ -1,9 +1,16 @@
 * {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "HelveticaNeueCyr", Arial, sans-serif;
 }
 .hidden {
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 a {
   text-decoration: none;
