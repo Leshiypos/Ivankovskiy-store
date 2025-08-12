@@ -12,6 +12,12 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+.logo {
+  width: fit-content;
+  font-size: 60px;
+  font-family: "Carattere", cursive;
+  color: $accentColor;
+}
 a {
   text-decoration: none;
   color: $textColor;

@@ -1,0 +1,43 @@
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10%;
+  margin-top: 100px;
+  padding: 0 35px 148px 35px;
+  .logo {
+    margin-top: -25px;
+  }
+  .footer_menu {
+    width: 100%;
+    max-width: 1300px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3%;
+
+    & > li > a {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .sub_menu {
+      margin-top: 24px;
+    }
+  }
+  .sub_menu {
+    line-height: 1.6;
+    a {
+      font-size: 14px;
+      color: rgba(76, 76, 76, 1);
+      font-weight: 400;
+      &:hover {
+        color: rgb(0, 0, 0);
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -148,6 +148,12 @@ a {
   transform: translateY(0);
   pointer-events: auto; }
 
+.logo {
+  width: fit-content;
+  font-size: 60px;
+  font-family: "Carattere", cursive;
+  color: #144918; }
+
 a {
   text-decoration: none;
   color: black; }
@@ -155,11 +161,7 @@ a {
 header {
   padding: 30px 30px; }
   header .logo {
-    margin: 0 auto;
-    width: fit-content;
-    font-size: 60px;
-    font-family: "Carattere", cursive;
-    color: #144918; }
+    margin: 0 auto; }
   header .options_block {
     display: flex;
     justify-content: flex-start;
@@ -293,7 +295,7 @@ section {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: normal; }
-  section .header_section {
+  section .header_block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -318,32 +320,189 @@ section {
     object-fit: cover; }
   .stripe_section article.cart h2 {
     text-align: center; }
+  .stripe_section article.cart .description_wrap {
+    width: 60%; }
+    .stripe_section article.cart .description_wrap .description_prod {
+      font-size: 14px;
+      opacity: 0.4;
+      margin-bottom: 19px;
+      text-transform: uppercase; }
+    .stripe_section article.cart .description_wrap .price_prod {
+      font-size: 18px;
+      font-weight: 500; }
 
-.new_collection {
+.slider_section {
+  padding: 0 19px; }
+  .slider_section .img_slider {
+    width: 100%;
+    overflow: hidden;
+    height: 432px; }
+  .slider_section .swiper-slide {
+    width: fit-content; }
+  .slider_section a {
+    display: block;
+    width: fit-content; }
+  .slider_section article .wrap_img {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    height: 100%;
+    overflow: hidden; }
+  .slider_section article img {
+    width: 100%;
+    max-height: 432px;
+    object-fit: contain; }
+
+.baner_section {
   position: relative;
   color: white; }
-  .new_collection .header_section {
+  .baner_section .header_block {
     width: 100%;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     padding-left: 19px;
     padding-right: 19px;
-    align-items: flex-end; }
-    .new_collection .header_section .btn_more {
+    align-items: flex-end;
+    margin-bottom: 0; }
+    .baner_section .header_block .btn_more {
       font-size: 25px;
-      margin-bottom: 19px;
+      margin-bottom: 0px;
       color: white; }
-  .new_collection h2 {
+  .baner_section .description_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; }
+  .baner_section h2 {
+    margin: 0;
     font-size: 200px;
-    letter-spacing: -3%;
     vertical-align: bottom;
     text-transform: none; }
-  .new_collection .description {
-    margin-left: 15px;
+    .baner_section h2.medium_fs {
+      font-size: 110px; }
+  .baner_section .description {
     font-size: 60px;
-    letter-spacing: -3%;
-    margin-bottom: 10px;
+    font-weight: 400;
+    font-weight: 300; }
+    .baner_section .description.medium_fs {
+      font-size: 30px; }
+
+.news_section {
+  padding: 0 19px; }
+  .news_section .wrap_img {
+    position: relative;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden; }
+    .news_section .wrap_img img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover; }
+    .news_section .wrap_img .btn_read_card {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease; }
+  .news_section .wrap_news {
+    display: flex;
+    flex-direction: row;
+    gap: 1%; }
+    .news_section .wrap_news article {
+      flex: 1; }
+  .news_section .single_news:hover .btn_read_card {
+    opacity: 1; }
+  .news_section .description_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 29px; }
+  .news_section h3 {
+    font-size: 24px;
     font-weight: 400; }
+  .news_section .description_new {
+    font-size: 14px; }
+
+.subscribe_section {
+  padding: 0 19px;
+  margin-top: 120px; }
+  .subscribe_section h2 {
+    font-size: 110px;
+    text-transform: none;
+    line-height: 80%;
+    margin-bottom: 110px; }
+  .subscribe_section label {
+    flex: 1; }
+  .subscribe_section .subscribe_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .subscribe_section .label-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1300px; }
+  .subscribe_section .contact-form-input {
+    border: none;
+    border-bottom: solid 2px black;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000000;
+    outline: 0;
+    padding-bottom: 14px;
+    background-color: transparent;
+    width: 100%;
+    max-width: 473px; }
+    .subscribe_section .contact-form-input::placeholder {
+      text-transform: uppercase;
+      color: black; }
+  .subscribe_section button {
+    border: none;
+    background-color: transparent; }
+  .subscribe_section .btn_more {
+    font-size: 25px;
+    margin-bottom: 0px; }
+    .subscribe_section .btn_more img {
+      width: 40px;
+      height: 40px; }
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10%;
+  margin-top: 100px;
+  padding: 0 35px 148px 35px; }
+  footer .logo {
+    margin-top: -25px; }
+  footer .footer_menu {
+    width: 100%;
+    max-width: 1300px; }
+  footer .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3%; }
+    footer .menu > li > a {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap; }
+    footer .menu .sub_menu {
+      margin-top: 24px; }
+  footer .sub_menu {
+    line-height: 1.6; }
+    footer .sub_menu a {
+      font-size: 14px;
+      color: #4c4c4c;
+      font-weight: 400; }
+      footer .sub_menu a:hover {
+        color: black;
+        text-decoration: underline; }
 
 .btn_more {
   display: flex;
@@ -355,6 +514,23 @@ section {
   font-weight: 400;
   text-transform: uppercase; }
   .btn_more:hover {
+    opacity: 0.7;
+    text-decoration: underline; }
+
+.btn_read_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 7px;
+  padding-left: 27px;
+  border-radius: 35px;
+  background-color: white;
+  white-space: nowrap; }
+  .btn_read_card:hover {
     opacity: 0.7;
     text-decoration: underline; }
 

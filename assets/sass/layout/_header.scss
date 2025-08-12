@@ -1,14 +1,8 @@
 header {
   padding: 30px 30px;
-
   .logo {
     margin: 0 auto;
-    width: fit-content;
-    font-size: 60px;
-    font-family: "Carattere", cursive;
-    color: $accentColor;
   }
-
   //   Начало Выпадающее меню
   .options_block {
     display: flex;

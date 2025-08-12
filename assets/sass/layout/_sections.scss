@@ -11,7 +11,7 @@ section {
     text-transform: uppercase;
     font-weight: normal;
   }
-  .header_section {
+  .header_block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,37 +51,206 @@ section {
     h2 {
       text-align: center;
     }
+    .description_wrap {
+      width: 60%;
+      .description_prod {
+        font-size: 14px;
+        opacity: 0.4;
+        margin-bottom: 19px;
+        text-transform: uppercase;
+      }
+      .price_prod {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Секция Слайдер картинок
+.slider_section {
+  padding: 0 19px;
+
+  .img_slider {
+    width: 100%;
+    overflow: hidden;
+    height: 432px;
+  }
+  .swiper-slide {
+    width: fit-content;
+  }
+  a {
+    display: block;
+    width: fit-content;
+  }
+
+  article {
+    .wrap_img {
+      background-color: rgba(243, 243, 243, 1);
+      border-radius: 10px;
+      margin-bottom: 35px;
+      height: 100%;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      max-height: 432px;
+      object-fit: contain;
+    }
   }
 }
 
 // Секция новая коллекция
-.new_collection {
+.baner_section {
   position: relative;
   color: rgba(255, 255, 255, 1);
-  .header_section {
+  .header_block {
     width: 100%;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     padding-left: 19px;
     padding-right: 19px;
     align-items: flex-end;
+    margin-bottom: 0;
     .btn_more {
       font-size: 25px;
-      margin-bottom: 19px;
+      margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
     }
   }
+  .description_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
   h2 {
+    margin: 0;
     font-size: 200px;
-    letter-spacing: -3%;
+    // letter-spacing: 97%;
     vertical-align: bottom;
     text-transform: none;
+    &.medium_fs {
+      font-size: 110px;
+    }
   }
   .description {
-    margin-left: 15px;
+    // margin-left: 15px;
     font-size: 60px;
-    letter-spacing: -3%;
-    margin-bottom: 10px;
+    // letter-spacing: 97%;
     font-weight: 400;
+    font-weight: 300;
+    &.medium_fs {
+      font-size: 30px;
+    }
+  }
+}
+
+// Секция последне новости
+.news_section {
+  padding: 0 19px;
+  .wrap_img {
+    position: relative;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .btn_read_card {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+  .wrap_news {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    article {
+      flex: 1;
+    }
+  }
+  .single_news {
+    &:hover {
+      .btn_read_card {
+        opacity: 1;
+      }
+    }
+  }
+  .description_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 29px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .description_new {
+    font-size: 14px;
+  }
+}
+
+.subscribe_section {
+  padding: 0 19px;
+  margin-top: 120px;
+  h2 {
+    font-size: 110px;
+    text-transform: none;
+    line-height: 80%;
+    margin-bottom: 110px;
+  }
+  label {
+    flex: 1;
+  }
+  .subscribe_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .label-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1300px;
+  }
+  .contact-form-input {
+    border: none;
+    border-bottom: solid 2px rgba(0, 0, 0, 1);
+    font-weight: 500;
+    font-size: 25px;
+    color: #000000;
+    outline: 0;
+    padding-bottom: 14px;
+    background-color: transparent;
+    width: 100%;
+    max-width: 473px;
+    &::placeholder {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+  button {
+    border: none;
+    background-color: transparent;
+  }
+  .btn_more {
+    font-size: 25px;
+    margin-bottom: 0px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
