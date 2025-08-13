@@ -31,3 +31,33 @@
     text-decoration: underline;
   }
 }
+
+// Кнопка фильтра
+button.filters_but,
+button.sort_but {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+// Кнопка формы
+.submit_but {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 1);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}

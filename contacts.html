@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sliders.js"></script>
+
+    <!-- Скрипты для поля ввода телефона -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+    <!-- для автоформатирования и placeholder‑масок -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"></script>
+
+    <title>Ivankovskiy</title>
+  </head>
+  <body class="contacts_page">
+    <header>
+      <div class="top_header">
+        <div>
+          <div class="options_block">
+            <div class="language-dropdown">
+              <button class="dropdownToggle">
+                <img src="./assets/images/icons/en_flag.svg" alt="" />
+                <span id="currentLang">English</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-lang="en" class="active">
+                  <a href="#"
+                    ><img src="./assets/images/icons/en_flag.svg" alt="" />
+                    English</a
+                  >
+                </li>
+                <li data-lang="ru">
+                  <a href="./index.html"
+                    ><img src="./assets/images/icons/ru_flag.svg" alt="" />
+                    Русский</a
+                  >
+                </li>
+
+                <li data-lang="uz">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/icons/es_flag.svg"
+                      alt=""
+                    />Español</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="сurrency-dropdown">
+              <button class="dropdownToggle">
+                <span id="currentСurrency">US DOLLAR (USD)</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-cur="usd" class="active">
+                  <a href="#">US DOLLAR (USD)</a>
+                </li>
+                <li data-cur="rub">
+                  <a href="#">Рубли (RUB)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="logo"><a href="/">Ivankovskiy</a></div>
+        </div>
+        <div class="icons_block">
+          <ul>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/search.svg"
+                  alt="search"
+                  title="search"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/favorites.svg"
+                  alt="favorites"
+                  title="favorites"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/basket.svg"
+                  alt="basket"
+                  title="basket"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="main_menu">
+        <ul>
+          <li>
+            <a href="#">Jewelry</a>
+            <div class="dropdawnWrap hidden">
+              <div class="wrap_sub_menu">
+                <h6>Jewelry collection</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="wrap_sub_menu">
+                <h6>Shop by category</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="baner">
+                <a href="#"
+                  ><img src="./assets/images/baner_menu.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">Engagement</a>
+            <div class="dropdawnWrap hidden">
+              <div class="wrap_sub_menu">
+                <h6>Jewelry collection</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="wrap_sub_menu">
+                <h6>Shop by category</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="baner">
+                <a href="#"
+                  ><img src="./assets/images/baner_menu.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">Diamonds</a></li>
+          <li><a href="#">Gemstones</a></li>
+          <li><a href="#">Design your own</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> /
+        <span>Contacts</span>
+      </div>
+      <!-- Начало секция Банер -->
+      <section class="baner_section">
+        <div class="wrap">
+          <img
+            src="./assets/images/contacts_baner.png"
+            alt=""
+            class="video_cover"
+          />
+          <div class="header_block">
+            <div class="description_wrap">
+              <p class="description">get in touch</p>
+              <h2>Contacts</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- КОнец секция Банер -->
+
+      <section class="сontact_details">
+        <div class="wrap">
+          <div class="col">
+            <img
+              src="./assets/images/icons/email.svg"
+              alt="email"
+              class="icon"
+            />
+            <h3>Email</h3>
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Suspendisse varius enim in ero.</p>
+            </div>
+            <div class="link">
+              <a href="mailto:hello@relume.io">hello@relume.io</a>
+            </div>
+          </div>
+          <div class="col">
+            <img
+              src="./assets/images/icons/phone.svg"
+              alt="phone"
+              class="icon"
+            />
+            <h3>Phone</h3>
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Suspendisse varius enim in ero.</p>
+            </div>
+            <div class="link">
+              <a href="tel:+15550000000">+1 (555) 000-0000</a>
+            </div>
+          </div>
+          <div class="col">
+            <img
+              src="./assets/images/icons/location.svg"
+              alt="location"
+              class="icon"
+            />
+            <h3>Location</h3>
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Suspendisse varius enim in ero.</p>
+            </div>
+            <div class="link">
+              <a href="https://maps.app.goo.gl/etVKmvwhaiBhSuK79"
+                >123 Sample St, Sydney NSW 2000 AU</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Начало секция обратной связи -->
+      <section class="contact_us_section">
+        <div class="wrap">
+          <div class="col child_heights">
+            <div class="wrap_img">
+              <img
+                src="./assets/images/contact_us.png"
+                alt="contact us"
+                class="img_cover"
+              />
+            </div>
+          </div>
+          <div class="col father_heights">
+            <div class="wrap_col">
+              <div class="pre_title">Contact us</div>
+              <h2>Get in touch</h2>
+              <div class="description">
+                We’d love to hear from you. Please fill out this form.
+              </div>
+              <form class="subscribe_form" action="" method="get">
+                <div class="label-wrap">
+                  <div class="names_wrap">
+                    <label class="form-first-name">
+                      First name
+                      <input
+                        id="firstname"
+                        class="contact-form-input"
+                        type="text"
+                        name="first"
+                        placeholder="First name"
+                        required
+                      />
+                    </label>
+                    <label class="form-last-name">
+                      Last name
+                      <input
+                        id="lastname"
+                        class="contact-form-input"
+                        type="text"
+                        name="lastname"
+                        placeholder="last name"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <label class="form-mail">
+                    E-Mail
+                    <input
+                      id="email"
+                      class="contact-form-input"
+                      type="email"
+                      name="email"
+                      placeholder="Your E-Mail"
+                      required
+                    />
+                  </label>
+                  <label class="form-phone">
+                    Phone number
+                    <input
+                      id="phone"
+                      class="contact-form-input"
+                      type="tel"
+                      name="phone"
+                      placeholder="+1 (555) 000-0000"
+                      required
+                    />
+                  </label>
+                  <label class="form-message">
+                    Message
+                    <textarea
+                      id="message"
+                      class="contact-form-textarea"
+                      name="message"
+                      required
+                    ></textarea>
+                  </label>
+                  <label class="form-privacy">
+                    <input
+                      id="privacy"
+                      type="checkbox"
+                      name="privacy"
+                      required
+                    />
+                    You agree to our friendly <a href="#">privacy policy</a>.
+                  </label>
+                </div>
+                <button type="submit" class="submit_but">Send message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Конец секция обратной связи -->
+    </main>
+
+    <footer>
+      <div class="logo"><a href="/">Ivankovskiy</a></div>
+      <div class="footer_menu">
+        <ul class="menu">
+          <li>
+            <a href="#">Shop</a>
+            <ul class="sub_menu">
+              <li><a href="#">Jewelry</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Gemstones</a></li>
+              <li><a href="#">Design your own</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Gemstones</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Client care</a>
+            <ul class="sub_menu">
+              <li><a href="#">Product care & repair</a></li>
+              <li><a href="#">Shipping & returns</a></li>
+              <li><a href="#">Frequently asked questions</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Support</a>
+            <ul class="sub_menu">
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Contact us</a>
+            <ul class="sub_menu">
+              <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
+              <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
+              <li>
+                <a href="mailto:info@ivankovskiy.com">info@ivankovskiy.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Social media</a>
+            <ul class="sub_menu">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

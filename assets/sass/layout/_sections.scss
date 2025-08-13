@@ -4,7 +4,7 @@
   object-fit: cover;
 }
 section {
-  width: 100%;
+  //   width: 100%;
   margin-bottom: 78px;
   h2 {
     font-size: 16px;
@@ -23,7 +23,7 @@ section {
 // Секция ВидеоБанер
 .video_baner {
   .wrap {
-    width: 100%;
+    // width: 100%;
     // height: 90vh;
     overflow: hidden;
   }
@@ -41,7 +41,7 @@ section {
   article.cart {
     .wrap_img {
       background-color: rgba(243, 243, 243, 1);
-      border-radius: 10px;
+      border-radius: $radiusMiniPc;
       margin-bottom: 35px;
     }
     img {
@@ -87,7 +87,7 @@ section {
   article {
     .wrap_img {
       background-color: rgba(243, 243, 243, 1);
-      border-radius: 10px;
+      border-radius: $radiusMiniPc;
       margin-bottom: 35px;
       height: 100%;
       overflow: hidden;
@@ -121,7 +121,7 @@ section {
   .description_wrap {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
   }
   h2 {
     margin: 0;
@@ -151,7 +151,7 @@ section {
   .wrap_img {
     position: relative;
     max-height: 500px;
-    border-radius: 10px;
+    border-radius: $radiusMiniPc;
     overflow: hidden;
     img {
       width: 100%;

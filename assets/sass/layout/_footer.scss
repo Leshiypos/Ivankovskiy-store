@@ -3,14 +3,21 @@ footer {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10%;
-  margin-top: 100px;
-  padding: 0 35px 148px 35px;
+  margin-top: 0;
+  padding: 51px 35px 148px 35px;
+  border-top: 1px solid rgba(234, 228, 224, 1);
+  &.main_page {
+    border-top: none;
+    margin-top: -30px;
+  }
   .logo {
     margin-top: -25px;
   }
   .footer_menu {
     width: 100%;
     max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .menu {
     display: flex;

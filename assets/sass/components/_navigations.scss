@@ -1,0 +1,24 @@
+// Хлебные крошки
+.breadcrumbs {
+  margin: 0 30px;
+  margin-bottom: 45px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(120, 117, 117, 1);
+  a {
+    color: rgb(0, 0, 0);
+    &:hover {
+      color: rgba(120, 117, 117, 1);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Блок фильтров
+
+.filters_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 58px 24px 49px 24px;
+}

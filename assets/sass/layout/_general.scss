@@ -17,6 +17,9 @@
   font-size: 60px;
   font-family: "Carattere", cursive;
   color: $accentColor;
+  a {
+    color: $accentColor;
+  }
 }
 a {
   text-decoration: none;
