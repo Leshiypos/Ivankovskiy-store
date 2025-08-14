@@ -31,6 +31,36 @@
     text-decoration: underline;
   }
 }
+.btn_read_news {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  border-radius: 35px;
+  background-color: white;
+  white-space: nowrap;
+}
+
+// Кнопка новости
+.btn_filters_news {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30;
+  min-width: 200px;
+  flex-flow: row nowrap;
+  padding: 15px 20px 15px 45px;
+  border: 1px solid #000000;
+  border-radius: $radiusMidiPc;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  white-space: nowrap;
+}
 
 // Кнопка фильтра
 button.filters_but,

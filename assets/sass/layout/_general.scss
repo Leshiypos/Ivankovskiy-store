@@ -1,6 +1,9 @@
 * {
   font-family: "HelveticaNeueCyr", Arial, sans-serif;
 }
+button {
+  cursor: pointer;
+}
 .hidden {
   opacity: 0;
   pointer-events: none;
@@ -43,6 +46,4 @@ p {
 }
 strong {
   font-weight: 600;
-}
-h1 {
 }
