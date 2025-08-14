@@ -60,6 +60,10 @@
   font-weight: 500;
   background-color: transparent;
   white-space: nowrap;
+  &.dark {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
+  }
 }
 
 // Кнопка фильтра

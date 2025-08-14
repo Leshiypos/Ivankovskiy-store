@@ -47,6 +47,10 @@
     &.news_list {
       margin-left: 30px;
       margin-right: 30px;
+      margin-bottom: 160px;
+      .footer_news {
+        margin-top: 100px;
+      }
     }
   }
   h1 {
@@ -69,7 +73,11 @@
     width: fit-content;
     justify-content: space-between;
   }
-  .top_news {
+  .all_news {
+    h3 {
+      font-size: 30px;
+      margin-top: 40px;
+    }
     margin-top: 80px;
     .wrap {
       display: flex;
@@ -78,20 +86,71 @@
         flex: 1;
       }
     }
+    .description_wrap {
+      margin-left: 9px;
+    }
     .wrap_img {
       position: relative;
       border-radius: $radiusMidiPc;
-      .btn_read_news {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        width: 49px;
-        height: 49px;
+
+      .news_category {
+        color: rgba(255, 255, 255, 1);
+        text-transform: uppercase;
+        bottom: 16px;
+        left: 20px;
+        padding: 12px 15px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: $radiusMidiPc;
       }
+    }
+    .description_new {
+      color: rgba(77, 77, 77, 1);
+      line-height: 1.6;
+    }
+    .btn_read_news {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 49px;
+      height: 49px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
     img {
       width: 100%;
       object-fit: cover;
     }
+    .single_news {
+      &:hover {
+        .btn_read_news {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.base {
+      h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        margin-top: 32px;
+      }
+      .wrap {
+        display: grid;
+        gap: 82px 17px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        @media screen and (min-width: 1600px) {
+          grid-template-columns: repeat(4, minmax(300px, 1fr));
+        }
+      }
+      .btn_read_news {
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+  .news_category {
+    position: absolute;
   }
 }
