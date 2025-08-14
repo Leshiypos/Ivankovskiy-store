@@ -102,7 +102,10 @@ section {
 
 // Секция новая коллекция
 .baner_section {
-  position: relative;
+  //   position: relative;
+  .wrap {
+    position: relative;
+  }
   color: rgba(255, 255, 255, 1);
   .header_block {
     width: 100%;

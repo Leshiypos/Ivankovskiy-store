@@ -1,6 +1,19 @@
-.contacts_page {
+.three_columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 5%;
+  .col {
+    flex: 1 1 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+}
+
+.single_page {
   .baner_section {
-    max-height: 420px;
+    //max-height: 420px;
     margin: 60px 30px 80px 30px;
     .video_cover {
       border-radius: $radiusMidiPc;
@@ -9,11 +22,14 @@
       gap: 0;
     }
     h2 {
-      text-transform: lowercase;
+      text-transform: none;
     }
   }
   .header_block {
-    bottom: 10%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .сontact_details {
@@ -22,17 +38,7 @@
     margin-right: 24px;
     margin-bottom: 200px;
     padding-top: 30px;
-    .wrap {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      gap: 5%;
-    }
     .col {
-      flex: 1 1 300px;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
       max-width: 405px;
       img {
         width: 48px;
@@ -60,7 +66,66 @@
       }
     }
   }
-  //   Секция контактов
+  // Секция доставка и возврат
+
+  .delivery_section {
+    border-top: 1px solid rgba(234, 228, 224, 1);
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 200px;
+    padding-top: 30px;
+    .wrap {
+      max-width: 1600px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 20px;
+    }
+    .col {
+      align-items: flex-start;
+      &.text {
+        max-width: 300px;
+      }
+      &.img {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .col > img {
+      object-fit: cover;
+      border-radius: $radiusMidiPc;
+      max-width: 600px;
+      width: 100%;
+    }
+    h3 {
+      font-size: 36px;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      font-weight: 400;
+      text-align: left;
+      width: 100%;
+    }
+    h4 {
+      font-weight: 600;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      height: 100%;
+      li {
+        padding-left: 8px;
+        border-left: 1px solid rgba(234, 228, 224, 1);
+        font-style: 16px;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  //   Секция обратная форма
+
   .contact_us_section {
     margin-bottom: 120px;
     .wrap {
