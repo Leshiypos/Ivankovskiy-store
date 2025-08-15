@@ -169,7 +169,8 @@ section {
 
 // Секция последне новости
 .news_section {
-  padding: 0 19px;
+  margin-left: 19px;
+  margin-right: 19px;
   .wrap_img {
     position: relative;
     max-height: 500px;
@@ -226,7 +227,8 @@ section {
 }
 
 .subscribe_section {
-  padding: 0 19px;
+  margin-left: 19px;
+  margin-right: 19px;
   margin-top: 120px;
   h2 {
     font-size: 110px;

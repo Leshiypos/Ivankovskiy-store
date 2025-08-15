@@ -154,3 +154,112 @@
     position: absolute;
   }
 }
+
+.single_news {
+  section {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+  h1 {
+    margin-bottom: 70px;
+    max-width: 1350px;
+  }
+  .news_category {
+    padding: 10px 30px;
+    border-radius: $radiusMidiPc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 60px;
+    width: fit-content;
+    text-transform: uppercase;
+  }
+  .wrap_header {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
+    margin-bottom: 52px;
+
+    .description_page {
+      font-size: 18px;
+      font-weight: 600;
+      max-width: 800px;
+      line-height: 2;
+    }
+  }
+  .baner_section {
+    &.top {
+      border-radius: $radiusMidiPc;
+    }
+    &.bottom {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .promoted_product {
+    margin-bottom: 170px;
+    .wrap {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 5%;
+      .col {
+        &:first-child {
+        }
+      }
+      & > div {
+        flex: 1 1 300px;
+      }
+    }
+    h2 {
+      font-size: 70px;
+      font-weight: 300;
+      text-transform: none;
+      margin-bottom: 50px;
+    }
+    .news_category {
+      margin-bottom: 45px;
+    }
+    .excerpt {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 55px;
+      color: rgba(133, 133, 133, 1);
+      p {
+        line-height: 2;
+      }
+    }
+    .wrap_img {
+      border-radius: $radiusMidiPc;
+      overflow: hidden;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .main_content {
+    h2 {
+      font-size: 92px;
+      text-transform: none;
+      font-weight: 300;
+      margin-bottom: 120px;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      font-size: 30px;
+      color: rgba(108, 108, 108, 1);
+      margin-bottom: 5%;
+      line-height: 1.6;
+    }
+    img {
+      border-radius: $radiusMidiPc;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}
