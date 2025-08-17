@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let sliders_section = document.querySelectorAll(
     ".slider_section .img_slider"
   );
-  console.log(sliders_section);
+
   if (sliders_section) {
     sliders_section.forEach((slider) => {
       new Swiper(slider, {

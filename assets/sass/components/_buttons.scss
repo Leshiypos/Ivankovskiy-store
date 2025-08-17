@@ -95,3 +95,31 @@ button.sort_but {
     opacity: 0.8;
   }
 }
+
+// woocommerce
+// Кнопка добавить в карзину
+.single_add_to_cart_button {
+  padding: 20px 30px;
+  border-radius: $radiusMidiPc;
+  background-color: rgba(0, 0, 0, 1);
+  width: fit-content;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-size: 14px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.request_cons {
+  padding: 20px 30px;
+  border-radius: $radiusMidiPc;
+  background-color: transparent;
+  width: fit-content;
+  color: rgba(157, 157, 157, 1);
+  border: 1px solid rgba(157, 157, 157, 1);
+  text-transform: uppercase;
+  font-size: 14px;
+  &:hover {
+    opacity: 0.8;
+  }
+}

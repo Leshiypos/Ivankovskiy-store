@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sliders.js"></script>
+    <title>Ivankovskiy</title>
+  </head>
+  <body>
+    <header>
+      <div class="top_header">
+        <div>
+          <div class="options_block">
+            <div class="language-dropdown">
+              <button class="dropdownToggle">
+                <img src="./assets/images/icons/en_flag.svg" alt="" />
+                <span id="currentLang">English</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-lang="en" class="active">
+                  <a href="#"
+                    ><img src="./assets/images/icons/en_flag.svg" alt="" />
+                    English</a
+                  >
+                </li>
+                <li data-lang="ru">
+                  <a href="./index.html"
+                    ><img src="./assets/images/icons/ru_flag.svg" alt="" />
+                    Русский</a
+                  >
+                </li>
+
+                <li data-lang="uz">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/icons/es_flag.svg"
+                      alt=""
+                    />Español</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="сurrency-dropdown">
+              <button class="dropdownToggle">
+                <span id="currentСurrency">US DOLLAR (USD)</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-cur="usd" class="active">
+                  <a href="#">US DOLLAR (USD)</a>
+                </li>
+                <li data-cur="rub">
+                  <a href="#">Рубли (RUB)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="logo"><a href="/">Ivankovskiy</a></div>
+        </div>
+        <div class="icons_block">
+          <ul>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/search.svg"
+                  alt="search"
+                  title="search"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/favorites.svg"
+                  alt="favorites"
+                  title="favorites"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="./assets/images/icons/basket.svg"
+                  alt="basket"
+                  title="basket"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="main_menu">
+        <ul>
+          <li>
+            <a href="#">Jewelry</a>
+            <div class="dropdawnWrap hidden">
+              <div class="wrap_sub_menu">
+                <h6>Jewelry collection</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="wrap_sub_menu">
+                <h6>Shop by category</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="baner">
+                <a href="#"
+                  ><img src="./assets/images/baner_menu.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">Engagement</a>
+            <div class="dropdawnWrap hidden">
+              <div class="wrap_sub_menu">
+                <h6>Jewelry collection</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="wrap_sub_menu">
+                <h6>Shop by category</h6>
+                <ul class="sub_menu">
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                  <li><a href="#">Collection name</a></li>
+                </ul>
+              </div>
+              <div class="baner">
+                <a href="#"
+                  ><img src="./assets/images/baner_menu.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">Diamonds</a></li>
+          <li><a href="#">Gemstones</a></li>
+          <li><a href="#">Design your own</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> / <a href="index.html">Jewelry</a> /
+        <a href="index.html">Rings</a> /
+        <span> Dragon Ring With Round Brilliant Diamond </span>
+      </div>
+      <!-- Начало секции ПРодукта -->
+      <section class="product_page_section">
+        <div class="wrap">
+          <div class="col">
+            <div class="woocommerce-product-gallery" data-columns="4">
+              <div class="flex-viewport">
+                <div class="woocommerce-product-gallery__wrapper">
+                  <div class="woocommerce-product-gallery__image">
+                    <a href="#"
+                      ><img
+                        width="600"
+                        height="748"
+                        src="./assets/images/img_product_single.png"
+                        class="wp-post-image"
+                    /></a>
+                  </div>
+                </div>
+                <img
+                  src="./assets/images/icons/like.svg"
+                  class="like_icon"
+                  alt="like"
+                />
+              </div>
+              <ol class="flex-control-nav flex-control-thumbs">
+                <li>
+                  <img
+                    src="./assets/images/img_product_single2.png"
+                    alt="Dragon Ring With Round Brilliant Diamond"
+                    draggable="false"
+                    width="100"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/images/img_product_single3.png"
+                    alt="Dragon Ring With Round Brilliant Diamond"
+                    draggable="false"
+                    width="100"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/images/img_product_single4.png"
+                    alt="Dragon Ring With Round Brilliant Diamond"
+                    draggable="false"
+                    width="100"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./assets/images/img_product_single5.png"
+                    alt="Dragon Ring With Round Brilliant Diamond"
+                    draggable="false"
+                    width="100"
+                    height="100"
+                  />
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="col">
+            <h1 class="product_title entry-title">
+              Dragon Ring With Round Brilliant Diamond
+            </h1>
+            <div class="woocommerce-product-details__short-description">
+              <p>in Platinum with a 7.56 CARART Round Brilliant Diamond</p>
+            </div>
+            <p class="price">
+              <span class="woocommerce-Price-amount amount">
+                <span class="woocommerce-Price-currencySymbol">$</span>
+                45,000 USD
+              </span>
+            </p>
+            <div class="form_wrap_product">
+              <form class="variations_form cart" action="" method="post">
+                <table class="variations" cellspacing="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <th class="label">
+                        <label for="pa_rings_size">Rings Size</label>
+                      </th>
+                      <td class="value">
+                        <select
+                          id="pa_rings_size"
+                          class=""
+                          name="attribute_pa_rings_size"
+                          data-attribute_name="attribute_pa_rings_size"
+                          data-show_option_none="yes"
+                        >
+                          <option value="">Выбрать опцию</option>
+                          <option
+                            value="maxi"
+                            selected="selected"
+                            class="attached enabled"
+                          >
+                            maxi
+                          </option>
+                          <option value="midi" class="attached enabled">
+                            midi
+                          </option>
+                          <option value="small" class="attached enabled">
+                            small
+                          </option>
+                        </select>
+                        <!-- <a
+                          class="reset_variations"
+                          href="#"
+                          aria-label="Очистить опции"
+                          style="visibility: visible"
+                          >Очистить
+                        </a> -->
+                        <a href="#" class="find_size">Find my ring size</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="but_block">
+                  <button
+                    type="submit"
+                    class="single_add_to_cart_button button alt"
+                  >
+                    Add to cart
+                  </button>
+                  <button type="button" class="request_cons">
+                    Request a consultation
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Аккордион -->
+            <div class="accordion">
+              <!--data-allow-multiple для мультиоткрытия-->
+              <!-- item 1 -->
+              <div class="accordion__item">
+                <h3 class="accordion__header">
+                  <button
+                    class="accordion__trigger"
+                    id="acc-h-1"
+                    aria-expanded="true"
+                    aria-controls="acc-p-1"
+                    type="button"
+                  >
+                    <span>Description</span>
+                    <svg
+                      class="accordion__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  id="acc-p-1"
+                  class="accordion__panel"
+                  role="region"
+                  aria-labelledby="acc-h-1"
+                  style="height: auto"
+                >
+                  <div class="accordion__panel-inner">
+                    <p>
+                      A statement of elegance and inner strength. This unique
+                      ring features a vivid pear-shaped emerald surrounded by
+                      marquise-cut diamonds, masterfully set in high-polish
+                      white gold. Hidden emerald cabochons along the inner band
+                      add an intimate and artistic detail — a secret known only
+                      to its wearer. Ideal for engagements, anniversaries, or
+                      simply celebrating your personal brilliance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item 2 -->
+              <div class="accordion__item">
+                <h3 class="accordion__header">
+                  <button
+                    class="accordion__trigger"
+                    id="acc-h-2"
+                    aria-expanded="false"
+                    aria-controls="acc-p-2"
+                    type="button"
+                  >
+                    <span>Details</span>
+                    <svg
+                      class="accordion__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  id="acc-p-2"
+                  class="accordion__panel"
+                  role="region"
+                  aria-labelledby="acc-h-2"
+                  hidden
+                >
+                  <div class="accordion__panel-inner">
+                    <ul>
+                      <li>18k white gold</li>
+                      <li>Emerald 7.56 ct</li>
+                      <li>Marquise-cut diamonds</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item 3 -->
+              <div class="accordion__item">
+                <h3 class="accordion__header">
+                  <button
+                    class="accordion__trigger"
+                    id="acc-h-3"
+                    aria-expanded="false"
+                    aria-controls="acc-p-3"
+                    type="button"
+                  >
+                    <span>Shipping & Returns</span>
+                    <svg
+                      class="accordion__icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  id="acc-p-3"
+                  class="accordion__panel"
+                  role="region"
+                  aria-labelledby="acc-h-3"
+                  hidden
+                >
+                  <div class="accordion__panel-inner">
+                    <p>Worldwide shipping. Free returns within 30 days.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--КОнец Аккордион -->
+
+            <!-- Уведомление о доставке -->
+            <div class="notice_shiping">
+              <img src="./assets/images/icons/info.svg" alt="" />
+              <div>Available to ship in 2-5 days.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Конец секции ПРодукта -->
+
+      <!-- Начало секция кольца -->
+      <section class="stripe_section">
+        <div class="wrap flex">
+          <div class="header_block">
+            <div>
+              <h2>You May Also Like</h2>
+            </div>
+            <div>
+              <a href="#" class="btn_more">
+                Watch more
+                <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="wrap">
+            <!-- Slider main container -->
+            <div class="swiper stripe_slider">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <article class="swiper-slide cart">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/cat_1.png" alt="categoru_1" />
+                    </div>
+                    <div class="description_wrap">
+                      <p class="description_prod">
+                        7.56 CARART DRAGON RING WITH ROUND BRILLIANT DIAMOND
+                      </p>
+                      <p class="price_prod">$44,704 USD</p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/cat_2.png" alt="categoru_1" />
+                    </div>
+                    <div class="description_wrap">
+                      <p class="description_prod">
+                        7.56 CARART DRAGON RING WITH ROUND BRILLIANT DIAMOND
+                      </p>
+                      <p class="price_prod">$44,704 USD</p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/cat_3.png" alt="categoru_1" />
+                    </div>
+                    <div class="description_wrap">
+                      <p class="description_prod">
+                        7.56 CARART DRAGON RING WITH ROUND BRILLIANT DIAMOND
+                      </p>
+                      <p class="price_prod">$44,704 USD</p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/cat_4.png" alt="categoru_1" />
+                    </div>
+                    <div class="description_wrap">
+                      <p class="description_prod">
+                        7.56 CARART DRAGON RING WITH ROUND BRILLIANT DIAMOND
+                      </p>
+                      <p class="price_prod">$44,704 USD</p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="swiper-slide cart">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/cat_5.png" alt="categoru_1" />
+                    </div>
+                    <div class="description_wrap">
+                      <p class="description_prod">
+                        7.56 CARART DRAGON RING WITH ROUND BRILLIANT DIAMOND
+                      </p>
+                      <p class="price_prod">$44,704 USD</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Конец секция кольца -->
+
+      <!-- Начало секция Банер -->
+      <section class="baner_section">
+        <div class="wrap">
+          <img src="./assets/images/sec_back3.png" alt="" class="video_cover" />
+          <div class="header_block">
+            <div class="description_wrap">
+              <p class="description">Discover the new collection</p>
+              <h2>Blue Amettise</h2>
+            </div>
+            <div>
+              <a href="#" class="btn_more">
+                Discover
+                <img
+                  src="./assets/images/icons/arrow_in_circle_white.svg"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- КОнец секция Банер -->
+    </main>
+
+    <footer>
+      <div class="logo"><a href="/">Ivankovskiy</a></div>
+      <div class="footer_menu">
+        <ul class="menu">
+          <li>
+            <a href="#">Shop</a>
+            <ul class="sub_menu">
+              <li><a href="#">Jewelry</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Gemstones</a></li>
+              <li><a href="#">Design your own</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Gemstones</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Client care</a>
+            <ul class="sub_menu">
+              <li><a href="#">Product care & repair</a></li>
+              <li><a href="#">Shipping & returns</a></li>
+              <li><a href="#">Frequently asked questions</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Support</a>
+            <ul class="sub_menu">
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Contact us</a>
+            <ul class="sub_menu">
+              <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
+              <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
+              <li>
+                <a href="mailto:info@ivankovskiy.com">info@ivankovskiy.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Social media</a>
+            <ul class="sub_menu">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

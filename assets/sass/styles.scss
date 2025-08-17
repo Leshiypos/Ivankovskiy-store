@@ -2,10 +2,11 @@
 @import "helpers/mixins";
 @import "base/reset";
 @import "base/typography";
+@import "components/buttons";
+@import "components/navigations";
 @import "layout/general";
 @import "layout/header";
 @import "layout/sections";
 @import "layout/footer";
 @import "layout/single-page";
-@import "components/buttons";
-@import "components/navigations";
+@import "layout/woocommerce/product-page";

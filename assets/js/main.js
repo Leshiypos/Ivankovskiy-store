@@ -87,34 +87,118 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //   валидация поля телефона формы Contact Us с выпадающим списком
   const input = document.querySelector("#phone");
-  const iti = window.intlTelInput(input, {
-    initialCountry: "us", // или 'us', 'by', 'ru' и т.д.
-    geoIpLookup: (cb) => cb("us"), // без внешних запросов: фиксируем страну
-    separateDialCode: true, // показывает код страны отдельно (+1)
-    nationalMode: true, // вводим национальный формат
-    autoPlaceholder: "aggressive", // «маска»-placeholder под страну
-    utilsScript:
-      "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js",
-  });
+  if (input) {
+    const iti = window.intlTelInput(input, {
+      initialCountry: "us", // или 'us', 'by', 'ru' и т.д.
+      geoIpLookup: (cb) => cb("us"), // без внешних запросов: фиксируем страну
+      separateDialCode: true, // показывает код страны отдельно (+1)
+      nationalMode: true, // вводим национальный формат
+      autoPlaceholder: "aggressive", // «маска»-placeholder под страну
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js",
+    });
 
-  // Валидация на лету
-  input.addEventListener("blur", () => {
-    if (input.value.trim()) {
-      const valid = iti.isValidNumber();
-      input.classList.toggle("is-invalid", !valid);
-      input.setCustomValidity(valid ? "" : "Некорректный номер телефона");
-    } else {
-      input.setCustomValidity("Укажите номер телефона");
-    }
-  });
+    // Валидация на лету
+    input.addEventListener("blur", () => {
+      if (input.value.trim()) {
+        const valid = iti.isValidNumber();
+        input.classList.toggle("is-invalid", !valid);
+        input.setCustomValidity(valid ? "" : "Некорректный номер телефона");
+      } else {
+        input.setCustomValidity("Укажите номер телефона");
+      }
+    });
 
-  // На сабмите получаем E.164 (+15551234567)
-  document.querySelector("form")?.addEventListener("submit", (e) => {
-    if (!input.reportValidity()) {
-      e.preventDefault();
-      return;
+    // На сабмите получаем E.164 (+15551234567)
+    document.querySelector("form")?.addEventListener("submit", (e) => {
+      if (!input.reportValidity()) {
+        e.preventDefault();
+        return;
+      }
+      const full = iti.getNumber(); // +15551234567
+      input.value = full; // отправим нормализованный
+    });
+  }
+
+  //   Аккордион
+
+  (function () {
+    const acc = document.querySelector(".accordion");
+    if (!acc) return;
+
+    const allowMultiple = acc.hasAttribute("data-allow-multiple");
+
+    acc.addEventListener("click", (e) => {
+      const btn = e.target.closest(".accordion__trigger");
+      if (!btn) return;
+
+      const targetOpen = btn.getAttribute("aria-expanded") !== "true";
+
+      // Если разрешено только одно открытие — закрываем остальные
+      if (!allowMultiple && targetOpen) {
+        acc
+          .querySelectorAll('.accordion__trigger[aria-expanded="true"]')
+          .forEach((b) => {
+            if (b !== btn) toggle(b, false);
+          });
+      }
+      toggle(btn, targetOpen);
+    });
+
+    // Клавиатура: стрелки перемещают фокус, Home/End — к первому/последнему
+    acc.addEventListener("keydown", (e) => {
+      const triggers = [...acc.querySelectorAll(".accordion__trigger")];
+      const i = triggers.indexOf(document.activeElement);
+      if (i === -1) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        triggers[(i + 1) % triggers.length].focus();
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        triggers[(i - 1 + triggers.length) % triggers.length].focus();
+      }
+      if (e.key === "Home") {
+        e.preventDefault();
+        triggers[0].focus();
+      }
+      if (e.key === "End") {
+        e.preventDefault();
+        triggers[triggers.length - 1].focus();
+      }
+    });
+
+    function toggle(btn, open) {
+      const panel = document.getElementById(btn.getAttribute("aria-controls"));
+      btn.setAttribute("aria-expanded", String(open));
+
+      if (open) {
+        panel.hidden = false;
+        panel.style.height = "auto";
+        const end = panel.scrollHeight + "px";
+        panel.style.height = "0px";
+        panel.offsetHeight; // reflow
+        panel.style.height = end;
+        panel.addEventListener("transitionend", function onEnd(e) {
+          if (e.propertyName !== "height") return;
+          panel.style.height = "auto"; // фикс высоты после анимации
+          panel.removeEventListener("transitionend", onEnd);
+        });
+      } else {
+        const start = panel.scrollHeight + "px";
+        panel.style.height = start;
+        panel.offsetHeight;
+        panel.style.height = "0px";
+        panel.addEventListener("transitionend", function onEnd(e) {
+          if (e.propertyName !== "height") return;
+          panel.hidden = true;
+          panel.style.height = "";
+          panel.removeEventListener("transitionend", onEnd);
+        });
+      }
     }
-    const full = iti.getNumber(); // +15551234567
-    input.value = full; // отправим нормализованный
-  });
+  })();
+
+  //   Конец аккордиона на странице товара
 });
