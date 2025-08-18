@@ -12,12 +12,6 @@
     justify-content: space-between;
     .col {
       flex: 1;
-      &:last-child {
-        background-color: rgba(247, 247, 247, 1);
-        padding: 18px 20px;
-        border-radius: $radiusMidiPc;
-        max-width: 610px;
-      }
     }
   }
   //  таблица
@@ -129,8 +123,15 @@
       background-color: rgba(97, 97, 97, 0.3);
     }
   }
+}
 
-  //   Блок Сумма
+//   Блок Сумма
+.order_summary_block {
+  background-color: rgba(247, 247, 247, 1);
+  padding: 18px 20px;
+  border-radius: $radiusMidiPc;
+  max-width: 610px;
+  margin-left: auto;
   .wp-block-woocommerce-cart-order-summary-block {
     h2 {
       font-size: 20px;

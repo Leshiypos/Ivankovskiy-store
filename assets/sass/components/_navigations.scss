@@ -8,6 +8,11 @@
   color: rgba(120, 117, 117, 1);
   a {
     color: rgb(0, 0, 0);
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    gap: 9px;
+    padding-top: 1px;
     &:hover {
       color: rgba(120, 117, 117, 1);
       text-decoration: underline;
