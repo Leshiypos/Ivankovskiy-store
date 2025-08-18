@@ -32,8 +32,8 @@ function dropDownToogle(butSelect, menuSelect) {
 
 //   Изменение высоты картинка в форме на странице Contacts
 function syncHeight() {
-  let father = document.querySelector(".col.father_heights");
-  let child = document.querySelector(".col.child_heights");
+  let father = document.querySelector(".father_heights");
+  let child = document.querySelector(".child_heights");
   if (father && child) {
     if (window.innerWidth > 645) {
       child.style.height = father.getBoundingClientRect().height + "px";
@@ -201,4 +201,85 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   //   Конец аккордиона на странице товара
+
+  //   Кнопка +_ в корзине
+
+  (function () {
+    // Делегирование — работает для любых строк корзины
+    document.addEventListener("click", function (e) {
+      const btn = e.target.closest(
+        ".wc-block-components-quantity-selector__button"
+      );
+      if (!btn) return;
+
+      const box = btn.closest(".wc-block-components-quantity-selector");
+      const input =
+        box &&
+        box.querySelector(".wc-block-components-quantity-selector__input");
+      if (!input || input.disabled) return;
+
+      // Читаем ограничения
+      const step = parseFloat(input.getAttribute("step")) || 1;
+      const min = isNaN(parseFloat(input.getAttribute("min")))
+        ? 1
+        : parseFloat(input.getAttribute("min"));
+      const max = isNaN(parseFloat(input.getAttribute("max")))
+        ? Infinity
+        : parseFloat(input.getAttribute("max"));
+
+      // Текущее значение (поддержим запятую как десятичный разделитель)
+      let val = parseFloat(String(input.value).replace(",", "."));
+      if (isNaN(val)) val = min;
+
+      // Что нажали
+      const isMinus = btn.classList.contains(
+        "wc-block-components-quantity-selector__button--minus"
+      );
+      val = isMinus ? val - step : val + step;
+
+      // Клэмп по min/max и нормализация точности
+      val = Math.max(min, Math.min(max, val));
+      // Если шаг целый — приводим к целому
+      const normalized = Number.isInteger(step)
+        ? Math.round(val)
+        : +val.toFixed(3);
+
+      input.value = normalized;
+
+      // Уведомим Woo/React об изменении
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+
+    // Бонус: стрелки ↑/↓ на инпуте меняют количество
+    document.addEventListener("keydown", function (e) {
+      const input = e.target.closest(
+        ".wc-block-components-quantity-selector__input"
+      );
+      if (!input) return;
+
+      const step = parseFloat(input.getAttribute("step")) || 1;
+      const min = isNaN(parseFloat(input.getAttribute("min")))
+        ? 1
+        : parseFloat(input.getAttribute("min"));
+      const max = isNaN(parseFloat(input.getAttribute("max")))
+        ? Infinity
+        : parseFloat(input.getAttribute("max"));
+      let val = parseFloat(String(input.value).replace(",", "."));
+      if (isNaN(val)) val = min;
+
+      if (e.key === "ArrowUp" || e.key === "+") {
+        e.preventDefault();
+        val = Math.min(max, val + step);
+      } else if (e.key === "ArrowDown" || e.key === "-") {
+        e.preventDefault();
+        val = Math.max(min, val - step);
+      } else {
+        return;
+      }
+      input.value = Number.isInteger(step) ? Math.round(val) : +val.toFixed(3);
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  })();
 });

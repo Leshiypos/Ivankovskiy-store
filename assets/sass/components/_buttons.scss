@@ -98,7 +98,10 @@ button.sort_but {
 
 // woocommerce
 // Кнопка добавить в карзину
-.single_add_to_cart_button {
+.single_add_to_cart_button,
+.wc-block-cart__submit-button {
+  display: block;
+  text-align: center;
   padding: 20px 30px;
   border-radius: $radiusMidiPc;
   background-color: rgba(0, 0, 0, 1);

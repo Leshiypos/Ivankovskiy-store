@@ -185,8 +185,10 @@
   } /* hidden, но участвует в анимации */
   .accordion__panel-inner {
     padding: 0 0 1rem;
+    padding-top: 18px;
     color: rgba(32, 32, 32, 1);
     line-height: 1.55;
+    max-width: 550px;
   }
 
   //   Информация о доставку
