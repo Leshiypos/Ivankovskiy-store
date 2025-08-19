@@ -67,6 +67,7 @@
       @include fluid-font(32, 100, 320, 1400);
       text-align: right;
       background-color: rgba(251, 247, 247, 0.6);
+      color: rgba(46, 44, 44, 1);
       margin-left: -350px;
       padding-left: 100px;
       padding-right: 50px;
@@ -91,7 +92,7 @@
         }
         &:last-child {
           .btn_more {
-            font-size: 25px;
+            @include fluid-font(16, 25, 320, 1400);
             img {
               width: 40px;
               height: 40px;

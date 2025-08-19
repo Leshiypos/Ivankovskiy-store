@@ -10,3 +10,23 @@
     #{$max-size}px
   );
 }
+
+// медиазапросы
+
+@mixin mobile($max: $screen-small) {
+  @media screen and (max-width: #{$max}px) {
+    @content;
+  }
+}
+
+@mixin tablet-range($min: $screen-small, $max: $screen-medium) {
+  @media screen and (min-width: (#{$min}px + 1px)) and (max-width: #{$max}px) {
+    @content;
+  }
+}
+
+@mixin tablet($max: $screen-medium) {
+  @media screen and (max-width: #{$max}px) {
+    @content;
+  }
+}

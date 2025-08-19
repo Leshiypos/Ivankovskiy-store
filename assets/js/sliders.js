@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 10,
+        breakpoints: {
+          430: {
+            slidesPerView: 2,
+          },
+          730: { slidesPerView: 2 },
+          1000: {
+            slidesPerView: 5,
+          },
+        },
       });
     });
   }

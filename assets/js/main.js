@@ -47,15 +47,26 @@ window.addEventListener("resize", syncHeight);
 //   КОНЕЦ Изменение высоты картинка в форме на странице Contacts
 
 document.addEventListener("DOMContentLoaded", () => {
-  //   Кнопка выпадающего меню Язык
+  //   Кнопка выпадающего меню Язык в шапке
   dropDownToogle(
-    ".language-dropdown .dropdownToggle",
-    ".language-dropdown .dropdownMenu"
+    ".top_header .language-dropdown .dropdownToggle",
+    ".top_header .language-dropdown .dropdownMenu"
   );
-  //   Кнопка выпадающего меню Валюты
+  //   Кнопка выпадающего меню Валюты в шапке
   dropDownToogle(
-    ".сurrency-dropdown .dropdownToggle",
-    ".сurrency-dropdown .dropdownMenu"
+    ".top_header .сurrency-dropdown .dropdownToggle",
+    ".top_header .сurrency-dropdown .dropdownMenu"
+  );
+
+  //   Кнопка выпадающего меню Язык Мобильная
+  dropDownToogle(
+    ".mobile_menu .language-dropdown .dropdownToggle",
+    ".mobile_menu .language-dropdown .dropdownMenu"
+  );
+  //   Кнопка выпадающего меню Валюты Мобильная
+  dropDownToogle(
+    ".mobile_menu .сurrency-dropdown .dropdownToggle",
+    ".mobile_menu .сurrency-dropdown .dropdownMenu"
   );
 
   //   Главное меню
@@ -282,4 +293,111 @@ document.addEventListener("DOMContentLoaded", () => {
       input.dispatchEvent(new Event("change", { bubbles: true }));
     });
   })();
+
+  //   Мобильное меню
+  // Открытие меню
+  let btnMenuMobOpen = document.getElementById("berger_btn_open_menu");
+  let btnMenuMobClose = document.getElementById("close_menu_btn");
+  const mobMenu = document.querySelector(".mobile_menu");
+  if (btnMenuMobOpen && mobMenu && btnMenuMobClose) {
+    btnMenuMobOpen.addEventListener("click", (e) => {
+      mobMenu.classList.add("opened");
+    });
+    btnMenuMobClose.addEventListener("click", (e) => {
+      mobMenu.classList.remove("opened");
+    });
+  }
+  //   Функция создания кнопки назад
+  function createBackBut(item) {
+    const header = item.firstElementChild; // <a> или <h6>
+    if (
+      header &&
+      (header.tagName === "H6" || header.tagName === "A") &&
+      !header.querySelector(".back_btn")
+    ) {
+      const backBtn = document.createElement("button");
+      backBtn.type = "button";
+      backBtn.className = "back_btn";
+      backBtn.innerHTML =
+        "<img src='./assets/images/icons/back.svg' alt='' /> Back";
+      header.prepend(backBtn);
+      header.classList.add("active");
+    }
+  }
+
+  // Функция получения всех братьев элемента
+  function getSiblings(el, selector) {
+    if (!el || !el.parentElement) return [];
+    return Array.from(el.parentElement.children).filter(
+      (node) => node !== el && (!selector || node.matches(selector))
+    );
+  }
+
+  //   функция появления dropDown
+  function showDropDown(e) {
+    e.stopPropagation();
+    let item = e.currentTarget;
+    createBackBut(item);
+    console.log(item);
+    let subMenu = item.querySelector(".dropdawnWrap");
+    if (subMenu) {
+      subMenu.classList.add("visible");
+    }
+    getSiblings(item).forEach((e) => {
+      e.classList.add("hidden");
+    });
+  }
+
+  //   получаем все меню первого уровня
+  let itemsMenuFirst = document.querySelectorAll(".mobile_menu li.parent");
+  //    получаем все меню воторого уровня
+  let itemMenuSecond = document.querySelectorAll(".mobile_menu .wrap_sub_menu");
+
+  if (itemsMenuFirst) {
+    itemsMenuFirst.forEach((item) => {
+      item.addEventListener("click", showDropDown);
+    });
+  }
+  if (itemMenuSecond) {
+    itemMenuSecond.forEach((item) => {
+      item.addEventListener("click", showDropDown);
+    });
+  }
+
+  //   Обрабатываем Закрытие по кнопке BACK
+  const menuBlock = document.querySelector(".mobile_menu .menu_block");
+
+  if (menuBlock) {
+    menuBlock.addEventListener(
+      "click",
+      function (e) {
+        const backBtn = e.target.closest(".back_btn");
+        if (!backBtn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        // header — это <a> или <h6>, куда мы вставляли кнопку
+        const header = backBtn.closest("h6, a");
+        if (!header) return;
+
+        // item — текущий контейнер уровня: <li.parent> или .wrap_sub_menu
+        const item = header.parentElement;
+
+        // скрываем его подменю
+        const subMenu = Array.from(item.children).find(
+          (ch) => ch.classList && ch.classList.contains("dropdawnWrap")
+        );
+        if (subMenu) subMenu.classList.remove("visible");
+
+        // показываем соседние пункты этого уровня
+        getSiblings(item).forEach((s) => s.classList.remove("hidden"));
+
+        // убираем кнопку и состояние
+        header.classList.remove("active");
+        backBtn.remove();
+      },
+      true // capture!
+    );
+  }
 });
