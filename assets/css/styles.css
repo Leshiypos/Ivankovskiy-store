@@ -574,7 +574,7 @@ header {
   z-index: 99;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   padding: 20px 20px 66px 13px; }
   .mobile_menu .wrap_menu {
@@ -675,6 +675,10 @@ header {
     justify-content: space-between;
     padding-top: 25px;
     border-top: 1px solid #bebebe; }
+    .mobile_menu .options_block .dropdownMenu {
+      background-color: white;
+      padding: 5px;
+      border-radius: 5px; }
   @media screen and (max-width: 1000px) {
     .mobile_menu.opened {
       display: flex; } }
