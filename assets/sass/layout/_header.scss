@@ -270,7 +270,7 @@ header {
         margin: 0;
         padding: 0;
         text-transform: none;
-        height: auto;
+        min-height: fit-content;
       }
       .sub_menu {
         margin-top: 50px;
@@ -315,6 +315,9 @@ header {
       &.visible {
         display: block;
       }
+    }
+    .hidden {
+      display: none;
     }
   }
   .options_block {

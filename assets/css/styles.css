@@ -635,7 +635,7 @@ header {
       margin: 0;
       padding: 0;
       text-transform: none;
-      height: auto; }
+      min-height: fit-content; }
     .mobile_menu .menu_block .wrap_sub_menu .sub_menu {
       margin-top: 50px; }
     .mobile_menu .menu_block .wrap_sub_menu .baner {
@@ -670,6 +670,8 @@ header {
       display: none; }
       .mobile_menu .menu_block .dropdawnWrap.visible {
         display: block; }
+    .mobile_menu .menu_block .hidden {
+      display: none; }
   .mobile_menu .options_block {
     display: flex;
     justify-content: space-between;
