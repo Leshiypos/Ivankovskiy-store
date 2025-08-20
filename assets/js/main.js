@@ -400,4 +400,88 @@ document.addEventListener("DOMContentLoaded", () => {
       true // capture!
     );
   }
+  // Конец мобильного меню
+
+  // Начало моюильного меню футера
+
+  if (window.innerWidth < 530) {
+    footerMobMenu();
+  }
+  function footerMobMenu() {
+    const root = document.querySelector(".footer_menu .menu");
+    const singleOpen = true; // =false, если можно открывать несколько
+
+    if (!root) return;
+
+    // инициализация всех подпунктов
+    root.querySelectorAll(":scope > li > a").forEach((trigger) => {
+      const panel = trigger.nextElementSibling;
+      if (!panel || !panel.classList.contains("sub_menu")) return;
+
+      // старт: закрыто
+      trigger.setAttribute("aria-expanded", "false");
+      panel.style.overflow = "hidden";
+      panel.style.height = "0px";
+      panel.hidden = true;
+
+      trigger.addEventListener("click", (e) => {
+        // даём линкам-родителям работать как кнопки
+        e.preventDefault();
+
+        const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+        if (singleOpen) {
+          // закрыть другие открытые
+          root
+            .querySelectorAll(':scope > li > a[aria-expanded="true"]')
+            .forEach((t) => {
+              if (t !== trigger) slideUp(t.nextElementSibling, t);
+            });
+        }
+
+        isOpen ? slideUp(panel, trigger) : slideDown(panel, trigger);
+      });
+    });
+  }
+
+  // helpers
+  function slideDown(panel, trigger) {
+    trigger.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
+
+    const end = panel.scrollHeight; // высота контента
+    panel.style.transition = "height 300ms ease";
+    panel.style.height = "0px"; // на всякий случай
+    requestAnimationFrame(() => {
+      panel.style.height = end + "px";
+    });
+
+    const done = (e) => {
+      if (e.propertyName !== "height") return;
+      panel.removeEventListener("transitionend", done);
+      panel.style.transition = "";
+      panel.style.height = "auto"; // чтобы адаптировалась к высоте контента
+    };
+    panel.addEventListener("transitionend", done);
+  }
+
+  function slideUp(panel, trigger) {
+    trigger.setAttribute("aria-expanded", "false");
+
+    // фиксируем текущую высоту и едем к 0
+    panel.style.height = panel.scrollHeight + "px";
+    panel.style.transition = "height 300ms ease";
+    requestAnimationFrame(() => {
+      panel.style.height = "0px";
+    });
+
+    const done = (e) => {
+      if (e.propertyName !== "height") return;
+      panel.removeEventListener("transitionend", done);
+      panel.style.transition = "";
+      panel.hidden = true; // чтобы не мешало табом и экранным читалкам
+    };
+    panel.addEventListener("transitionend", done);
+  }
+  //   Конец Мобильного меню футера
 });

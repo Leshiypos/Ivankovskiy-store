@@ -12,6 +12,7 @@ footer {
   }
   .logo {
     margin-top: -25px;
+    font-size: 60px;
   }
   .footer_menu {
     width: 100%;
@@ -21,10 +22,14 @@ footer {
   }
   .menu {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 3%;
-
+    gap: 10px;
+    & > li {
+      flex: 1 1 200px;
+      margin-bottom: 70px;
+    }
     & > li > a {
       font-size: 16px;
       font-weight: 600;
@@ -35,7 +40,7 @@ footer {
       margin-top: 24px;
     }
     @include tablet(1000) {
-      flex-flow: column nowrap;
+      //   flex-flow: column nowrap;
     }
   }
   .sub_menu {
@@ -48,6 +53,46 @@ footer {
         color: rgb(0, 0, 0);
         text-decoration: underline;
       }
+    }
+  }
+  @include tablet {
+    padding: 15px 8px 40px 8px;
+    flex-flow: column wrap;
+    gap: 66px;
+  }
+  @include mobile {
+    .menu {
+      gap: 33px;
+      flex-flow: column nowrap;
+      & > li {
+        margin-bottom: 0px;
+        flex: 1 1 auto;
+        width: 100%;
+        & > a {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+
+          &::after {
+            content: "";
+            display: inline-block;
+            background: url(../images/icons/arrow_mob_menu.svg) no-repeat center /
+              contain;
+            margin-left: auto;
+            width: 33px;
+            height: 33px;
+            transform: rotate(90deg);
+            transition: transform 0.3s ease;
+          }
+          &[aria-expanded="true"]::after {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+    .sub_menu {
+      margin-top: 20px;
     }
   }
 }

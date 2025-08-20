@@ -1,6 +1,6 @@
 .video_cover {
   width: 100%;
-  //   height: 100%;
+  //height: 100%;
   object-fit: cover;
 }
 section {
@@ -26,12 +26,26 @@ section {
     // width: 100%;
     // height: 90vh;
     overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  @include tablet {
+    .wrap {
+      height: 90vh;
+      img {
+        height: 100%;
+      }
+    }
   }
 }
 
 // Секция категорий
 .stripe_section {
-  padding: 0 19px;
+  padding-top: 0;
+  padding-bottom: 0;
+  @extend %adaptivePaddingSection;
 
   .stripe_slider {
     width: 100%;
@@ -65,11 +79,16 @@ section {
       }
     }
   }
+  @include mobile {
+    margin-bottom: 45px;
+  }
 }
 
 // Секция Слайдер картинок
 .slider_section {
-  padding: 0 19px;
+  padding-top: 0;
+  padding-bottom: 0;
+  @extend %adaptivePaddingSection;
 
   .img_slider {
     width: 100%;
@@ -94,8 +113,9 @@ section {
     }
     img {
       width: 100%;
+      height: 100%;
       max-height: 432px;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }
@@ -122,25 +142,31 @@ section {
       height: 100%;
     }
   }
+  .video_cover {
+    height: 100%;
+  }
   .wrap {
     position: relative;
   }
   color: rgba(255, 255, 255, 1);
   .header_block {
+    @extend %adaptivePaddingSection;
     width: 100%;
     position: absolute;
     bottom: 100px;
-    padding-left: 19px;
-    padding-right: 19px;
     align-items: flex-end;
     margin-bottom: 0;
     .btn_more {
       font-size: 25px;
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
+
       @include tablet(1000) {
         font-size: 20px;
       }
+    }
+    @include tablet(1000) {
+      bottom: 80px;
     }
   }
   .description_wrap {
@@ -151,12 +177,17 @@ section {
   h2 {
     margin: 0;
     font-size: 200px;
+    margin-bottom: -5px;
     vertical-align: bottom;
     text-transform: none;
     &.medium_fs {
       font-size: 110px;
       @include tablet(1000) {
         font-size: 80px;
+      }
+      @include mobile {
+        font-size: 42px;
+        margin-bottom: 24px;
       }
     }
     @include tablet(1000) {
@@ -171,11 +202,14 @@ section {
     font-weight: 300;
     &.medium_fs {
       font-size: 30px;
-      @include tablet(1000) {
+      @include tablet {
         font-size: 24px;
       }
+      @include mobile {
+        font-size: 16px;
+      }
     }
-    @include tablet(1000) {
+    @include tablet {
       font-size: 24px;
     }
   }
@@ -183,12 +217,38 @@ section {
     padding-left: 19px;
     padding-right: 19px;
   }
+  @include tablet(1200) {
+    .wrap {
+      height: 90vh;
+    }
+  }
+  @include mobile {
+    margin-top: 66px;
+    &.low_height > .wrap {
+      height: 50vh;
+    }
+    .header_block {
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 80px;
+      bottom: 40px;
+    }
+    .description_wrap {
+      gap: 5px;
+    }
+    .description {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 68px;
+    }
+  }
 }
 
 // Секция последне новости
 .news_section {
-  margin-left: 19px;
-  margin-right: 19px;
+  @extend %adaptiveMarginSection;
   .wrap_img {
     position: relative;
     max-height: 500px;
@@ -213,9 +273,6 @@ section {
     display: flex;
     flex-direction: row;
     gap: 1%;
-    article {
-      flex: 1;
-    }
   }
   .single_news {
     &:hover {
@@ -242,23 +299,24 @@ section {
     color: rgba(77, 77, 77, 1);
     line-height: 1.6;
   }
+  @include mobile {
+    h3 {
+      font-size: 20px;
+    }
+    .description_new {
+      line-height: 1;
+    }
+  }
 }
 
 .subscribe_section {
-  margin-left: 19px;
-  margin-right: 19px;
+  @extend %adaptiveMarginSection;
   margin-top: 120px;
   h2 {
     font-size: 110px;
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px;
-    @include tablet {
-      font-size: 60px;
-    }
-    @include mobile {
-      font-size: 42px;
-    }
   }
   label {
     flex: 1;
@@ -303,6 +361,49 @@ section {
     img {
       width: 40px;
       height: 40px;
+    }
+  }
+  @include tablet {
+    margin-bottom: 170px;
+    h2 {
+      font-size: 60px;
+      max-width: 600px;
+    }
+    .label-wrap {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
+    .subscribe_form {
+      flex-flow: column nowrap;
+      gap: 120px;
+    }
+    .btn_more {
+      align-self: flex-end;
+    }
+    label {
+      width: 100%;
+    }
+    .contact-form-input {
+      max-width: 100%;
+    }
+  }
+  @include mobile {
+    margin-bottom: 80px;
+    h2 {
+      font-size: 42px;
+    }
+    .contact-form-input {
+      font-size: 18px;
+    }
+    .subscribe_form {
+      gap: 64px;
+    }
+    .btn_more {
+      font-size: 20px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

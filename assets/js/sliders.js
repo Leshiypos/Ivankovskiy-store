@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sliders_stripe.forEach((slider) => {
       new Swiper(slider, {
         speed: 400,
-        slidesPerView: 5,
+        slidesPerView: 2,
         spaceBetween: 10,
         breakpoints: {
           430: {
@@ -31,6 +31,28 @@ document.addEventListener("DOMContentLoaded", () => {
         loop: true,
         slidesPerView: "auto",
         spaceBetween: 10,
+      });
+    });
+  }
+
+  //   Блок новости
+  let news_section = document.querySelectorAll(
+    ".news_section .swiper.news_slider"
+  );
+  if (news_section) {
+    news_section.forEach((slider) => {
+      new Swiper(slider, {
+        speed: 400,
+        slidesPerView: 1.5,
+        spaceBetween: 16,
+        breakpoints: {
+          530: {
+            spaceBetween: 36,
+          },
+          1000: {
+            slidesPerView: 3,
+          },
+        },
       });
     });
   }
