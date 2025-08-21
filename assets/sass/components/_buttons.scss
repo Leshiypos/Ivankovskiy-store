@@ -12,7 +12,7 @@
     text-decoration: underline;
   }
   img {
-    @include tablet(1000) {
+    @include tablet {
       width: 24px;
       height: 24px;
     }

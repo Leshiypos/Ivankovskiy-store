@@ -135,6 +135,7 @@ section {
     }
     h2 {
       text-transform: none;
+      letter-spacing: -3px;
     }
     .header_block {
       bottom: 0;
@@ -162,12 +163,9 @@ section {
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
 
-      @include tablet(1000) {
+      @include tablet {
         font-size: 20px;
       }
-    }
-    @include tablet(1000) {
-      bottom: 80px;
     }
   }
   .description_wrap {
@@ -178,12 +176,14 @@ section {
   h2 {
     margin: 0;
     font-size: 200px;
+    @include fluid-font(80, 200);
     margin-bottom: -5px;
     vertical-align: bottom;
     text-transform: none;
+    letter-spacing: -3px;
     &.medium_fs {
       font-size: 110px;
-      @include tablet(1000) {
+      @include tablet {
         font-size: 80px;
       }
       @include mobile {
@@ -191,13 +191,11 @@ section {
         margin-bottom: 24px;
       }
     }
-    @include tablet(1000) {
-      font-size: 80px;
-    }
   }
   .description {
     // margin-left: 15px;
     font-size: 60px;
+    @include fluid-font(24, 60);
     // letter-spacing: 97%;
     font-weight: 400;
     font-weight: 300;
@@ -210,17 +208,23 @@ section {
         font-size: 16px;
       }
     }
-    @include tablet {
-      font-size: 24px;
-    }
   }
   &.with_padding {
     padding-left: 19px;
     padding-right: 19px;
   }
-  @include tablet(1200) {
+  @include tablet {
     .wrap {
       height: 90vh;
+    }
+    .header_block {
+      bottom: 80px;
+    }
+    h2 {
+      font-size: 80px;
+    }
+    .description {
+      font-size: 24px;
     }
   }
   @include mobile {
