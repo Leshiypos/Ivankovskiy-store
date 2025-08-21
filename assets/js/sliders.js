@@ -43,13 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
     news_section.forEach((slider) => {
       new Swiper(slider, {
         speed: 400,
-        slidesPerView: 1.5,
+        slidesPerView: 1.3,
         spaceBetween: 16,
         breakpoints: {
           530: {
             spaceBetween: 36,
           },
-          1000: {
+          830: {
+            slidesPerView: 2,
+          },
+          1250: {
             slidesPerView: 3,
           },
         },

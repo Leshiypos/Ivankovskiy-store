@@ -506,6 +506,9 @@ header {
         height: 45px; }
         header .top_header .icons_block ul a:hover {
           background-color: rgba(217, 217, 217, 0.3); }
+        @media screen and (max-width: 1000px) {
+          header .top_header .icons_block ul a {
+            background-color: rgba(217, 217, 217, 0.3); } }
     @media screen and (max-width: 1000px) {
       header .top_header .options_block {
         display: none; } }
@@ -791,7 +794,8 @@ section {
     position: absolute;
     bottom: 100px;
     align-items: flex-end;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    gap: 10px; }
     .baner_section .header_block .btn_more {
       font-size: 25px;
       margin-bottom: 0px;
@@ -816,7 +820,8 @@ section {
       font-size: clamp(60px, calc( 60px + (110 - 60) * ((100vw - 1000px) / (1600 - 1000)) ), 110px); }
       @media screen and (max-width: 1000px) {
         .baner_section h2.medium_fs {
-          font-size: 60px; } }
+          font-size: 60px;
+          margin-bottom: 18px; } }
       @media screen and (max-width: 560px) {
         .baner_section h2.medium_fs {
           font-size: 42px;
@@ -834,7 +839,8 @@ section {
           font-size: 20px; } }
       @media screen and (max-width: 560px) {
         .baner_section .description.medium_fs {
-          font-size: 16px; } }
+          font-size: 16px;
+          margin-bottom: -20px; } }
   .baner_section.with_padding {
     padding-left: 19px;
     padding-right: 19px; }
@@ -849,7 +855,8 @@ section {
       font-size: 24px; } }
   @media screen and (max-width: 657px) {
     .baner_section h2 {
-      font-size: 68px; } }
+      font-size: 68px;
+      letter-spacing: -3px; } }
   @media screen and (max-width: 560px) {
     .baner_section {
       margin-top: 66px; }
@@ -864,7 +871,8 @@ section {
       .baner_section .description_wrap {
         gap: 5px; }
       .baner_section .description {
-        font-size: 20px; } }
+        font-size: 20px;
+        max-width: 270px; } }
   @media screen and (max-width: 417px) {
     .baner_section h2 {
       font-size: 50px; } }
@@ -897,7 +905,7 @@ section {
   justify-content: space-between;
   gap: 15px;
   margin-top: 29px;
-  width: 70%;
+  max-width: 466px;
   margin-left: 9px; }
 .news_section h3 {
   font-size: 24px;
@@ -905,10 +913,12 @@ section {
 .news_section .description_new {
   font-size: 14px;
   color: #4d4d4d;
-  line-height: 1.6; }
-@media screen and (max-width: 560px) {
+  line-height: 1.6;
+  margin-right: 15px; }
+@media screen and (max-width: 1450px) {
   .news_section h3 {
-    font-size: 20px; }
+    font-size: 20px; } }
+@media screen and (max-width: 560px) {
   .news_section .description_new {
     line-height: 1; } }
 
@@ -916,6 +926,7 @@ section {
   margin-top: 120px; }
   .subscribe_section h2 {
     font-size: 110px;
+    font-size: clamp(42px, calc( 42px + (110 - 42) * ((100vw - 768px) / (1800 - 768)) ), 110px);
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px; }
@@ -924,7 +935,8 @@ section {
   .subscribe_section .subscribe_form {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    gap: 20px; }
   .subscribe_section .label-wrap {
     display: flex;
     flex-direction: row;
@@ -959,12 +971,10 @@ section {
   @media screen and (max-width: 1000px) {
     .subscribe_section {
       margin-bottom: 170px; }
-      .subscribe_section h2 {
-        font-size: 60px;
-        max-width: 600px; }
       .subscribe_section .label-wrap {
         flex-flow: column nowrap;
-        align-items: flex-start; }
+        align-items: flex-start;
+        gap: 120px; }
       .subscribe_section .subscribe_form {
         flex-flow: column nowrap;
         gap: 120px; }
@@ -974,15 +984,20 @@ section {
         width: 100%; }
       .subscribe_section .contact-form-input {
         max-width: 100%; } }
+  @media screen and (max-width: 750px) {
+    .subscribe_section h2 {
+      max-width: 600px; } }
   @media screen and (max-width: 560px) {
     .subscribe_section {
       margin-bottom: 80px; }
       .subscribe_section h2 {
         font-size: 42px; }
+      .subscribe_section .label-wrap {
+        gap: 77px; }
       .subscribe_section .contact-form-input {
         font-size: 18px; }
       .subscribe_section .subscribe_form {
-        gap: 64px; }
+        gap: 60px; }
       .subscribe_section .btn_more {
         font-size: 20px; }
         .subscribe_section .btn_more img {
@@ -1174,13 +1189,10 @@ footer {
     margin-right: auto;
     margin-left: auto; }
   footer .menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px; }
     footer .menu > li {
-      flex: 1 1 200px;
       margin-bottom: 70px; }
     footer .menu > li > a {
       font-size: 16px;
@@ -1202,18 +1214,25 @@ footer {
     footer {
       padding: 15px 8px 40px 8px;
       flex-flow: column wrap;
-      gap: 66px; } }
+      gap: 66px; }
+      footer .menu {
+        justify-content: flex-start; }
+        footer .menu > li {
+          max-width: 175px; } }
   @media screen and (max-width: 560px) {
     footer .menu {
+      display: flex;
       gap: 33px;
       flex-flow: column nowrap; }
       footer .menu > li {
         margin-bottom: 0px;
         flex: 1 1 auto;
-        width: 100%; }
+        width: 100%;
+        max-width: 100%; }
         footer .menu > li > a {
           display: flex;
           width: 100%;
+          max-width: 100%;
           justify-content: space-between;
           align-items: center; }
           footer .menu > li > a::after {

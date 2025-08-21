@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Начало моюильного меню футера
 
-  if (window.innerWidth < 530) {
+  if (window.innerWidth < 561) {
     footerMobMenu();
   }
   function footerMobMenu() {

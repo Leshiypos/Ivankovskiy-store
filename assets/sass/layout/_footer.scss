@@ -21,13 +21,14 @@ footer {
     margin-left: auto;
   }
   .menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    // flex-flow: row wrap;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     & > li {
-      flex: 1 1 200px;
+      //   flex: 1 1 150px;
       margin-bottom: 70px;
     }
     & > li > a {
@@ -59,18 +60,28 @@ footer {
     padding: 15px 8px 40px 8px;
     flex-flow: column wrap;
     gap: 66px;
+
+    .menu {
+      justify-content: flex-start;
+      & > li {
+        max-width: 175px;
+      }
+    }
   }
   @include mobile {
     .menu {
+      display: flex;
       gap: 33px;
       flex-flow: column nowrap;
       & > li {
         margin-bottom: 0px;
         flex: 1 1 auto;
         width: 100%;
+        max-width: 100%;
         & > a {
           display: flex;
           width: 100%;
+          max-width: 100%;
           justify-content: space-between;
           align-items: center;
 
