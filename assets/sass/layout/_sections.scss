@@ -231,6 +231,9 @@ section {
     .description {
       font-size: 24px;
     }
+    .video_cover {
+      object-position: 33% center;
+    }
   }
   @include mobile(657) {
     h2 {
