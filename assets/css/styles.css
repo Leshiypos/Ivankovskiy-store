@@ -920,6 +920,9 @@ section {
 @media screen and (max-width: 1450px) {
   .news_section h3 {
     font-size: 20px; } }
+@media screen and (max-width: 560px) {
+  .news_section .description_new {
+    line-height: 1.2; } }
 
 .subscribe_section {
   margin-top: 120px; }
