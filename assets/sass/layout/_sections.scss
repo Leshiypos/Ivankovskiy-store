@@ -183,8 +183,9 @@ section {
     letter-spacing: -3px;
     &.medium_fs {
       font-size: 110px;
+      @include fluid-font(60, 110);
       @include tablet {
-        font-size: 80px;
+        font-size: 60px;
       }
       @include mobile {
         font-size: 42px;
@@ -201,8 +202,9 @@ section {
     font-weight: 300;
     &.medium_fs {
       font-size: 30px;
+      @include fluid-font(20, 30);
       @include tablet {
-        font-size: 24px;
+        font-size: 20px;
       }
       @include mobile {
         font-size: 16px;
@@ -227,6 +229,11 @@ section {
       font-size: 24px;
     }
   }
+  @include mobile(657) {
+    h2 {
+      font-size: 68px;
+    }
+  }
   @include mobile {
     margin-top: 66px;
     &.low_height > .wrap {
@@ -245,8 +252,10 @@ section {
     .description {
       font-size: 20px;
     }
+  }
+  @include mobile(417) {
     h2 {
-      font-size: 68px;
+      font-size: 50px;
     }
   }
 }

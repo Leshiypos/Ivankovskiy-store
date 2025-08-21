@@ -739,7 +739,7 @@ section {
     .stripe_section article.cart .description_wrap .price_prod {
       font-size: 18px;
       font-weight: 500; }
-  @media screen and (max-width: 530px) {
+  @media screen and (max-width: 560px) {
     .stripe_section {
       margin-bottom: 45px; } }
 
@@ -806,31 +806,33 @@ section {
   .baner_section h2 {
     margin: 0;
     font-size: 200px;
-    font-size: clamp(80px, calc( 80px + (200 - 80) * ((100vw - 1000px) / (1500 - 1000)) ), 200px);
+    font-size: clamp(80px, calc( 80px + (200 - 80) * ((100vw - 1000px) / (1600 - 1000)) ), 200px);
     margin-bottom: -5px;
     vertical-align: bottom;
     text-transform: none;
     letter-spacing: -3px; }
     .baner_section h2.medium_fs {
-      font-size: 110px; }
+      font-size: 110px;
+      font-size: clamp(60px, calc( 60px + (110 - 60) * ((100vw - 1000px) / (1600 - 1000)) ), 110px); }
       @media screen and (max-width: 1000px) {
         .baner_section h2.medium_fs {
-          font-size: 80px; } }
-      @media screen and (max-width: 530px) {
+          font-size: 60px; } }
+      @media screen and (max-width: 560px) {
         .baner_section h2.medium_fs {
           font-size: 42px;
           margin-bottom: 24px; } }
   .baner_section .description {
     font-size: 60px;
-    font-size: clamp(24px, calc( 24px + (60 - 24) * ((100vw - 1000px) / (1500 - 1000)) ), 60px);
+    font-size: clamp(24px, calc( 24px + (60 - 24) * ((100vw - 1000px) / (1600 - 1000)) ), 60px);
     font-weight: 400;
     font-weight: 300; }
     .baner_section .description.medium_fs {
-      font-size: 30px; }
+      font-size: 30px;
+      font-size: clamp(20px, calc( 20px + (30 - 20) * ((100vw - 1000px) / (1600 - 1000)) ), 30px); }
       @media screen and (max-width: 1000px) {
         .baner_section .description.medium_fs {
-          font-size: 24px; } }
-      @media screen and (max-width: 530px) {
+          font-size: 20px; } }
+      @media screen and (max-width: 560px) {
         .baner_section .description.medium_fs {
           font-size: 16px; } }
   .baner_section.with_padding {
@@ -845,7 +847,10 @@ section {
       font-size: 80px; }
     .baner_section .description {
       font-size: 24px; } }
-  @media screen and (max-width: 530px) {
+  @media screen and (max-width: 657px) {
+    .baner_section h2 {
+      font-size: 68px; } }
+  @media screen and (max-width: 560px) {
     .baner_section {
       margin-top: 66px; }
       .baner_section.low_height > .wrap {
@@ -859,9 +864,10 @@ section {
       .baner_section .description_wrap {
         gap: 5px; }
       .baner_section .description {
-        font-size: 20px; }
-      .baner_section h2 {
-        font-size: 68px; } }
+        font-size: 20px; } }
+  @media screen and (max-width: 417px) {
+    .baner_section h2 {
+      font-size: 50px; } }
 
 .news_section .wrap_img {
   position: relative;
@@ -900,7 +906,7 @@ section {
   font-size: 14px;
   color: #4d4d4d;
   line-height: 1.6; }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 560px) {
   .news_section h3 {
     font-size: 20px; }
   .news_section .description_new {
@@ -968,7 +974,7 @@ section {
         width: 100%; }
       .subscribe_section .contact-form-input {
         max-width: 100%; } }
-  @media screen and (max-width: 530px) {
+  @media screen and (max-width: 560px) {
     .subscribe_section {
       margin-bottom: 80px; }
       .subscribe_section h2 {
@@ -1197,7 +1203,7 @@ footer {
       padding: 15px 8px 40px 8px;
       flex-flow: column wrap;
       gap: 66px; } }
-  @media screen and (max-width: 530px) {
+  @media screen and (max-width: 560px) {
     footer .menu {
       gap: 33px;
       flex-flow: column nowrap; }
