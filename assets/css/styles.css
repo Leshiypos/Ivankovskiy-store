@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Carattere&display=swap");
-.stripe_section, .slider_section, .baner_section .header_block {
+.stripe_section, .slider_section, .baner_section .header_block, .product_list {
   padding-left: 19px;
   padding-right: 19px; }
   @media screen and (max-width: 1000px) {
-    .stripe_section, .slider_section, .baner_section .header_block {
+    .stripe_section, .slider_section, .baner_section .header_block, .product_list {
       padding-left: 8px;
       padding-right: 8px; } }
 
@@ -722,7 +722,8 @@ section {
   .stripe_section article.cart .wrap_img {
     background-color: #f3f3f3;
     border-radius: 10px;
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+    overflow: hidden; }
   .stripe_section article.cart img {
     width: 100%;
     object-fit: cover; }
@@ -1702,5 +1703,56 @@ footer {
     margin-right: auto;
     margin-top: 108px;
     margin-bottom: 70px; }
+
+.product_list .wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-flow: row dense;
+  grid-template-areas: ". . . ." ". . promoCartOne promoCartOne" ". . promoCartOne promoCartOne" "promoCartTwo promoCartTwo . ." "promoCartTwo promoCartTwo . ." ". . . ."; }
+.product_list article.cart .wrap_img {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  overflow: hidden; }
+.product_list article.cart img {
+  width: 100%;
+  object-fit: cover; }
+  .product_list article.cart img.promo_img {
+    display: none; }
+.product_list article.cart h2 {
+  text-align: center; }
+.product_list article.cart .description_wrap {
+  width: 60%; }
+  .product_list article.cart .description_wrap .description_prod {
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom: 19px;
+    text-transform: uppercase; }
+  .product_list article.cart .description_wrap .price_prod {
+    font-size: 18px;
+    font-weight: 500; }
+.product_list article.cart.promo_cart {
+  position: relative; }
+  .product_list article.cart.promo_cart a {
+    height: 100%;
+    display: block; }
+  .product_list article.cart.promo_cart.one {
+    grid-area: promoCartOne; }
+  .product_list article.cart.promo_cart.two {
+    grid-area: promoCartTwo; }
+  .product_list article.cart.promo_cart .wrap_img {
+    height: 100%; }
+  .product_list article.cart.promo_cart img {
+    display: none;
+    height: 100%; }
+    .product_list article.cart.promo_cart img.promo_img {
+      display: block; }
+  .product_list article.cart.promo_cart .description_wrap {
+    max-width: 300px;
+    color: white;
+    position: absolute;
+    bottom: 48px;
+    left: 33px; }
 
 /*# sourceMappingURL=styles.css.map */

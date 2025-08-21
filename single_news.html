@@ -24,61 +24,66 @@
   <body>
     <header>
       <div class="top_header">
-        <div>
-          <div class="options_block">
-            <div class="language-dropdown">
-              <button class="dropdownToggle">
-                <img src="./assets/images/icons/en_flag.svg" alt="" />
-                <span id="currentLang">English</span>
-                <img src="./assets/images/icons/arrow_down.svg" alt="" />
-              </button>
-              <ul class="dropdownMenu hidden">
-                <li data-lang="en" class="active">
-                  <a href="#"
-                    ><img src="./assets/images/icons/en_flag.svg" alt="" />
-                    English</a
-                  >
-                </li>
-                <li data-lang="ru">
-                  <a href="./index.html"
-                    ><img src="./assets/images/icons/ru_flag.svg" alt="" />
-                    Русский</a
-                  >
-                </li>
+        <div class="mobile_btns">
+          <button id="berger_btn_open_menu" class="burger_btn">
+            <img src="./assets/images/icons/burger.svg" alt="" />
+          </button>
+        </div>
 
-                <li data-lang="uz">
-                  <a href="#"
-                    ><img
-                      src="./assets/images/icons/es_flag.svg"
-                      alt=""
-                    />Español</a
-                  >
-                </li>
-              </ul>
-            </div>
+        <div class="options_block">
+          <div class="language-dropdown">
+            <button class="dropdownToggle">
+              <img src="./assets/images/icons/en_flag.svg" alt="" />
+              <span id="currentLang">English</span>
+              <img src="./assets/images/icons/arrow_down.svg" alt="" />
+            </button>
+            <ul class="dropdownMenu hidden">
+              <li data-lang="en" class="active">
+                <a href="#"
+                  ><img src="./assets/images/icons/en_flag.svg" alt="" />
+                  English</a
+                >
+              </li>
+              <li data-lang="ru">
+                <a href="./index.html"
+                  ><img src="./assets/images/icons/ru_flag.svg" alt="" />
+                  Русский</a
+                >
+              </li>
 
-            <div class="сurrency-dropdown">
-              <button class="dropdownToggle">
-                <span id="currentСurrency">US DOLLAR (USD)</span>
-                <img src="./assets/images/icons/arrow_down.svg" alt="" />
-              </button>
-              <ul class="dropdownMenu hidden">
-                <li data-cur="usd" class="active">
-                  <a href="#">US DOLLAR (USD)</a>
-                </li>
-                <li data-cur="rub">
-                  <a href="#">Рубли (RUB)</a>
-                </li>
-              </ul>
-            </div>
+              <li data-lang="uz">
+                <a href="#"
+                  ><img
+                    src="./assets/images/icons/es_flag.svg"
+                    alt=""
+                  />Español</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="сurrency-dropdown">
+            <button class="dropdownToggle">
+              <span id="currentСurrency">US DOLLAR (USD)</span>
+              <img src="./assets/images/icons/arrow_down.svg" alt="" />
+            </button>
+            <ul class="dropdownMenu hidden">
+              <li data-cur="usd" class="active">
+                <a href="#">US DOLLAR (USD)</a>
+              </li>
+              <li data-cur="rub">
+                <a href="#">Рубли (RUB)</a>
+              </li>
+            </ul>
           </div>
         </div>
+
         <div>
           <div class="logo"><a href="/">Ivankovskiy</a></div>
         </div>
         <div class="icons_block">
           <ul>
-            <li>
+            <li class="search_btn">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -86,7 +91,7 @@
                   title="search"
               /></a>
             </li>
-            <li>
+            <li class="favorites_btn">
               <a href=""
                 ><img
                   src="./assets/images/icons/favorites.svg"
@@ -94,8 +99,8 @@
                   title="favorites"
               /></a>
             </li>
-            <li>
-              <a href=""
+            <li class="basket_btn">
+              <a href="cart.html"
                 ><img
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
@@ -172,6 +177,189 @@
           <li><a href="#">Design your own</a></li>
           <li><a href="#">Blogs</a></li>
         </ul>
+      </nav>
+
+      <!-- Мобильное меню -->
+      <nav class="mobile_menu">
+        <div class="wrap_menu">
+          <div class="wrap_close">
+            <button id="close_menu_btn" class="close_menu_btn">
+              <img
+                src="./assets/images/icons/close_btn.svg"
+                alt="close_button"
+              />
+            </button>
+          </div>
+          <div class="icons_block">
+            <ul>
+              <li class="search_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/search.svg"
+                    alt="search"
+                    title="search"
+                  />Search</a
+                >
+              </li>
+              <li class="favorites_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/favorites.svg"
+                    alt="favorites"
+                    title="favorites"
+                  />Wishlist</a
+                >
+              </li>
+              <li class="basket_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/basket.svg"
+                    alt="basket"
+                    title="basket"
+                  />My cart</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Пункты меню -->
+          <div class="menu_block">
+            <ul>
+              <li class="parent">
+                <a href="#">Jewelry</a>
+                <div class="dropdawnWrap">
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="parent">
+                <a href="#">Engagement</a>
+                <div class="dropdawnWrap">
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Diamonds</a></li>
+              <li><a href="#">Gemstones</a></li>
+              <li><a href="#">Design your own</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="options_block">
+            <div class="language-dropdown">
+              <button class="dropdownToggle">
+                <img src="./assets/images/icons/en_flag.svg" alt="" />
+                <span id="currentLang">English</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-lang="en" class="active">
+                  <a href="#"
+                    ><img src="./assets/images/icons/en_flag.svg" alt="" />
+                    English</a
+                  >
+                </li>
+                <li data-lang="ru">
+                  <a href="./index.html"
+                    ><img src="./assets/images/icons/ru_flag.svg" alt="" />
+                    Русский</a
+                  >
+                </li>
+
+                <li data-lang="uz">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/icons/es_flag.svg"
+                      alt=""
+                    />Español</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="сurrency-dropdown">
+              <button class="dropdownToggle">
+                <span id="currentСurrency">US DOLLAR (USD)</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-cur="usd" class="active">
+                  <a href="#">US DOLLAR (USD)</a>
+                </li>
+                <li data-cur="rub">
+                  <a href="#">Рубли (RUB)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <main class="single_page single_news">
