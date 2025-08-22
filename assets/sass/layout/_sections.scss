@@ -163,7 +163,13 @@ section {
       font-size: 25px;
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
-
+      @include tablet(1600) {
+        font-size: 22px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
       @include tablet {
         font-size: 20px;
       }
@@ -184,7 +190,7 @@ section {
     letter-spacing: -3px;
     &.medium_fs {
       font-size: 110px;
-      @include fluid-font(60, 110);
+      @include fluid-font(60, 90);
       @include tablet {
         font-size: 60px;
         margin-bottom: 18px;
@@ -198,7 +204,7 @@ section {
   .description {
     // margin-left: 15px;
     font-size: 60px;
-    @include fluid-font(24, 60);
+    @include fluid-font(24, 50);
     // letter-spacing: 97%;
     font-weight: 400;
     font-weight: 300;
@@ -309,11 +315,12 @@ section {
     justify-content: space-between;
     gap: 15px;
     margin-top: 29px;
-    max-width: 466px;
+    max-width: 85%;
     margin-left: 9px;
   }
   h3 {
     font-size: 24px;
+    @include fluid-font(20, 22);
     font-weight: 400;
   }
   .description_new {
@@ -322,14 +329,13 @@ section {
     line-height: 1.6;
     margin-right: 15px;
   }
-  @include tablet(1450) {
-    h3 {
-      font-size: 20px;
-    }
-  }
+
   @include mobile {
     .description_new {
       line-height: 1.2;
+    }
+    .description_wrap {
+      max-width: 100%;
     }
   }
 }
@@ -339,7 +345,7 @@ section {
   margin-top: 120px;
   h2 {
     font-size: 110px;
-    @include fluid-font(42, 110, 768, 1800);
+    @include fluid-font(42, 95, 768, 1900);
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px;
