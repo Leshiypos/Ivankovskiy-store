@@ -913,7 +913,7 @@ section {
   justify-content: space-between;
   gap: 15px;
   margin-top: 29px;
-  max-width: 85%;
+  max-width: 80%;
   margin-left: 9px; }
 .news_section h3 {
   font-size: 24px;
@@ -924,6 +924,9 @@ section {
   color: #4d4d4d;
   line-height: 1.6;
   margin-right: 15px; }
+@media screen and (max-width: 1000px) {
+  .news_section .description_wrap {
+    max-width: 80%; } }
 @media screen and (max-width: 560px) {
   .news_section .description_new {
     line-height: 1.2; }

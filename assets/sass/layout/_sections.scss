@@ -315,7 +315,7 @@ section {
     justify-content: space-between;
     gap: 15px;
     margin-top: 29px;
-    max-width: 85%;
+    max-width: 80%;
     margin-left: 9px;
   }
   h3 {
@@ -328,6 +328,11 @@ section {
     color: rgba(77, 77, 77, 1);
     line-height: 1.6;
     margin-right: 15px;
+  }
+  @include tablet {
+    .description_wrap {
+      max-width: 80%;
+    }
   }
 
   @include mobile {
