@@ -733,7 +733,7 @@ section {
   .stripe_section article.cart h2 {
     text-align: center; }
   .stripe_section article.cart .description_wrap {
-    width: 60%; }
+    width: 70%; }
     .stripe_section article.cart .description_wrap .description_prod {
       font-size: 14px;
       opacity: 0.4;
@@ -744,7 +744,9 @@ section {
       font-weight: 500; }
   @media screen and (max-width: 560px) {
     .stripe_section {
-      margin-bottom: 45px; } }
+      margin-bottom: 45px; }
+      .stripe_section article.cart .description_wrap {
+        width: 100%; } }
 
 .slider_section {
   padding-top: 0;
@@ -883,7 +885,7 @@ section {
         max-width: 270px; } }
   @media screen and (max-width: 417px) {
     .baner_section h2 {
-      font-size: 50px; } }
+      font-size: 60px; } }
 
 .news_section .wrap_img {
   position: relative;
@@ -1213,9 +1215,9 @@ footer {
     footer .menu .sub_menu {
       margin-top: 24px; }
   footer .sub_menu {
-    line-height: 1.6; }
+    line-height: 1.7; }
     footer .sub_menu a {
-      font-size: 14px;
+      font-size: 16px;
       color: #4c4c4c;
       font-weight: 400; }
       footer .sub_menu a:hover {
@@ -1258,7 +1260,8 @@ footer {
           footer .menu > li > a[aria-expanded="true"]::after {
             transform: rotate(-90deg); }
     footer .sub_menu {
-      margin-top: 20px; } }
+      margin-top: 20px;
+      line-height: 2; } }
 
 .single_page .сontact_details {
   border-top: 1px solid #eae4e0;

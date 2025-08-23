@@ -45,9 +45,9 @@ footer {
     }
   }
   .sub_menu {
-    line-height: 1.6;
+    line-height: 1.7;
     a {
-      font-size: 14px;
+      font-size: 16px;
       color: rgba(76, 76, 76, 1);
       font-weight: 400;
       &:hover {
@@ -104,6 +104,7 @@ footer {
     }
     .sub_menu {
       margin-top: 20px;
+      line-height: 2;
     }
   }
 }
