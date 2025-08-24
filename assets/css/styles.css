@@ -733,7 +733,7 @@ section {
   .stripe_section article.cart h2 {
     text-align: center; }
   .stripe_section article.cart .description_wrap {
-    width: 70%; }
+    max-width: 235px; }
     .stripe_section article.cart .description_wrap .description_prod {
       font-size: 14px;
       opacity: 0.4;
@@ -862,7 +862,9 @@ section {
     .baner_section .description {
       font-size: 24px; }
     .baner_section .video_cover {
-      object-position: 31% center; } }
+      object-position: 31% center; }
+      .baner_section .video_cover.position_left {
+        object-position: 53% center; } }
   @media screen and (max-width: 657px) {
     .baner_section h2 {
       font-size: 68px;
@@ -915,7 +917,7 @@ section {
   justify-content: space-between;
   gap: 15px;
   margin-top: 29px;
-  max-width: 80%;
+  max-width: 440px;
   margin-left: 9px; }
 .news_section h3 {
   font-size: 24px;
@@ -926,9 +928,6 @@ section {
   color: #4d4d4d;
   line-height: 1.6;
   margin-right: 15px; }
-@media screen and (max-width: 1000px) {
-  .news_section .description_wrap {
-    max-width: 80%; } }
 @media screen and (max-width: 560px) {
   .news_section .description_new {
     line-height: 1.2; }
@@ -939,7 +938,7 @@ section {
   margin-top: 120px; }
   .subscribe_section h2 {
     font-size: 110px;
-    font-size: clamp(42px, calc( 42px + (95 - 42) * ((100vw - 768px) / (1900 - 768)) ), 95px);
+    font-size: clamp(60px, calc( 60px + (95 - 60) * ((100vw - 768px) / (1900 - 768)) ), 95px);
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px; }
@@ -997,9 +996,10 @@ section {
         width: 100%; }
       .subscribe_section .contact-form-input {
         max-width: 100%; } }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 769px) {
     .subscribe_section h2 {
-      max-width: 600px; } }
+      max-width: 600px;
+      fz: 60px; } }
   @media screen and (max-width: 560px) {
     .subscribe_section {
       margin-bottom: 80px; }
