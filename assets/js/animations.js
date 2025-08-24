@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2, // задержка 1 сек между карточками
       scrollTrigger: {
         trigger: triger,
-        start: "top 90%",
+        start: "top 70%",
         once: true,
         markers: false,
       },
