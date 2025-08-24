@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   //   Анимация логотипа
-  gsap.from(".logo", { y: 30, opacity: 0, duration: 0.8, delay: 0.3 });
+  gsap.from(".logo", { y: 30, opacity: 0, duration: 1, delay: 0.3 });
 
   //   Функция анимации слайдера
   function animateStripeOnce(section) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2, // задержка 1 сек между карточками
       scrollTrigger: {
         trigger: triger,
-        start: "top 70%",
+        start: "top 90%",
         once: true,
         markers: false,
       },
@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     newsSection.forEach(animateStripeOnce);
   }
 
-  //   Анимация банера
-  function banerAnimation(selector) {
+  //   Анимация
+  function fadeInAnimation(selector) {
     const banerSections = document.querySelectorAll(selector);
     if (banerSections) {
       banerSections.forEach((section) => {
         gsap.from(section, {
           opacity: 0,
           y: 24,
-          duration: 0.6,
+          duration: 1,
           //   delay: 1,
 
           scrollTrigger: {
@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  banerAnimation(".baner_section");
-  banerAnimation(".video_baner");
+  //   fadeInAnimation(".baner_section");
+  //   fadeInAnimation(".video_baner");
+  //   fadeInAnimation(".subscribe_section");
+  fadeInAnimation(".fade_in");
 });
