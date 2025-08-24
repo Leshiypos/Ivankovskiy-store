@@ -65,4 +65,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   banerAnimation(".baner_section");
+  banerAnimation(".video_baner");
 });
