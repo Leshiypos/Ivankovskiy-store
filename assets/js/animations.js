@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: section,
             start: "top 90%",
             once: true,
-            markers: true,
+            markers: false,
           },
         });
       });
