@@ -868,7 +868,9 @@ section {
   @media screen and (max-width: 657px) {
     .baner_section h2 {
       font-size: 68px;
-      letter-spacing: -3px; } }
+      letter-spacing: -3px; }
+    .baner_section .video_cover.position_left {
+      object-position: 36% center; } }
   @media screen and (max-width: 560px) {
     .baner_section {
       margin-top: 66px; }
