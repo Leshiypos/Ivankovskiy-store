@@ -994,7 +994,7 @@ section {
     .subscribe_section .btn_more img {
       width: 40px;
       height: 40px; }
-  @media screen and (min-width: 1001px) and (max-width: 1500px) {
+  @media screen and (min-width: 1001px) and (max-width: 1600px) {
     .subscribe_section .contact-form-input {
       font-size: 20px;
       width: 70%; }

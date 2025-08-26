@@ -413,7 +413,7 @@ section {
       height: 40px;
     }
   }
-  @include tablet-range(1001, 1500) {
+  @include tablet-range(1001, 1600) {
     .contact-form-input {
       font-size: 20px;
       width: 70%;
