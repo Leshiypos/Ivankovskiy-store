@@ -1,8 +1,15 @@
 header {
+  a {
+    font-family: "HelveticaNeueCyr", Arial, sans-serif;
+  }
   position: relative;
   padding: 30px 30px;
   .logo {
     margin: 0 auto;
+    a {
+      @include fluid-font(40, 60);
+      font-family: "Carattere", cursive;
+    }
   }
   .mobile_btns {
     display: none;
@@ -19,6 +26,11 @@ header {
     gap: 22px;
     margin-right: auto;
     font-size: 14px;
+    button {
+      &.dropdownToggle {
+        font-weight: 500;
+      }
+    }
   }
 
   .language-dropdown,
@@ -138,7 +150,7 @@ header {
       position: relative;
     }
     & > li > a {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 
@@ -328,6 +340,11 @@ header {
     justify-content: space-between;
     padding-top: 25px;
     border-top: 1px solid rgba(190, 190, 190, 1);
+    button {
+      &.dropdownToggle {
+        font-weight: 500;
+      }
+    }
     .dropdownMenu {
       background-color: rgb(255, 255, 255);
       padding: 5px;

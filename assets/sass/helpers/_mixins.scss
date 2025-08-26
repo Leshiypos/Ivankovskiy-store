@@ -24,8 +24,8 @@
   }
 }
 
-@mixin tablet-range($min: $screen-small, $max: $screen-medium) {
-  @media screen and (min-width: (#{$min}px + 1px)) and (max-width: #{$max}px) {
+@mixin tablet-range($min: $screen-medium, $max: $screen-larger) {
+  @media screen and (min-width: (#{$min}px)) and (max-width: #{$max}px) {
     @content;
   }
 }

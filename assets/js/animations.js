@@ -26,21 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //   Анимация секциии ряда
-  let stripeSections = document.querySelectorAll(".stripe_section");
-  if (stripeSections) {
-    stripeSections.forEach(animateStripeOnce);
-  }
-  //   Анимация секциии Слайдера
-  let sliderSection = document.querySelectorAll(".slider_section");
-  if (sliderSection) {
-    sliderSection.forEach(animateStripeOnce);
-  }
-  //   Анимация секциии Новости
-  let newsSection = document.querySelectorAll(".news_section");
-  if (newsSection) {
-    newsSection.forEach(animateStripeOnce);
-  }
+  //   //   Анимация секциии ряда
+  //   let stripeSections = document.querySelectorAll(".stripe_section");
+  //   if (stripeSections) {
+  //     stripeSections.forEach(animateStripeOnce);
+  //   }
+  //   //   Анимация секциии Слайдера
+  //   let sliderSection = document.querySelectorAll(".slider_section");
+  //   if (sliderSection) {
+  //     sliderSection.forEach(animateStripeOnce);
+  //   }
+  //   //   Анимация секциии Новости
+  //   let newsSection = document.querySelectorAll(".news_section");
+  //   if (newsSection) {
+  //     newsSection.forEach(animateStripeOnce);
+  //   }
 
   //   Анимация
   function fadeInAnimation(selector) {

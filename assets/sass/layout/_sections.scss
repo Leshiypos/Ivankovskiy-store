@@ -175,8 +175,12 @@ section {
           height: 30px;
         }
       }
-      @include tablet {
+      @include tablet(1400) {
         font-size: 20px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
@@ -358,7 +362,7 @@ section {
   margin-top: 120px;
   h2 {
     font-size: 110px;
-    @include fluid-font(60, 95, 768, 1900);
+    @include fluid-font(55, 100, 1000, 1900);
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px;
@@ -409,9 +413,25 @@ section {
       height: 40px;
     }
   }
+  @include tablet-range(1001, 1500) {
+    .contact-form-input {
+      font-size: 20px;
+      width: 70%;
+    }
+    .btn_more {
+      font-size: 20px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
   @include tablet {
     margin-bottom: 170px;
-
+    h2 {
+      max-width: 600px;
+      font-size: 60px;
+    }
     .label-wrap {
       flex-flow: column nowrap;
       align-items: flex-start;
@@ -432,10 +452,6 @@ section {
     }
   }
   @include tablet(769) {
-    h2 {
-      max-width: 600px;
-      fz: 60px;
-    }
   }
   @include mobile {
     margin-bottom: 80px;

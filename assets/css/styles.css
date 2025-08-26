@@ -428,8 +428,13 @@ h1 {
 header {
   position: relative;
   padding: 30px 30px; }
+  header a {
+    font-family: "HelveticaNeueCyr", Arial, sans-serif; }
   header .logo {
     margin: 0 auto; }
+    header .logo a {
+      font-size: clamp(40px, calc( 40px + (60 - 40) * ((100vw - 1000px) / (1900 - 1000)) ), 60px);
+      font-family: "Carattere", cursive; }
   header .mobile_btns {
     display: none; }
     @media screen and (max-width: 1000px) {
@@ -443,6 +448,8 @@ header {
     gap: 22px;
     margin-right: auto;
     font-size: 14px; }
+    header .options_block button.dropdownToggle {
+      font-weight: 500; }
   header .language-dropdown,
   header .сurrency-dropdown {
     position: relative; }
@@ -530,7 +537,7 @@ header {
     .main_menu > ul > li {
       position: relative; }
     .main_menu > ul > li > a {
-      font-weight: 600; }
+      font-weight: 500; }
   .main_menu a {
     font-size: 14px;
     text-transform: uppercase; }
@@ -680,6 +687,8 @@ header {
     justify-content: space-between;
     padding-top: 25px;
     border-top: 1px solid #bebebe; }
+    .mobile_menu .options_block button.dropdownToggle {
+      font-weight: 500; }
     .mobile_menu .options_block .dropdownMenu {
       background-color: white;
       padding: 5px;
@@ -808,9 +817,12 @@ section {
           .baner_section .header_block .btn_more img {
             width: 30px;
             height: 30px; } }
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1400px) {
         .baner_section .header_block .btn_more {
-          font-size: 20px; } }
+          font-size: 20px; }
+          .baner_section .header_block .btn_more img {
+            width: 24px;
+            height: 24px; } }
   .baner_section .description_wrap {
     display: flex;
     flex-direction: column;
@@ -940,7 +952,7 @@ section {
   margin-top: 120px; }
   .subscribe_section h2 {
     font-size: 110px;
-    font-size: clamp(60px, calc( 60px + (95 - 60) * ((100vw - 768px) / (1900 - 768)) ), 95px);
+    font-size: clamp(55px, calc( 55px + (100 - 55) * ((100vw - 1000px) / (1900 - 1000)) ), 100px);
     text-transform: none;
     line-height: 80%;
     margin-bottom: 110px; }
@@ -982,9 +994,21 @@ section {
     .subscribe_section .btn_more img {
       width: 40px;
       height: 40px; }
+  @media screen and (min-width: 1001px) and (max-width: 1500px) {
+    .subscribe_section .contact-form-input {
+      font-size: 20px;
+      width: 70%; }
+    .subscribe_section .btn_more {
+      font-size: 20px; }
+      .subscribe_section .btn_more img {
+        width: 24px;
+        height: 24px; } }
   @media screen and (max-width: 1000px) {
     .subscribe_section {
       margin-bottom: 170px; }
+      .subscribe_section h2 {
+        max-width: 600px;
+        font-size: 60px; }
       .subscribe_section .label-wrap {
         flex-flow: column nowrap;
         align-items: flex-start;
@@ -998,10 +1022,6 @@ section {
         width: 100%; }
       .subscribe_section .contact-form-input {
         max-width: 100%; } }
-  @media screen and (max-width: 769px) {
-    .subscribe_section h2 {
-      max-width: 600px;
-      fz: 60px; } }
   @media screen and (max-width: 560px) {
     .subscribe_section {
       margin-bottom: 80px; }
@@ -1213,12 +1233,14 @@ footer {
       font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
-      white-space: nowrap; }
+      white-space: nowrap;
+      font-family: "HelveticaNeueCyr", Arial, sans-serif; }
     footer .menu .sub_menu {
       margin-top: 24px; }
   footer .sub_menu {
     line-height: 1.7; }
     footer .sub_menu a {
+      font-family: "HelveticaNeueCyr", Arial, sans-serif;
       font-size: 16px;
       color: #4c4c4c;
       font-weight: 400; }
