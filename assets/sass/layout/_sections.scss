@@ -18,6 +18,12 @@ section {
     align-items: center;
     margin-bottom: 28px;
   }
+  @include tablet-range(1441, 1600) {
+    margin-bottom: 60px;
+  }
+  @include tablet-range(1000, 1440) {
+    margin-bottom: 45px;
+  }
 }
 
 // Секция ВидеоБанер
@@ -80,6 +86,73 @@ section {
       }
     }
   }
+  @include tablet-range(1601, 1900) {
+    article.cart {
+      .wrap_img {
+        margin-bottom: 23px;
+      }
+      .description_wrap {
+        .description_prod {
+          font-size: 12px;
+          margin-bottom: 16px;
+        }
+        .price_prod {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @include tablet-range(1440, 1600) {
+    h2,
+    .btn_more {
+      font-size: 14px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    article.cart {
+      .wrap_img {
+        margin-bottom: 23px;
+      }
+      .description_wrap {
+        .description_prod {
+          font-size: 12px;
+          margin-bottom: 16px;
+        }
+        .price_prod {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @include tablet-range(1000, 1439) {
+    h2,
+    .btn_more {
+      font-size: 12px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    article.cart {
+      .wrap_img {
+        margin-bottom: 23px;
+      }
+      .description_wrap {
+        .description_prod {
+          font-size: 10px;
+          margin-bottom: 14px;
+        }
+        .price_prod {
+          font-size: 14px;
+        }
+      }
+    }
+    .header_block {
+      margin-bottom: 20px;
+    }
+  }
   @include mobile {
     margin-bottom: 45px;
     article.cart {
@@ -122,6 +195,35 @@ section {
       height: 100%;
       max-height: 432px;
       object-fit: cover;
+    }
+  }
+  @include tablet-range(1440, 1600) {
+    h2,
+    .btn_more {
+      font-size: 14px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .img_slider {
+      height: 350px;
+    }
+  }
+  @include tablet-range(1000, 1439) {
+    h2,
+    .btn_more {
+      font-size: 12px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .img_slider {
+      height: 300px;
+    }
+    .header_block {
+      margin-bottom: 20px;
     }
   }
 }
@@ -168,20 +270,6 @@ section {
       font-size: 25px;
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
-      @include tablet(1600) {
-        font-size: 22px;
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-      @include tablet(1400) {
-        font-size: 20px;
-        img {
-          width: 24px;
-          height: 24px;
-        }
-      }
     }
   }
   .description_wrap {
@@ -198,6 +286,7 @@ section {
     text-transform: none;
     letter-spacing: -3px;
     &.medium_fs {
+      margin-bottom: 60px;
       font-size: 110px;
       @include fluid-font(60, 90);
       @include tablet {
@@ -232,6 +321,64 @@ section {
   &.with_padding {
     padding-left: 19px;
     padding-right: 19px;
+  }
+  @include tablet-range(1601, 1900) {
+    h2.medium_fs {
+      margin-bottom: 30px;
+    }
+    .header_block {
+      bottom: 70px;
+      .btn_more {
+        font-size: 21px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+  @include tablet-range(1441, 1600) {
+    h2.medium_fs {
+      margin-bottom: 28px;
+    }
+    .header_block {
+      bottom: 65px;
+      .btn_more {
+        font-size: 21px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  @include tablet-range(1000, 1440) {
+    h2.medium_fs {
+      margin-bottom: 26px;
+    }
+    .header_block {
+      bottom: 60px;
+      .btn_more {
+        font-size: 18px;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+  @include tablet-range(1000, 1200) {
+    .header_block {
+      bottom: 45px;
+      .btn_more {
+        font-size: 16px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
   }
   @include tablet {
     .wrap {
@@ -337,7 +484,6 @@ section {
   }
   h3 {
     font-size: 24px;
-    @include fluid-font(20, 22);
     font-weight: 400;
   }
   .description_new {
@@ -345,6 +491,69 @@ section {
     color: rgba(77, 77, 77, 1);
     line-height: 1.6;
     margin-right: 15px;
+  }
+  @include tablet-range(1601, 1900) {
+    h3 {
+      font-size: 22px;
+    }
+    .description_wrap {
+      margin-top: 24px;
+    }
+  }
+  @include tablet-range(1440, 1600) {
+    h2,
+    .btn_more {
+      font-size: 14px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .header_block {
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    .description_wrap {
+      margin-top: 22px;
+    }
+  }
+
+  @include tablet-range(1000, 1439) {
+    h2,
+    .btn_more {
+      font-size: 12px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .header_block {
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .description_wrap {
+      margin-top: 20px;
+      gap: 12px;
+    }
+    .description_new {
+      font-size: 12px;
+    }
+  }
+  @include tablet-range(1000, 1200) {
+    .description_wrap {
+      margin-top: 18px;
+      gap: 8px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    .description_new {
+      font-size: 10px;
+    }
   }
 
   @include mobile {
@@ -413,7 +622,10 @@ section {
       height: 40px;
     }
   }
-  @include tablet-range(1001, 1600) {
+  @include tablet-range(1441, 1600) {
+    h2 {
+      margin-bottom: 100px;
+    }
     .contact-form-input {
       font-size: 20px;
       width: 70%;
@@ -423,6 +635,39 @@ section {
       img {
         width: 24px;
         height: 24px;
+      }
+    }
+  }
+  @include tablet-range(1201, 1440) {
+    h2 {
+      margin-bottom: 95px;
+    }
+    .contact-form-input {
+      font-size: 18px;
+      width: 60%;
+    }
+    .btn_more {
+      font-size: 18px;
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  @include tablet-range(1000, 1200) {
+    margin-top: 95px;
+    h2 {
+      margin-bottom: 70px;
+    }
+    .contact-form-input {
+      font-size: 16px;
+      width: 60%;
+    }
+    .btn_more {
+      font-size: 16px;
+      img {
+        width: 20px;
+        height: 20px;
       }
     }
   }

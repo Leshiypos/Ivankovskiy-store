@@ -37,12 +37,18 @@ footer {
       text-transform: uppercase;
       white-space: nowrap;
       font-family: "HelveticaNeueCyr", Arial, sans-serif;
+      @include tablet-range(1000, 1440) {
+        font-size: 14px;
+      }
     }
     .sub_menu {
       margin-top: 24px;
     }
-    @include tablet(1000) {
-      //   flex-flow: column nowrap;
+
+    @include tablet-range(1000, 1440) {
+      .sub_menu {
+        margin-top: 20px;
+      }
     }
   }
   .sub_menu {
@@ -55,6 +61,9 @@ footer {
       &:hover {
         color: rgb(0, 0, 0);
         text-decoration: underline;
+      }
+      @include tablet-range(1000, 1440) {
+        font-size: 14px;
       }
     }
   }
