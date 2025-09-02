@@ -759,12 +759,17 @@ section {
     width: 100%;
     overflow: hidden; }
   .stripe_section article.cart .wrap_img {
+    display: flex;
+    align-items: center;
     background-color: #f3f3f3;
     border-radius: 10px;
     margin-bottom: 35px;
-    overflow: hidden; }
-  .stripe_section article.cart img {
+    overflow: hidden;
+    aspect-ratio: 4 / 5; }
+  .stripe_section article.cart img,
+  .stripe_section article.cart model-viewer {
     width: 100%;
+    height: 100%;
     object-fit: cover; }
   .stripe_section article.cart h2 {
     text-align: center; }

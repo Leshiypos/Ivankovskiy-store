@@ -484,4 +484,11 @@ document.addEventListener("DOMContentLoaded", () => {
     panel.addEventListener("transitionend", done);
   }
   //   Конец Мобильного меню футера
+
+  // 3D визуализация
+  // Слайдеры картинок
+  document.querySelectorAll("model-viewer").forEach((mv) => {
+    mv.addEventListener("mouseenter", () => mv.dismissPoster());
+    mv.addEventListener("mouseleave", () => mv.showPoster());
+  });
 });
