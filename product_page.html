@@ -9,6 +9,10 @@
     <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/sliders.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <title>Ivankovskiy</title>
   </head>
   <body>
@@ -366,13 +370,25 @@
               <div class="flex-viewport">
                 <div class="woocommerce-product-gallery__wrapper">
                   <div class="woocommerce-product-gallery__image">
-                    <a href="#"
-                      ><img
+                    <!-- <img
                         width="600"
                         height="748"
                         src="./assets/images/img_product_single.png"
-                        class="wp-post-image"
-                    /></a>
+                        class="wp-post-image" /> -->
+
+                    <model-viewer
+                      src="./assets/3D/pear.glb"
+                      alt="Дракон-кольцо"
+                      poster="./assets/images/img_product_single.png"
+                      reveal="manual"
+                      auto-rotate
+                      shadow-intensity="1"
+                      animation-loop
+                      camera-controls
+                      camera-orbit="0deg 75deg 1000m"
+                      class="3dmodel"
+                    >
+                    </model-viewer>
                   </div>
                 </div>
                 <img

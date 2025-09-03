@@ -22,6 +22,7 @@
       flex: 3;
       border-radius: $radiusMidiPc;
       overflow: hidden;
+      aspect-ratio: 4/5;
       img {
         &.wp-post-image {
           width: 100% !important;
@@ -36,6 +37,14 @@
           width: 19px;
           cursor: pointer;
         }
+      }
+      .woocommerce-product-gallery__image {
+        display: block;
+        aspect-ratio: 4/5;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100%;
       }
     }
     .flex-control-nav {

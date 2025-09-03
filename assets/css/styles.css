@@ -1694,7 +1694,8 @@ footer {
       order: 2;
       flex: 3;
       border-radius: 12px;
-      overflow: hidden; }
+      overflow: hidden;
+      aspect-ratio: 4/5; }
       .product_page_section .woocommerce-product-gallery .flex-viewport img.wp-post-image {
         width: 100% !important;
         height: 100% !important; }
@@ -1706,6 +1707,12 @@ footer {
         height: 19px;
         width: 19px;
         cursor: pointer; }
+      .product_page_section .woocommerce-product-gallery .flex-viewport .woocommerce-product-gallery__image {
+        display: block;
+        aspect-ratio: 4/5; }
+      .product_page_section .woocommerce-product-gallery .flex-viewport model-viewer {
+        width: 100%;
+        height: 100%; }
     .product_page_section .woocommerce-product-gallery .flex-control-nav {
       display: flex;
       flex-flow: column nowrap;
