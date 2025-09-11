@@ -401,11 +401,14 @@
                         src="./assets/3D/Dragon_Ring_50.glb"
                         alt="Дракон-кольцо"
                         poster="./assets/images/cat_1.png"
-                        reveal="manual"
+                        environment-image="./assets/3D/HDR8-studowhite.hdr"
+                        skybox-image="./assets/3D/HDR8-studowhite.hdr"
+                        reveal="auto"
                         auto-rotate
                         shadow-intensity="1"
                         animation-loop
-                        camera-orbit="0deg 75deg 1000m"
+                        camera-orbit="75deg 75deg 140%"
+                        max-camera-orbit="auto auto 500%"
                       >
                       </model-viewer>
                     </div>
@@ -418,16 +421,17 @@
                     <div class="wrap_img">
                       <!-- <img src="./assets/images/cat_2.png" alt="categoru_1" /> -->
                       <model-viewer
+                        poster="./assets/images/cat_1.png"
                         src="./assets/3D/Dragon_Ring_next.glb"
                         modelCacheSize="5"
-                        environment-image="./assets/3D/HDR8-studowhite.hdr"
-                        skybox-image="./assets/3D/HDR8-studowhite.hdr"
+                        environment-image="./assets/3D/DH-329LL.hdr"
                         alt="Дракон-кольцо"
                         reveal="auto"
                         auto-rotate
-                        shadow-intensity="1"
+                        shadow-intensity=".3"
+                        exposure="2"
                         animation-loop
-                        camera-orbit="75deg 75deg 130%"
+                        camera-orbit="75deg 65deg 160%"
                         max-camera-orbit="auto auto 500%"
                       >
                       </model-viewer>
