@@ -487,13 +487,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 3D визуализация
   // Слайдеры картинок
-  const models = document.querySelectorAll("model-viewer");
-  if (models) {
-    models.forEach((mv) => {
-      if (!mv.classList.contains("product_page")) {
-        mv.addEventListener("mouseenter", () => mv.dismissPoster());
-        mv.addEventListener("mouseleave", () => mv.showPoster());
-      }
-    });
-  }
+  //   const models = document.querySelectorAll("model-viewer");
+  //   if (models) {
+  //     models.forEach((mv) => {
+  //       if (!mv.classList.contains("product_page")) {
+  //         mv.addEventListener("mouseenter", () => mv.dismissPoster());
+  //         mv.addEventListener("mouseleave", () => mv.showPoster());
+  //       }
+  //     });
+  //   }
 });
