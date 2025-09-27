@@ -396,10 +396,10 @@
                       class="cloudimage-360"
                       id="gurkha-suv"
                       data-folder="./ring/"
-                      data-filename-x="frame_{index}.jpg"
+                      data-filename-x="frame_{index}.webp"
                       data-amount-x="72"
                       data-lazyload
-                      data-lazyload-selector="lazy"
+                      data-lazyload-selector="lozad"
                     ></div>
                   </div>
                 </div>
@@ -844,9 +844,10 @@
     </footer>
     <!-- 3D визуализация -->
     <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js?func=proxy"></script>
-    <script src="https://cdn.scaleflex.it/filerobot/js-cloudimage-responsive/yall.min.js?v3.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js?v1.9.0"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", yall);
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
     </script>
   </body>
 </html>
