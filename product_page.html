@@ -391,16 +391,43 @@
                     >
                     </model-viewer> -->
 
+                    <!-- Обёртка 360 -->
                     <div
-                      <div
-                      class="cloudimage-360"
-                      id="gurkha-suv"
-                      data-folder="./ringtwo/"
-                      data-filename-x="frame_{index}.webp"
-                      data-amount-x="36"
-                      data-lazyload
-                      data-lazyload-selector="lozad"
-                    ></div>
+                      id="ring360-wrap"
+                      class="spin360"
+                      data-inited="false"
+                      style="position: relative; max-width: 600px; margin: auto"
+                    >
+                      <!-- Постер (первый кадр) -->
+                      <img
+                        src="./assets/3D/ring/frame_001.jpg"
+                        alt="360 preview"
+                        width="600"
+                        height="600"
+                        loading="lazy"
+                        style="
+                          display: block;
+                          width: 100%;
+                          height: auto;
+                          border: 0;
+                        "
+                      />
+
+                      <!-- Кнопка запуска -->
+                      <button
+                        class="spin360-start"
+                        style="
+                          position: absolute;
+                          inset: auto 16px 16px auto;
+                          padding: 10px 14px;
+                          border: 0;
+                          border-radius: 8px;
+                          cursor: pointer;
+                        "
+                      >
+                        View 360°
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <img
@@ -843,11 +870,60 @@
       </div>
     </footer>
     <!-- 3D визуализация -->
-    <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js?func=proxy"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js?v1.9.0"></script>
     <script>
-      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-      observer.observe();
+      // Подключаем скрипт Cloudimage 360 только при необходимости
+      function loadCI360(cb) {
+        if (window.CI360) return cb();
+        const s = document.createElement("script");
+        s.src =
+          "https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js";
+        s.onload = cb;
+        document.head.appendChild(s);
+      }
+
+      // Монтируем 360 внутрь обёртки
+      function mount360(wrapper) {
+        if (!wrapper || wrapper.dataset.inited === "true") return;
+        wrapper.dataset.inited = "true";
+        wrapper.innerHTML = `
+      <div class="cloudimage-360"
+           data-folder="./ring/"
+           data-filename="frame_{index}.webp"
+           data-amount="72"
+           
+           data-drag-speed="150"
+           data-speed="150"
+           style="max-width:600px;margin:auto;user-select:none"></div>
+    `;
+        loadCI360(() => {
+          if (window.CI360 && CI360.init) CI360.init();
+        });
+      }
+
+      // 1) Запуск по клику
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest(".spin360-start");
+        if (!btn) return;
+        e.preventDefault();
+        mount360(document.getElementById("ring360-wrap"));
+      });
+
+      // 2) Автозапуск при появлении во вьюпорте (ленивая инициализация)
+      const target = document.getElementById("ring360-wrap");
+      if ("IntersectionObserver" in window && target) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                mount360(entry.target);
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "200px" }
+        ); // начнёт за ~200px до видимости
+        io.observe(target);
+      }
     </script>
   </body>
 </html>
