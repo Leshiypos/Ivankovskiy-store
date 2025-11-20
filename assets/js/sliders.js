@@ -3,15 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (sliders_stripe) {
     sliders_stripe.forEach((slider) => {
+      const conunSlideMibile = slider.dataset.countSlideMobile ?? 2;
       new Swiper(slider, {
         speed: 400,
-        slidesPerView: 2,
+        slidesPerView: conunSlideMibile,
         spaceBetween: 10,
         breakpoints: {
           430: {
-            slidesPerView: 2,
+            slidesPerView: conunSlideMibile,
           },
-          730: { slidesPerView: 2 },
+          730: { slidesPerView: conunSlideMibile },
           1000: {
             slidesPerView: 5,
           },

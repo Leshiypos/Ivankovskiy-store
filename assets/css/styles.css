@@ -16,6 +16,10 @@
       margin-left: 8px;
       margin-right: 8px; } }
 
+.video_baner .header_block h1 {
+  font-size: 100px;
+  font-size: clamp(50px, calc( 50px + (100 - 50) * ((100vw - 1000px) / (1900 - 1000)) ), 100px); }
+
 * {
   box-sizing: border-box; }
 
@@ -166,6 +170,9 @@ a {
     .btn_more img {
       width: 24px;
       height: 24px; } }
+  @media screen and (max-width: 1000px) {
+    .btn_more .desktop {
+      display: none; } }
 
 .btn_read_card {
   display: flex;
@@ -741,16 +748,93 @@ section {
     section {
       margin-bottom: 45px; } }
 
-.video_baner .wrap {
+.video_baner {
   overflow: hidden; }
-  .video_baner .wrap img {
-    width: 100%;
-    object-fit: cover; }
-@media screen and (max-width: 1000px) {
   .video_baner .wrap {
-    height: 90vh; }
-    .video_baner .wrap img {
-      height: 100%; } }
+    position: relative;
+    overflow: hidden; }
+    .video_baner .wrap img.video_cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+      .video_baner .wrap img.video_cover.mobile {
+        display: none; }
+  .video_baner .header_block {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    gap: 75px;
+    right: 0;
+    bottom: 0;
+    padding: 22px;
+    padding-bottom: 69px;
+    margin-bottom: 0; }
+    .video_baner .header_block .description_wrap {
+      max-width: 60%; }
+    .video_baner .header_block h1 {
+      font-weight: 400;
+      line-height: 77%;
+      letter-spacing: -0.03em;
+      text-align: right;
+      color: #fff; }
+    .video_baner .header_block .btn_more {
+      font-size: 25px;
+      margin-bottom: 0px;
+      color: white; }
+  @media screen and (min-width: 1601px) and (max-width: 1900px) {
+    .video_baner .header_block .btn_more {
+      font-size: 21px; }
+      .video_baner .header_block .btn_more img {
+        width: 32px;
+        height: 32px; } }
+  @media screen and (min-width: 1441px) and (max-width: 1600px) {
+    .video_baner .header_block {
+      gap: 65px;
+      padding-bottom: 45px; }
+      .video_baner .header_block .btn_more {
+        font-size: 21px; }
+        .video_baner .header_block .btn_more img {
+          width: 32px;
+          height: 32px; } }
+  @media screen and (min-width: 1000px) and (max-width: 1440px) {
+    .video_baner .header_block {
+      gap: 60px;
+      padding-bottom: 35px; }
+      .video_baner .header_block .btn_more {
+        font-size: 18px; }
+        .video_baner .header_block .btn_more img {
+          width: 28px;
+          height: 28px; } }
+  @media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .video_baner .header_block .btn_more {
+      font-size: 16px; }
+      .video_baner .header_block .btn_more img {
+        width: 24px;
+        height: 24px; } }
+  @media screen and (max-width: 1000px) {
+    .video_baner {
+      margin-bottom: 28px; }
+      .video_baner .header_block {
+        gap: 40px;
+        padding-bottom: 19px; }
+        .video_baner .header_block h1 {
+          font-size: 55px; }
+      .video_baner .wrap {
+        height: 480px; }
+        .video_baner .wrap img.video_cover {
+          height: 100%;
+          object-position: left; }
+          .video_baner .wrap img.video_cover.desktop {
+            display: none; }
+          .video_baner .wrap img.video_cover.mobile {
+            display: inline; } }
+  @media screen and (max-width: 780px) {
+    .video_baner .header_block h1 {
+      font-size: 40px; } }
+  @media screen and (max-width: 560px) {
+    .video_baner .header_block {
+      display: none; } }
 
 .stripe_section {
   padding-top: 0;
@@ -892,6 +976,8 @@ section {
       height: 100%; }
   .baner_section .video_cover {
     height: 100%; }
+    .baner_section .video_cover.mobile {
+      display: none; }
   .baner_section .wrap {
     position: relative; }
   .baner_section .header_block {
@@ -987,7 +1073,7 @@ section {
           height: 24px; } }
   @media screen and (max-width: 1000px) {
     .baner_section .wrap {
-      height: 90vh; }
+      height: 780px; }
     .baner_section .header_block {
       bottom: 80px; }
     .baner_section h2 {
@@ -997,7 +1083,15 @@ section {
     .baner_section .video_cover {
       object-position: 31% center; }
       .baner_section .video_cover.position_left {
-        object-position: 53% center; } }
+        object-position: 53% center; }
+      .baner_section .video_cover.position_center {
+        object-position: center center; }
+      .baner_section .video_cover.mobile {
+        display: inline;
+        object-position: center top;
+        height: 100%; }
+      .baner_section .video_cover.desktop {
+        display: none; } }
   @media screen and (max-width: 657px) {
     .baner_section h2 {
       font-size: 68px;

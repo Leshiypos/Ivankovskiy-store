@@ -17,6 +17,11 @@
       height: 24px;
     }
   }
+  .desktop {
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .btn_read_card {
