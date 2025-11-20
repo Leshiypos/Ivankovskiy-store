@@ -4,9 +4,10 @@
   align-items: center;
   width: fit-content;
   gap: 8px;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: normal;
   &:hover {
     opacity: 0.7;
     text-decoration: underline;
@@ -20,6 +21,14 @@
   .desktop {
     @include tablet {
       display: none;
+    }
+  }
+  @include tablet {
+    font-weight: 400;
+    font-size: 16px;
+    img {
+      height: 19px;
+      width: 19px;
     }
   }
 }
@@ -135,5 +144,18 @@ button.sort_but {
   font-size: 14px;
   &:hover {
     opacity: 0.8;
+  }
+}
+
+button {
+  &.menu_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    background: $UiBackgroundColor;
+    border: none;
+    border-radius: 4px;
   }
 }

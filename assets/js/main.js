@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Начало моюильного меню футера
 
   if (window.innerWidth < 561) {
-    footerMobMenu();
+    // footerMobMenu();
   }
   function footerMobMenu() {
     const root = document.querySelector(".footer_menu .menu");

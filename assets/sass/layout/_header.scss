@@ -13,8 +13,13 @@ header {
   }
   .mobile_btns {
     display: none;
+
     @include tablet {
-      display: block;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
     }
   }
   //   Начало Выпадающее меню
@@ -116,8 +121,23 @@ header {
           &:hover {
             background-color: rgba(217, 217, 217, 0.3);
           }
+          img {
+            &.mobile {
+              display: none;
+            }
+          }
           @include tablet {
             background-color: rgba(217, 217, 217, 0.3);
+            width: 27px;
+            height: 27px;
+            img {
+              height: 10px;
+              width: 10px;
+              display: none;
+              &.mobile {
+                display: inline;
+              }
+            }
           }
         }
       }
@@ -130,7 +150,9 @@ header {
     }
     .search_btn {
       @include tablet {
-        display: none;
+        &.desktop {
+          display: none;
+        }
       }
     }
     .favorites_btn {
@@ -147,6 +169,21 @@ header {
   }
   @include tablet-range(1000, 1439) {
     padding: 22px 8px;
+  }
+  @include tablet {
+    padding: 12px 10px;
+    .logo {
+      a {
+        font-size: 35px;
+      }
+    }
+  }
+  @include mobile {
+    .logo {
+      a {
+        font-size: 25px;
+      }
+    }
   }
 }
 

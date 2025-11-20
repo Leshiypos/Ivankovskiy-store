@@ -386,7 +386,6 @@ section {
     margin-bottom: 0;
     gap: 10px;
     .btn_more {
-      font-size: 25px;
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
     }
@@ -413,8 +412,8 @@ section {
         margin-bottom: 18px;
       }
       @include mobile {
-        font-size: 42px;
-        margin-bottom: 24px;
+        font-size: 50px;
+        margin-bottom: 0;
       }
     }
   }
@@ -434,6 +433,7 @@ section {
       @include mobile {
         font-size: 16px;
         margin-bottom: -20px;
+        display: none;
       }
     }
   }
@@ -550,7 +550,7 @@ section {
       flex-flow: column;
       align-items: flex-start;
       justify-content: flex-start;
-      gap: 80px;
+      gap: 32px;
       bottom: 40px;
     }
     .description_wrap {
@@ -559,11 +559,12 @@ section {
     .description {
       font-size: 20px;
       max-width: 270px;
+      display: none;
     }
   }
   @include mobile(417) {
     h2 {
-      font-size: 60px;
+      font-size: 80px;
     }
   }
 }
@@ -831,7 +832,15 @@ section {
   @include mobile {
     margin-bottom: 80px;
     h2 {
-      font-size: 42px;
+      font-weight: 400;
+      font-size: 27px;
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      color: #cecece;
+      margin-bottom: 49px;
+      &::first-line {
+        color: #000;
+      }
     }
     .label-wrap {
       gap: 77px;
