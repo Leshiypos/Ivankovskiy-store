@@ -106,7 +106,15 @@ button.sort_but {
   cursor: pointer;
   padding: 5px;
   font-size: 20px;
+  @include fz_20;
   text-transform: uppercase;
+  @include mobile {
+    font-size: 14px;
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
 
 // Кнопка формы

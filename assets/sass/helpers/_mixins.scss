@@ -51,11 +51,27 @@
   font-size: 100px;
   @include fluid-font(50, 100);
 }
+@mixin fz_110 {
+  font-size: 110px;
+  @include fluid-font(60, 110);
+}
 @mixin fz_55 {
   font-size: 55px;
   @include fluid-font(25, 55);
 }
+@mixin fz_20 {
+  font-size: 20px;
+  @include fluid-font(16, 20);
+}
+@mixin fz_18 {
+  font-size: 18px;
+  @include fluid-font(14, 18);
+}
 @mixin fz_16 {
   font-size: 16px;
   @include fluid-font(10, 16);
+}
+@mixin fz_14 {
+  font-size: 14px;
+  @include fluid-font(10, 14);
 }
