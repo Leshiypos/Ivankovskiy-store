@@ -342,6 +342,9 @@ section {
       margin-bottom: 20px;
     }
   }
+  @include mobile {
+    margin-bottom: 43px;
+  }
 }
 
 // Секция новая коллекция
@@ -543,6 +546,7 @@ section {
   }
   @include mobile {
     margin-top: 66px;
+    margin-bottom: 48px;
     &.low_height > .wrap {
       height: 50vh;
     }
@@ -1178,11 +1182,18 @@ section {
     .cell {
       .descripion {
         max-width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.03em;
+        color: #8e8e8e;
+        max-width: 153px;
       }
       h3 {
         font-weight: 500;
         font-size: 25px;
         line-height: 104%;
+        max-width: 153px;
       }
       &.cell_1 {
         display: none;

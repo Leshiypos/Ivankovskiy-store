@@ -1002,6 +1002,9 @@ section {
       height: 300px; }
     .slider_section .header_block {
       margin-bottom: 20px; } }
+  @media screen and (max-width: 560px) {
+    .slider_section {
+      margin-bottom: 43px; } }
 
 .baner_section {
   color: white; }
@@ -1145,7 +1148,8 @@ section {
       object-position: 36% center; } }
   @media screen and (max-width: 560px) {
     .baner_section {
-      margin-top: 66px; }
+      margin-top: 66px;
+      margin-bottom: 48px; }
       .baner_section.low_height > .wrap {
         height: 50vh; }
       .baner_section .header_block {
@@ -1620,11 +1624,18 @@ section {
         .unique_patented_section .background_img.mobile {
           display: inline; }
       .unique_patented_section .cell .descripion {
-        max-width: 100%; }
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.03em;
+        color: #8e8e8e;
+        max-width: 153px; }
       .unique_patented_section .cell h3 {
         font-weight: 500;
         font-size: 25px;
-        line-height: 104%; }
+        line-height: 104%;
+        max-width: 153px; }
       .unique_patented_section .cell.cell_1 {
         display: none; }
       .unique_patented_section .cell.cell_3 h3 {
