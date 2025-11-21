@@ -46,6 +46,23 @@ window.addEventListener("load", syncHeight);
 window.addEventListener("resize", syncHeight);
 //   КОНЕЦ Изменение высоты картинка в форме на странице Contacts
 
+// Страница Каталог
+function calcHeihgtPromoCard() {
+  const promoCards = document.querySelectorAll(
+    ".product_list article.cart.promo_cart"
+  );
+  const card = document.querySelector(
+    ".product_list article.cart:not(.promo_cart)"
+  );
+  if (!promoCards.length && !card) return;
+
+  const heightStyle = card.querySelector(".description_wrap").offsetHeight;
+  promoCards.forEach((card) => {
+    card.style.height = "";
+    card.style.height = card.offsetHeight - heightStyle + "px";
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   //   Кнопка выпадающего меню Язык в шапке
   dropDownToogle(
@@ -496,4 +513,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //       }
   //     });
   //   }
+
+  //Расчет высоты помо карточки товара на странице товара
+  if (window.innerWidth > 999) {
+    calcHeihgtPromoCard();
+
+    let bFunc; // таймер
+
+    window.addEventListener("resize", () => {
+      clearTimeout(bFunc); // отменить предыдущий таймер
+      bFunc = setTimeout(() => {
+        calcHeihgtPromoCard(); // вызвать после 1 секунды "покоя"
+      }, 1000);
+    });
+  }
 });
