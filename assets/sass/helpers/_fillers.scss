@@ -15,9 +15,3 @@
     margin-right: 8px;
   }
 }
-
-// Размеры шрифтов
-%fz_100 {
-  font-size: 100px;
-  @include fluid-font(50, 100);
-}
