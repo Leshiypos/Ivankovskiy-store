@@ -59,7 +59,9 @@ function calcHeihgtPromoCard() {
   const heightStyle = card.querySelector(".description_wrap").offsetHeight;
   promoCards.forEach((card) => {
     card.style.height = "";
-    card.style.height = card.offsetHeight - heightStyle + "px";
+    if (window.innerWidth > 999) {
+      card.style.height = card.offsetHeight - heightStyle + "px";
+    }
   });
 }
 

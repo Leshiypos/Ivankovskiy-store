@@ -2426,10 +2426,9 @@ footer {
       color: #000; } }
 @media screen and (max-width: 560px) {
   .product_list article.cart .description_wrap {
-    width: 90%; }
+    width: 90%;
+    padding-top: 20px; }
     .product_list article.cart .description_wrap .description_prod {
-      margin-bottom: 13px; }
-  .product_list article.cart .wrap_img {
-    margin-bottom: 20px; } }
+      margin-bottom: 13px; } }
 
 /*# sourceMappingURL=styles.css.map */
