@@ -59,6 +59,14 @@
   font-size: 55px;
   @include fluid-font(25, 55);
 }
+@mixin fz_40 {
+  font-size: 40px;
+  @include fluid-font(18, 40);
+}
+@mixin fz_32 {
+  font-size: 40px;
+  @include fluid-font(18, 32);
+}
 @mixin fz_20 {
   font-size: 20px;
   @include fluid-font(16, 20);

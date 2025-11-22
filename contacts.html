@@ -25,8 +25,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -83,7 +86,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -105,7 +108,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -180,7 +190,7 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu fade_in">
         <div class="wrap_menu">
           <div class="wrap_close">
             <button id="close_menu_btn" class="close_menu_btn">
@@ -362,23 +372,29 @@
         </div>
       </nav>
     </header>
+
     <main>
       <div class="breadcrumbs">
         <a href="index.html">Home</a> /
         <span>Contacts</span>
       </div>
       <!-- Начало секция Банер -->
-      <section class="baner_section with_radius">
+      <section class="baner_section with_radius contacts_page">
         <div class="wrap">
           <img
-            src="./assets/images/contacts_baner.png"
+            src="./assets/images/contacts_baner.webp"
             alt=""
-            class="video_cover"
+            class="video_cover desktop"
+          />
+          <img
+            src="./assets/images/contacts_baner_mob.webp"
+            alt=""
+            class="video_cover mobile"
           />
           <div class="header_block">
             <div class="description_wrap">
               <p class="description">get in touch</p>
-              <h2>contacts</h2>
+              <h2><span>/</span>contacts</h2>
             </div>
           </div>
         </div>
@@ -395,8 +411,8 @@
             />
             <h3>Email</h3>
             <div class="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p>Suspendisse varius enim in ero.</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+              Suspendisse varius enim in ero.
             </div>
             <div class="link">
               <a href="mailto:hello@relume.io">hello@relume.io</a>
@@ -410,8 +426,8 @@
             />
             <h3>Phone</h3>
             <div class="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p>Suspendisse varius enim in ero.</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+              Suspendisse varius enim in ero.
             </div>
             <div class="link">
               <a href="tel:+15550000000">+1 (555) 000-0000</a>
@@ -425,8 +441,8 @@
             />
             <h3>Location</h3>
             <div class="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p>Suspendisse varius enim in ero.</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+              Suspendisse varius enim in ero.
             </div>
             <div class="link">
               <a href="https://maps.app.goo.gl/etVKmvwhaiBhSuK79"
@@ -443,9 +459,14 @@
           <div class="col child_heights">
             <div class="wrap_img">
               <img
-                src="./assets/images/contact_us.png"
+                src="./assets/images/contact_us.webp"
                 alt="contact us"
-                class="img_cover"
+                class="img_cover desktop"
+              />
+              <img
+                src="./assets/images/contact_us_mob.webp"
+                alt="contact us"
+                class="img_cover mobile"
               />
             </div>
           </div>
@@ -533,11 +554,19 @@
       <!--Конец секция обратной связи -->
     </main>
 
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -549,7 +578,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -558,7 +587,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -566,7 +595,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -577,7 +606,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>

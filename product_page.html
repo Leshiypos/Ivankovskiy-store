@@ -20,8 +20,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -78,7 +81,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -100,7 +103,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -175,7 +185,7 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu fade_in">
         <div class="wrap_menu">
           <div class="wrap_close">
             <button id="close_menu_btn" class="close_menu_btn">
@@ -765,16 +775,20 @@
       <!-- Конец секция кольца -->
 
       <!-- Начало секция Банер -->
-      <section class="baner_section">
+      <section class="baner_section fade_in">
         <div class="wrap">
-          <img src="./assets/images/sec_back3.png" alt="" class="video_cover" />
+          <img
+            src="./assets/images/sec_back3.webp"
+            alt=""
+            class="video_cover position_center"
+          />
           <div class="header_block">
             <div class="description_wrap">
-              <p class="description">Discover the new collection</p>
-              <h2>Blue Amettise</h2>
+              <p class="description fade_in">Discover the new collection</p>
+              <h2 class="fade_in">Blue Amettise</h2>
             </div>
             <div>
-              <a href="#" class="btn_more">
+              <a href="#" class="btn_more fade_in">
                 Discover
                 <img
                   src="./assets/images/icons/arrow_in_circle_white.svg"
@@ -787,11 +801,19 @@
       <!-- КОнец секция Банер -->
     </main>
 
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="main_page fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -803,7 +825,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -812,7 +834,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -820,7 +842,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -831,7 +853,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>

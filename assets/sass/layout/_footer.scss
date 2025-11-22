@@ -69,7 +69,7 @@ footer {
     padding: 15px 8px 40px 8px;
     flex-flow: column wrap;
     gap: 66px;
-
+    border-top: none;
     .menu {
       justify-content: flex-start;
       & > li {

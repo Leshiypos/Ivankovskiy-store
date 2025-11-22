@@ -970,6 +970,9 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    &.mobile {
+      display: none;
+    }
   }
   h2 {
     text-transform: none;
@@ -1029,6 +1032,51 @@ section {
     }
     .submit_but {
       width: 100%;
+    }
+  }
+  @include mobile(645) {
+    margin-bottom: 113px;
+    .wrap {
+      margin: 0;
+      gap: 24px;
+    }
+    .wrap_img {
+      border-radius: 0;
+      height: 750px;
+    }
+    .col {
+      &.father_heights {
+        margin-left: 13px;
+        margin-right: 13px;
+      }
+      .description {
+        margin-bottom: 35px;
+      }
+    }
+    .img_cover {
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: inline;
+      }
+    }
+    .contact_us_form {
+      label {
+        font-size: 14px;
+        &.form-privacy {
+          font-size: 16px;
+        }
+      }
+      input {
+        font-size: 14px;
+      }
+      textarea {
+        font-size: 14px;
+      }
+      .submit_but {
+        font-size: 16px;
+      }
     }
   }
 }
