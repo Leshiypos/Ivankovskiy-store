@@ -25,8 +25,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -83,7 +86,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -105,7 +108,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -180,7 +190,7 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu fade_in">
         <div class="wrap_menu">
           <div class="wrap_close">
             <button id="close_menu_btn" class="close_menu_btn">
@@ -368,12 +378,17 @@
         <span>Delivery & returns</span>
       </div>
       <!-- Начало секция Банер -->
-      <section class="baner_section with_radius">
+      <section class="baner_section with_radius delivery_page">
         <div class="wrap">
           <img
-            src="./assets/images/baner_shiping.png"
+            src="./assets/images/baner_shiping.webp"
             alt=""
-            class="video_cover"
+            class="video_cover desktop"
+          />
+          <img
+            src="./assets/images/baner_shiping_mob.webp"
+            alt=""
+            class="video_cover mobile"
           />
           <div class="header_block">
             <div class="description_wrap">
@@ -421,7 +436,7 @@
             </ul>
           </div>
           <div class="col img">
-            <img src="./assets/images/delivery_cent.png" alt="" />
+            <img src="./assets/images/delivery_cent.webp" alt="" />
           </div>
           <div class="col text">
             <h3>Returns</h3>
@@ -464,11 +479,16 @@
       <section class="contact_us_section">
         <div class="wrap">
           <div class="col child_heights">
-            <div class="wrap_img">
+            <div class="wrap_img with_padding_mob">
               <img
-                src="./assets/images/contact_us.png"
+                src="./assets/images/baner_main_contacts.webp"
                 alt="contact us"
-                class="img_cover"
+                class="img_cover desktop"
+              />
+              <img
+                src="./assets/images/baner_main_contacts_mob.webp"
+                alt="contact us"
+                class="img_cover mobile with_radius_mob"
               />
             </div>
           </div>
@@ -555,12 +575,19 @@
       </section>
       <!--Конец секция обратной связи -->
     </main>
-
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -572,7 +599,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -581,7 +608,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -589,7 +616,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -600,7 +627,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>

@@ -1,5 +1,6 @@
 .single_page {
   .baner_section {
+    margin-top: 0;
     &.contacts_page {
       .header_block {
         span {
@@ -13,6 +14,20 @@
         margin-top: 0;
         h2 {
           @include fz_120;
+        }
+      }
+    }
+    &.delivery_page {
+      &.with_radius {
+        margin-top: 0;
+        .header_block {
+          align-items: flex-end;
+          margin-left: 80px;
+          margin-bottom: 65px;
+        }
+        h2 {
+          @include fz_120;
+          color: rgba(0, 0, 0, 1);
         }
       }
     }
@@ -52,12 +67,34 @@
       color: #000;
     }
   }
+  @include desktop(1600) {
+    .baner_section {
+      &.delivery_page {
+        &.with_radius {
+          .header_block {
+            margin-left: 60px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
   @include desktop(1400) {
     .сontact_details {
       margin-bottom: 175px;
     }
     .contact_us_section {
       margin-bottom: 110px;
+    }
+    .baner_section {
+      &.delivery_page {
+        &.with_radius {
+          .header_block {
+            margin-left: 50px;
+            margin-bottom: 40px;
+          }
+        }
+      }
     }
   }
   @include desktop(1200) {
@@ -66,6 +103,16 @@
     }
     .contact_us_section {
       margin-bottom: 100px;
+    }
+    .baner_section {
+      &.delivery_page {
+        &.with_radius {
+          .header_block {
+            margin-left: 30px;
+            margin-bottom: 35px;
+          }
+        }
+      }
     }
   }
   @include tablet {
@@ -94,6 +141,29 @@
             font-size: 40px;
           }
         }
+      }
+      &.delivery_page {
+        margin: 0;
+        .wrap {
+          height: auto;
+          .video_cover {
+            min-height: 370px;
+          }
+        }
+        &.with_radius {
+          .video_cover {
+            border-radius: 0;
+          }
+          .header_block {
+            position: static;
+            height: auto;
+            margin: 23px;
+            align-items: flex-start;
+            padding: 0;
+            width: fit-content;
+          }
+        }
+        margin-bottom: 72px;
       }
     }
     .сontact_details {

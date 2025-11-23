@@ -1453,9 +1453,11 @@ section {
     object-fit: cover;
     border-radius: 12px;
     max-width: 600px;
-    width: 100%; }
+    width: 100%;
+    max-height: 630px; }
   .delivery_section h3 {
     font-size: 36px;
+    font-size: clamp(16px, calc( 16px + (36 - 16) * ((100vw - 1000px) / (1900 - 1000)) ), 36px);
     text-transform: uppercase;
     margin-bottom: 36px;
     font-weight: 400;
@@ -1471,10 +1473,47 @@ section {
     gap: 20px;
     height: 100%; }
     .delivery_section ul li {
+      font-size: 16px;
+      font-size: clamp(10px, calc( 10px + (16 - 10) * ((100vw - 1000px) / (1900 - 1000)) ), 16px);
       padding-left: 8px;
       border-left: 1px solid #eae4e0;
-      font-style: 16px;
       line-height: 1.3; }
+  @media screen and (min-width: 1000px) and (max-width: 1600px) {
+    .delivery_section .three_columns {
+      margin: 0 3%; }
+    .delivery_section .col.text {
+      max-width: 19%; }
+    .delivery_section .col > img {
+      max-width: 70%; } }
+  @media screen and (max-width: 1000px) {
+    .delivery_section {
+      border-top: none;
+      margin-bottom: 120px; }
+      .delivery_section h3 {
+        font-size: 36px; }
+      .delivery_section ul li {
+        font-size: 16px; }
+      .delivery_section .three_columns {
+        row-gap: 50px; }
+      .delivery_section .col img {
+        min-height: 490px; } }
+  @media screen and (max-width: 666px) {
+    .delivery_section {
+      margin-left: 13px;
+      margin-right: 13px;
+      margin-bottom: 52px; }
+      .delivery_section .three_columns {
+        justify-content: flex-start;
+        gap: 50px; }
+        .delivery_section .three_columns .col.text {
+          margin-left: 13px;
+          margin-right: 13px;
+          max-width: 100%; }
+          .delivery_section .three_columns .col.text ul {
+            flex-flow: row wrap;
+            gap: 40px; }
+            .delivery_section .three_columns .col.text ul li {
+              flex: 1 1 195px; } }
 
 .contact_us_section {
   margin-bottom: 120px; }
@@ -1571,6 +1610,10 @@ section {
       .contact_us_section .wrap_img {
         border-radius: 0;
         height: 750px; }
+        .contact_us_section .wrap_img.with_padding_mob {
+          padding-left: 13px;
+          padding-right: 13px;
+          height: 455px; }
       .contact_us_section .col.father_heights {
         margin-left: 13px;
         margin-right: 13px; }
@@ -1580,6 +1623,8 @@ section {
         display: none; }
       .contact_us_section .img_cover.mobile {
         display: inline; }
+      .contact_us_section .img_cover.with_radius_mob {
+        border-radius: 12px; }
       .contact_us_section .contact_us_form label {
         font-size: 14px; }
         .contact_us_section .contact_us_form label.form-privacy {
@@ -1838,16 +1883,28 @@ footer {
     footer .menu > li.item_5 {
       order: 4; } }
 
-.single_page .baner_section.contacts_page .header_block span {
-  display: none; }
-.single_page .baner_section.contacts_page .description {
-  font-size: 40px;
-  font-size: clamp(18px, calc( 18px + (40 - 18) * ((100vw - 1000px) / (1900 - 1000)) ), 40px); }
-.single_page .baner_section.contacts_page.with_radius {
+.single_page .baner_section {
   margin-top: 0; }
-  .single_page .baner_section.contacts_page.with_radius h2 {
-    font-size: 120px;
-    font-size: clamp(60px, calc( 60px + (120 - 60) * ((100vw - 1000px) / (1900 - 1000)) ), 120px); }
+  .single_page .baner_section.contacts_page .header_block span {
+    display: none; }
+  .single_page .baner_section.contacts_page .description {
+    font-size: 40px;
+    font-size: clamp(18px, calc( 18px + (40 - 18) * ((100vw - 1000px) / (1900 - 1000)) ), 40px); }
+  .single_page .baner_section.contacts_page.with_radius {
+    margin-top: 0; }
+    .single_page .baner_section.contacts_page.with_radius h2 {
+      font-size: 120px;
+      font-size: clamp(60px, calc( 60px + (120 - 60) * ((100vw - 1000px) / (1900 - 1000)) ), 120px); }
+  .single_page .baner_section.delivery_page.with_radius {
+    margin-top: 0; }
+    .single_page .baner_section.delivery_page.with_radius .header_block {
+      align-items: flex-end;
+      margin-left: 80px;
+      margin-bottom: 65px; }
+    .single_page .baner_section.delivery_page.with_radius h2 {
+      font-size: 120px;
+      font-size: clamp(60px, calc( 60px + (120 - 60) * ((100vw - 1000px) / (1900 - 1000)) ), 120px);
+      color: black; }
 .single_page .сontact_details {
   border-top: 1px solid #eae4e0;
   margin-left: 24px;
@@ -1879,16 +1936,26 @@ footer {
     line-height: 150%;
     text-align: center;
     color: #000; }
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+  .single_page .baner_section.delivery_page.with_radius .header_block {
+    margin-left: 60px;
+    margin-bottom: 50px; } }
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   .single_page .сontact_details {
     margin-bottom: 175px; }
   .single_page .contact_us_section {
-    margin-bottom: 110px; } }
+    margin-bottom: 110px; }
+  .single_page .baner_section.delivery_page.with_radius .header_block {
+    margin-left: 50px;
+    margin-bottom: 40px; } }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
   .single_page .сontact_details {
     margin-bottom: 160px; }
   .single_page .contact_us_section {
-    margin-bottom: 100px; } }
+    margin-bottom: 100px; }
+  .single_page .baner_section.delivery_page.with_radius .header_block {
+    margin-left: 30px;
+    margin-bottom: 35px; } }
 @media screen and (max-width: 1000px) {
   .single_page .baner_section.contacts_page {
     margin: 0; }
@@ -1906,6 +1973,22 @@ footer {
       border-radius: 0; }
     .single_page .baner_section.contacts_page.with_radius h2 {
       font-size: 40px; }
+  .single_page .baner_section.delivery_page {
+    margin: 0;
+    margin-bottom: 72px; }
+    .single_page .baner_section.delivery_page .wrap {
+      height: auto; }
+      .single_page .baner_section.delivery_page .wrap .video_cover {
+        min-height: 370px; }
+    .single_page .baner_section.delivery_page.with_radius .video_cover {
+      border-radius: 0; }
+    .single_page .baner_section.delivery_page.with_radius .header_block {
+      position: static;
+      height: auto;
+      margin: 23px;
+      align-items: flex-start;
+      padding: 0;
+      width: fit-content; }
   .single_page .сontact_details {
     border-top: none;
     padding-top: 40px;
