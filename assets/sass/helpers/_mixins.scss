@@ -87,9 +87,17 @@
   font-size: 32px;
   @include fluid-font(18, 32);
 }
+@mixin fz_30_small {
+  font-size: 30px;
+  @include fluid-font(15, 30);
+}
 @mixin fz_25 {
   font-size: 25px;
   @include fluid-font(18, 25);
+}
+@mixin fz_24 {
+  font-size: 24px;
+  @include fluid-font(16, 24);
 }
 @mixin fz_20 {
   font-size: 20px;
@@ -98,6 +106,10 @@
 @mixin fz_18 {
   font-size: 18px;
   @include fluid-font(14, 18);
+}
+@mixin fz_18_small {
+  font-size: 18px;
+  @include fluid-font(9, 18);
 }
 @mixin fz_16 {
   font-size: 16px;

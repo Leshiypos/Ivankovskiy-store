@@ -117,16 +117,34 @@
   gap: 30;
   min-width: 200px;
   flex-flow: row nowrap;
-  padding: 15px 20px 15px 45px;
+  padding: 15px 20px;
   border: 1px solid #000000;
   border-radius: $radiusMidiPc;
-  font-size: 16px;
+  @include fz_16;
   font-weight: 500;
   background-color: transparent;
   white-space: nowrap;
+  p {
+    text-align: center;
+    width: 100%;
+  }
   &.dark {
     background-color: rgba(0, 0, 0, 1);
     color: rgb(255, 255, 255);
+  }
+  @include desktop(1600) {
+    padding: 13px 15px;
+    min-width: 180px;
+  }
+  @include desktop(1400) {
+    min-width: 150px;
+  }
+  @include desktop(1200) {
+    min-width: 120px;
+  }
+  @include tablet {
+    min-width: 140px;
+    font-size: 14px;
   }
 }
 

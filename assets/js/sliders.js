@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       new Swiper(slider, {
         speed: 400,
         slidesPerView: 1.3,
-        spaceBetween: 16,
+        spaceBetween: 11,
         breakpoints: {
           530: {
             spaceBetween: 36,

@@ -514,6 +514,13 @@ section {
       }
     }
   }
+  @include mobile(1050) {
+    h2.medium_fs {
+      br {
+        display: none;
+      }
+    }
+  }
   @include tablet {
     .wrap {
       height: 780px;

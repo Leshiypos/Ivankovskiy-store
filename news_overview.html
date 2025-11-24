@@ -25,8 +25,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -83,7 +86,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -105,7 +108,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -180,7 +190,7 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu fade_in">
         <div class="wrap_menu">
           <div class="wrap_close">
             <button id="close_menu_btn" class="close_menu_btn">
@@ -362,6 +372,7 @@
         </div>
       </nav>
     </header>
+
     <main class="single_page news_page">
       <div class="breadcrumbs">
         <a href="index.html">Home</a> /
@@ -376,11 +387,11 @@
         </div>
         <div class="buttons_block">
           <button class="btn_filters_news">
-            Categories
+            <p>Categories</p>
             <img src="./assets/images/icons/arrow_down2_black.svg" alt="" />
           </button>
           <button class="btn_filters_news">
-            By recency
+            <p>By recency</p>
             <img src="./assets/images/icons/arrow_down2_black.svg" alt="" />
           </button>
         </div>
@@ -455,7 +466,7 @@
                   <div class="news_category">Collection</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -480,7 +491,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -505,7 +516,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -530,7 +541,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -555,7 +566,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -580,7 +591,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -605,7 +616,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -630,7 +641,7 @@
                   <div class="news_category">Diamonds</div>
                 </div>
                 <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
+                  <h3>Summer Glow: New Collection</h3>
                   <p class="description_new">
                     Yellow sapphires, diamonds, and the warmth of sun—our most
                     radiant release of the season.
@@ -643,13 +654,13 @@
         <!-- Конец Новости -->
         <div class="footer_news">
           <button class="btn_filters_news dark">
-            Categories
+            <p>Load more</p>
             <img src="./assets/images/icons/arrow_diag_white.svg" alt="" />
           </button>
         </div>
       </section>
       <!-- Начало секции Подписка на рассылку -->
-      <section class="subscribe_section">
+      <section class="subscribe_section news_page">
         <h2>
           Subscribe to our newsletter and be the first to receive new
           collections
@@ -682,105 +693,118 @@
       <!-- Конец секции Подписка на рассылку -->
 
       <!-- Начало секции Последние новости -->
-      <section class="news_section">
+
+      <section class="news_section fade_in">
         <div class="wrap flex">
           <div class="header_block">
             <div>
-              <h2>MOST POPULAR NEWS</h2>
+              <h2>Latest news</h2>
             </div>
             <div>
               <a href="#" class="btn_more">
-                Watch more
+                <span class="desktop">Watch</span> more
                 <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
               /></a>
             </div>
           </div>
           <div class="wrap_news">
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img
-                    src="./assets/images/most_pop_news_1.png"
-                    alt="categoru_1"
-                  />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+            <div class="swiper news_slider">
+              <div class="swiper-wrapper">
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img
+                        src="./assets/images/most_pop_news_1.png"
+                        alt="categoru_1"
+                      />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
 
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img
-                    src="./assets/images/most_pop_news_2.png"
-                    alt="categoru_1"
-                  />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img
+                        src="./assets/images/most_pop_news_2.png"
+                        alt="categoru_1"
+                      />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
 
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img
-                    src="./assets/images/most_pop_news_3.png"
-                    alt="categoru_1"
-                  />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img
+                        src="./assets/images/most_pop_news_3.png"
+                        alt="categoru_1"
+                      />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- Конец секции Последние новости -->
     </main>
 
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -792,7 +816,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -801,7 +825,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -809,7 +833,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -820,7 +844,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>
