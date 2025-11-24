@@ -55,6 +55,18 @@ section {
     .description_wrap {
       max-width: 60%;
     }
+    &.large_title {
+      gap: 30px;
+      .description_wrap {
+        max-width: unset;
+        gap: 30px;
+        h1 {
+          line-height: 82%;
+          letter-spacing: -0.03em;
+          @include fz_200;
+        }
+      }
+    }
     h1 {
       font-weight: 400;
       @include fz_100;
@@ -691,11 +703,20 @@ section {
       font-size: 10px;
     }
   }
-
-  @include mobile {
-    .description_new {
-      line-height: 1.2;
+  @include tablet {
+    h3 {
+      font-size: 24px;
     }
+    .description_new {
+      display: none;
+    }
+  }
+  @include mobile {
+    h3 {
+      font-size: 20px;
+      max-width: 250px;
+    }
+
     .description_wrap {
       max-width: 100%;
     }
@@ -1162,6 +1183,7 @@ section {
 // Секция История
 
 .story_section {
+  margin-top: 6%;
   .wrap {
     padding-left: 30px;
     padding-right: 30px;
@@ -1194,16 +1216,45 @@ section {
     object-fit: cover;
   }
   h2 {
-    font-size: 80px;
+    @include fz_80;
     text-align: left;
     text-transform: none;
   }
   .caption {
-    font-size: 16px;
-    width: 60%;
+    @include fz_16_small;
+    width: 58%;
+    &:last-child {
+      width: 87%;
+    }
   }
   p {
     line-height: 1.6;
+  }
+  @include tablet {
+    margin-bottom: 40px;
+    h2 {
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+    .wrap {
+      flex-flow: column nowrap;
+      & > .col {
+        width: 100% !important;
+        gap: 40px !important;
+        &:last-child {
+          flex-flow: column-reverse nowrap;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .caption {
+    width: 100% !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 190%;
+    letter-spacing: -0.03em;
+    color: #212121;
   }
 }
 
@@ -1280,6 +1331,50 @@ section {
   }
   .btn_more {
     margin-top: 30px;
+    @include fz_16;
+  }
+  //   Секция на сранице ABOUT
+  &.details {
+    margin-top: 6.7%;
+    margin-bottom: 5.8%;
+    h2 {
+      @include fz_80;
+      max-width: 100%;
+      text-align: center;
+      color: #212121;
+      &::first-line {
+        color: inherit;
+      }
+      span {
+        color: #cecece;
+      }
+    }
+    .description_wrap {
+      margin-top: 6%;
+    }
+    .cell {
+      &.mobile {
+        display: none;
+      }
+      .descripion {
+        max-width: 57%;
+      }
+      &.cell_3 {
+        h3 {
+          margin-top: 3%;
+        }
+      }
+      &.cell_4 {
+        h3 {
+          margin-top: -38%;
+        }
+      }
+      &.cell_5 {
+        h3 {
+          margin-top: 50%;
+        }
+      }
+    }
   }
   @include tablet {
     margin-top: 80px;
@@ -1346,6 +1441,42 @@ section {
       display: flex;
       margin-left: auto;
       margin-right: auto;
+      font-size: 16px;
+    }
+
+    &.details {
+      margin-left: 23px;
+      margin-right: 23px;
+      margin-bottom: 64px;
+      .description_wrap {
+        column-gap: 19px;
+        row-gap: 0;
+      }
+      h2 {
+        font-size: 50px;
+        line-height: 104%;
+        letter-spacing: -0.03em;
+      }
+      .cell {
+        &.cell_3 {
+          h3 {
+            margin-top: 10%;
+          }
+        }
+        &.cell_4 {
+          h3 {
+            margin-top: 10%;
+          }
+        }
+        &.cell_5 {
+          h3 {
+            margin-top: 10%;
+          }
+        }
+        .descripion {
+          max-width: 160px;
+        }
+      }
     }
   }
   @include mobile(630) {
@@ -1358,6 +1489,23 @@ section {
     .cell {
       &.cell_4 {
         display: none;
+      }
+    }
+    &.details {
+      h2 {
+        text-align: left;
+        max-width: 300px;
+      }
+      .cell {
+        &.mobile {
+          display: block;
+          h3 {
+            margin-top: 10%;
+          }
+        }
+        &.cell_5 {
+          display: none;
+        }
       }
     }
   }

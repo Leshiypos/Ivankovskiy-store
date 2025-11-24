@@ -25,8 +25,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -83,7 +86,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -105,7 +108,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -180,7 +190,7 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu fade_in">
         <div class="wrap_menu">
           <div class="wrap_close">
             <button id="close_menu_btn" class="close_menu_btn">
@@ -367,23 +377,57 @@
         <a href="index.html">Home</a> /
         <span>About us</span>
       </div>
-      <!-- Начало секция Банер -->
-      <section class="baner_section">
+      <!-- Начало Главный банер -->
+      <section class="video_baner fade_in">
         <div class="wrap">
           <img
-            src="./assets/images/baner_about.png"
+            src="./assets/images/baner_main.webp"
             alt=""
-            class="video_cover"
+            class="video_cover desktop"
           />
-          <div class="header_block">
+          <img
+            src="./assets/images/baner_main_mobile.webp"
+            alt=""
+            class="video_cover mobile"
+          />
+          <div class="header_block large_title">
             <div class="description_wrap">
-              <p class="description">Discover the new collection</p>
-              <h2>Blue Amettise</h2>
+              <h1
+                class="fade_in"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0px);
+                  opacity: 1;
+                "
+              >
+                Blue <br />
+                Amettise
+              </h1>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="btn_more fade_in"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0px);
+                  opacity: 1;
+                "
+              >
+                Discover
+                <img
+                  src="./assets/images/icons/arrow_in_circle_white.svg"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
       </section>
-      <!-- КОнец секция Банер -->
+      <!-- Конец Главный банер -->
 
       <section class="story_section">
         <div class="wrap">
@@ -400,12 +444,12 @@
               </p>
             </div>
             <div class="wrap_img">
-              <img src="./assets/images/story_1.png" alt="" />
+              <img src="./assets/images/story_1.webp" alt="" />
             </div>
           </div>
           <div class="col">
             <div class="wrap_img">
-              <img src="./assets/images/story_2.png" alt="" />
+              <img src="./assets/images/story_2.webp" alt="" />
             </div>
             <div class="caption">
               <p>
@@ -417,6 +461,70 @@
           </div>
         </div>
       </section>
+
+      <!-- Секция Уникальный патент -->
+      <section class="unique_patented_section details fade_in">
+        <div class="wrap_section">
+          <h2>The invisible detail <span>that changes everything.</span></h2>
+
+          <div class="description_wrap">
+            <!-- строка 1 -->
+            <div class="cell cell_1"></div>
+            <div class="cell background_wrap cell_2">
+              <img
+                src="./assets/images/unique_background_cover_details.webp"
+                class="background_img"
+                alt=""
+              />
+              <img
+                src="./assets/images/unique_background_cover_details_mob.webp"
+                class="background_img mobile"
+                alt=""
+              />
+            </div>
+            <div class="cell mobile">
+              <h3>EXPANSION CLAMPS</h3>
+              <div class="descripion">
+                This innovation is exclusively available in Ivankovskiy rings
+                and reflects our belief that luxury should adapt to life, not
+                the other way around.
+              </div>
+            </div>
+            <div class="cell cell_3">
+              <h3>27 CARAT DIAMOND</h3>
+              <div class="descripion">
+                This innovation is exclusively available in Ivankovskiy rings
+                and reflects our belief that luxury should adapt to life, not
+                the other way around.
+              </div>
+            </div>
+
+            <!-- Строка 2 -->
+            <div class="cell cell_4">
+              <h3>585 FINENESS GOLD</h3>
+              <div class="descripion">
+                This innovation is exclusively available in Ivankovskiy rings
+                and reflects our belief that luxury should adapt to life, not
+                the other way around.
+              </div>
+            </div>
+            <!-- <div class="cell"></div> -->
+            <div class="cell cell_5">
+              <h3>925 STERLING SILVER</h3>
+              <div class="descripion">
+                This innovation is exclusively available in Ivankovskiy rings
+                and reflects our belief that luxury should adapt to life, not
+                the other way around.
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn_more fade_in dark">
+            Discover the Technology
+            <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
+          /></a>
+        </div>
+      </section>
+      <!-- Секция Уникальный патент -->
 
       <!-- Начало секция Банер -->
       <section class="baner_section">
@@ -446,7 +554,7 @@
 
       <!-- Начало секции Последние новости -->
 
-      <section class="news_section">
+      <section class="news_section fade_in">
         <div class="wrap flex">
           <div class="header_block">
             <div>
@@ -454,88 +562,100 @@
             </div>
             <div>
               <a href="#" class="btn_more">
-                Watch more
+                <span class="desktop">Watch</span> more
                 <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
               /></a>
             </div>
           </div>
           <div class="wrap_news">
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img src="./assets/images/news_1.png" alt="categoru_1" />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+            <div class="swiper news_slider">
+              <div class="swiper-wrapper">
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/news_1.png" alt="categoru_1" />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
 
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img src="./assets/images/news_2.png" alt="categoru_1" />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/news_2.png" alt="categoru_1" />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
 
-            <article class="single_news">
-              <a href="#">
-                <div class="wrap_img">
-                  <img src="./assets/images/news_3.png" alt="categoru_1" />
-                  <div class="btn_read_card">
-                    <div>Read more</div>
-                    <img
-                      src="./assets/images/icons/arrow_diag_black.svg"
-                      alt="read_more"
-                    />
-                  </div>
-                </div>
-                <div class="description_wrap">
-                  <h3>Summer Glow: New Collection Now Live</h3>
-                  <p class="description_new">
-                    Yellow sapphires, diamonds, and the warmth of sun—our most
-                    radiant release of the season.
-                  </p>
-                </div>
-              </a>
-            </article>
+                <article class="single_news swiper-slide">
+                  <a href="#">
+                    <div class="wrap_img">
+                      <img src="./assets/images/news_3.png" alt="categoru_1" />
+                      <div class="btn_read_card">
+                        <div>Read more</div>
+                        <img
+                          src="./assets/images/icons/arrow_diag_black.svg"
+                          alt="read_more"
+                        />
+                      </div>
+                    </div>
+                    <div class="description_wrap">
+                      <h3>Summer Glow: New Collection Now Live</h3>
+                      <p class="description_new">
+                        Yellow sapphires, diamonds, and the warmth of sun—our
+                        most radiant release of the season.
+                      </p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- Конец секции Последние новости -->
     </main>
 
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -547,7 +667,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -556,7 +676,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -564,7 +684,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -575,7 +695,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>
