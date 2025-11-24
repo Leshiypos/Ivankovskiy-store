@@ -23,7 +23,7 @@
   </head>
   <body class="error_page">
     <header>
-      <div class="top_header">
+      <div class="top_header desktop">
         <div>
           <div class="logo"><a href="/">Ivankovskiy</a></div>
         </div>
@@ -31,6 +31,240 @@
           <a href="#" class="cont_us_link">Contact us</a>
         </div>
       </div>
+
+      <!-- мобильная версия -->
+      <div class="top_header mobile">
+        <div class="mobile_btns">
+          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button class="menu_btn search_btn">
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
+          </button>
+        </div>
+
+        <div>
+          <div class="logo"><a href="/">Ivankovskiy</a></div>
+        </div>
+        <div class="icons_block">
+          <ul>
+            <li class="search_btn desktop">
+              <a href=""
+                ><img
+                  src="./assets/images/icons/search.svg"
+                  alt="search"
+                  title="search"
+              /></a>
+            </li>
+            <li class="favorites_btn">
+              <a href=""
+                ><img
+                  src="./assets/images/icons/favorites.svg"
+                  alt="favorites"
+                  title="favorites"
+              /></a>
+            </li>
+            <li class="basket_btn">
+              <a href="cart.html"
+                ><img
+                  src="./assets/images/icons/basket.svg"
+                  alt="basket"
+                  title="basket"
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Мобильное меню -->
+      <nav class="mobile_menu fade_in">
+        <div class="wrap_menu">
+          <div class="wrap_close">
+            <button id="close_menu_btn" class="close_menu_btn">
+              <img
+                src="./assets/images/icons/close_btn.svg"
+                alt="close_button"
+              />
+            </button>
+          </div>
+          <div class="icons_block">
+            <ul>
+              <li class="search_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/search.svg"
+                    alt="search"
+                    title="search"
+                  />Search</a
+                >
+              </li>
+              <li class="favorites_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/favorites.svg"
+                    alt="favorites"
+                    title="favorites"
+                  />Wishlist</a
+                >
+              </li>
+              <li class="basket_btn">
+                <a href=""
+                  ><img
+                    src="./assets/images/icons/basket.svg"
+                    alt="basket"
+                    title="basket"
+                  />My cart</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Пункты меню -->
+          <div class="menu_block">
+            <ul>
+              <li class="parent">
+                <a href="#">Jewelry</a>
+                <div class="dropdawnWrap">
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="parent">
+                <a href="#">Engagement</a>
+                <div class="dropdawnWrap">
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrap_sub_menu">
+                    <h6>Jewelry collection</h6>
+                    <div class="dropdawnWrap">
+                      <ul class="sub_menu">
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                        <li><a href="#">Collection name</a></li>
+                      </ul>
+
+                      <div class="baner">
+                        <a href="#"
+                          ><img src="./assets/images/baner_menu.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">Diamonds</a></li>
+              <li><a href="#">Gemstones</a></li>
+              <li><a href="#">Design your own</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="options_block">
+            <div class="language-dropdown">
+              <button class="dropdownToggle">
+                <img src="./assets/images/icons/en_flag.svg" alt="" />
+                <span id="currentLang">English</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-lang="en" class="active">
+                  <a href="#"
+                    ><img src="./assets/images/icons/en_flag.svg" alt="" />
+                    English</a
+                  >
+                </li>
+                <li data-lang="ru">
+                  <a href="./index.html"
+                    ><img src="./assets/images/icons/ru_flag.svg" alt="" />
+                    Русский</a
+                  >
+                </li>
+
+                <li data-lang="uz">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/icons/es_flag.svg"
+                      alt=""
+                    />Español</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="сurrency-dropdown">
+              <button class="dropdownToggle">
+                <span id="currentСurrency">US DOLLAR (USD)</span>
+                <img src="./assets/images/icons/arrow_down.svg" alt="" />
+              </button>
+              <ul class="dropdownMenu hidden">
+                <li data-cur="usd" class="active">
+                  <a href="#">US DOLLAR (USD)</a>
+                </li>
+                <li data-cur="rub">
+                  <a href="#">Рубли (RUB)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <section class="cont_error_page">
@@ -50,15 +284,34 @@
           <div class="desc_block">
             <div class="wrap">
               <div class="col">
-                Sorry, the page you were looking for does not exist, go back one
-                step and try another option
+                Sorry, the page <br />
+                you were <br />
+                looking for does <br />
+                not exist, go <br />
+                back one step <br />
+                and try another option
               </div>
               <div class="col">
-                <a href="#" class="btn_more">
+                <a href="#" class="btn_more error_page">
                   Go to collection page
                   <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
                 /></a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="desc_block mobile">
+          <div class="wrap">
+            <div class="col error_desc">
+              SORRY, <br />
+              BUT PAGE<br />
+              IS NOT FOUND
+            </div>
+            <div class="col">
+              <a href="#" class="btn_more error_page">
+                Go to collection page
+                <img src="./assets/images/icons/arrow_in_circle.svg" alt=""
+              /></a>
             </div>
           </div>
         </div>

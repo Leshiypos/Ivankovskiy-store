@@ -43,6 +43,10 @@
 }
 
 // Размеры шрифтов
+@mixin fz_500 {
+  font-size: 500px;
+  @include fluid-font(200, 500);
+}
 @mixin fz_120 {
   font-size: 120px;
   @include fluid-font(60, 120);
@@ -50,6 +54,10 @@
 @mixin fz_100 {
   font-size: 100px;
   @include fluid-font(50, 100);
+}
+@mixin fz_99 {
+  font-size: 100px;
+  @include fluid-font(40, 99);
 }
 @mixin fz_110 {
   font-size: 110px;
@@ -68,8 +76,12 @@
   @include fluid-font(16, 36);
 }
 @mixin fz_32 {
-  font-size: 40px;
+  font-size: 32px;
   @include fluid-font(18, 32);
+}
+@mixin fz_25 {
+  font-size: 25px;
+  @include fluid-font(18, 25);
 }
 @mixin fz_20 {
   font-size: 20px;
