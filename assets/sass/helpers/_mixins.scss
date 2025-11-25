@@ -42,6 +42,13 @@
   }
 }
 
+// Расыты высоты от ширины
+@mixin fluid-height($prop, $val) {
+  @media screen and (min-width: 1000px) {
+    #{$prop}: calc(100vw * (#{$val} / 1920));
+  }
+}
+
 // Размеры шрифтов
 @mixin fz_500 {
   font-size: 500px;
@@ -67,9 +74,17 @@
   font-size: 110px;
   @include fluid-font(60, 110);
 }
+@mixin fz_96_small {
+  font-size: 110px;
+  @include fluid-font(48, 96);
+}
 @mixin fz_80 {
   font-size: 80px;
   @include fluid-font(40, 80);
+}
+@mixin fz_70_small {
+  font-size: 70px;
+  @include fluid-font(35, 70);
 }
 @mixin fz_55 {
   font-size: 55px;
