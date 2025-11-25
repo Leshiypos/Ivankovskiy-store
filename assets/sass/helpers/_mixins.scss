@@ -43,9 +43,12 @@
 }
 
 // Расыты высоты от ширины
-@mixin fluid-height($prop, $val) {
-  @media screen and (min-width: 1000px) {
+@mixin fluid-height($prop, $val, $val-mob: $val) {
+  @media screen and (min-width: #{$screen-medium+1}px) {
     #{$prop}: calc(100vw * (#{$val} / 1920));
+  }
+  @media screen and (max-width: #{$screen-medium}px) {
+    #{$prop}: #{$val}px;
   }
 }
 
@@ -57,6 +60,10 @@
 @mixin fz_200 {
   font-size: 200px;
   @include fluid-font(100, 200);
+}
+@mixin fz_170_small {
+  font-size: 170px;
+  @include fluid-font(85, 170);
 }
 @mixin fz_120 {
   font-size: 120px;

@@ -1424,6 +1424,11 @@ section {
         line-height: 104%;
         max-width: 153px;
       }
+      .mob_centr {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+      }
       &.cell_1 {
         display: none;
       }
@@ -1512,6 +1517,295 @@ section {
         }
         &.cell_5 {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+// Секция растущего кольца
+
+.grow_section {
+  margin-top: 6.3%;
+  margin-bottom: 6.3%;
+  h2 {
+    font-weight: 300;
+    @include fz_170_small;
+    letter-spacing: -0.03em;
+    color: #212121;
+    text-transform: none;
+    margin-bottom: 7%;
+    span {
+      color: #d2d2d2;
+    }
+  }
+  .head_section {
+    @extend %adaptiveMarginSection;
+  }
+  .background_section {
+    position: relative;
+    img {
+      &.mobile {
+        display: none;
+      }
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .wrap_content {
+      margin-left: 3.8%;
+      margin-right: 9.4%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      height: 100%;
+      .col {
+        max-width: 24%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .cell {
+          max-width: 72%;
+          &.full_width {
+            max-width: 100%;
+          }
+        }
+        h3 {
+          font-weight: 400;
+          @include fz_55;
+          line-height: 91%;
+          letter-spacing: -0.03em;
+          color: #212121;
+          @include fluid-height(margin-bottom, 37);
+        }
+        .description {
+          font-weight: 400;
+          @include fz_16_small;
+          line-height: 130%;
+          letter-spacing: -0.03em;
+          color: #212121;
+          &.only {
+            line-height: 160%;
+          }
+        }
+        &.col_1 {
+          justify-content: center;
+          align-items: flex-start;
+          .cell {
+            transform: translateY(57%);
+          }
+        }
+      }
+    }
+  }
+  .label_block {
+    margin-left: 3.8%;
+    margin-right: 13px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5.2%;
+    @include fluid-height(gap, 12);
+    .label_advantages {
+      font-weight: 400;
+      @include fz_16;
+      line-height: 130%;
+      letter-spacing: -0.03em;
+      color: #212121;
+      @include fluid-height(padding, 20);
+      @include fluid-height(padding-left, 30);
+      @include fluid-height(padding-right, 30);
+      border: 1px solid #dbd6d6;
+      border-radius: 80px;
+    }
+  }
+  @include tablet {
+    margin-bottom: 33px;
+    h2 {
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 108%;
+      max-width: 350px;
+    }
+    .background_section {
+      img {
+        margin-top: 10%;
+        margin-bottom: 15%;
+      }
+      .wrap_content {
+        position: static;
+        margin-left: 13px;
+        margin-right: 13px;
+        gap: 37px;
+        justify-content: space-around;
+        .col {
+          max-width: 100%;
+          justify-content: flex-start;
+          h3 {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 104%;
+            letter-spacing: -0.03em;
+            color: #212121;
+          }
+          .description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: -0.03em;
+            color: #8e8e8e;
+          }
+          &.col_1 {
+            .cell {
+              transform: unset;
+            }
+          }
+          &.col_2 {
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-around;
+            h3 {
+              margin-bottom: 64px;
+            }
+            .cell {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+          }
+          .cell {
+            max-width: 160px;
+          }
+          .description {
+            &.only {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .label_block {
+      gap: 28px;
+      margin-top: 33px;
+      margin-left: 13px;
+      margin-right: 13px;
+      .label_advantages {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -0.03em;
+        color: #212121;
+        flex: 1 1 180px;
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//   Секция Твоя жизнь меняется
+.evolves_section {
+  @extend %adaptiveMarginSection;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  h2 {
+    font-weight: 400;
+    @include fz_110;
+    line-height: 77%;
+    letter-spacing: -0.03em;
+    color: #212121;
+    text-transform: none;
+    text-indent: 10%;
+    @include fluid-height(margin-bottom, 125);
+  }
+  .wrap_section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .col {
+    flex: 1 1 300px;
+
+    &.col_left {
+      flex: 1.1 1.1 330px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      .wrap_content {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        img {
+          flex: 1;
+          max-width: 50%;
+        }
+        .description {
+          flex: 1;
+          font-weight: 400;
+          @include fz_16_small;
+          line-height: 130%;
+          letter-spacing: -0.03em;
+          color: #212121;
+          p {
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+    &.col_right {
+      max-width: 48%;
+    }
+  }
+  @include tablet {
+    margin-top: 33px;
+    margin-bottom: 43px;
+    h2 {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 102%;
+      letter-spacing: -0.03em;
+      margin-bottom: 51px;
+    }
+    .wrap_section {
+      gap: 53px;
+      column-gap: 20px;
+    }
+    .col {
+      &.col_left {
+        .wrap_content {
+          flex-flow: column nowrap;
+          gap: 53px;
+          .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: -0.03em;
+            p {
+              max-width: 90%;
+              margin-bottom: 20px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+      &.col_right {
+        max-width: 100%;
+        img {
         }
       }
     }
