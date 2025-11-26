@@ -6,9 +6,27 @@
     <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/sliders.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <!-- Скрипты для поля ввода телефона -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+    <!-- для автоформатирования и placeholder‑масок -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"></script>
+
     <title>Ivankovskiy</title>
   </head>
   <body>
@@ -368,7 +386,7 @@
         <span>Rings</span>
       </div>
       <!-- Начало секция Банер -->
-      <section class="baner_section hero_section">
+      <section class="baner_section hero_section fade_in">
         <div class="wrap">
           <img
             src="./assets/images/baner_catalog_page.png"
@@ -408,7 +426,7 @@
       <!-- КОнец секция Банер -->
 
       <!-- Начало фильтры -->
-      <div class="filters_block">
+      <div class="filters_block fade_in">
         <button class="filters_but">
           <img src="./assets/images/icons/filrets_icon.svg" alt="" />
           <span>Filters</span>
@@ -423,6 +441,7 @@
       <!-- Товары -->
       <section class="product_list">
         <div class="wrap">
+          <!-- Тут не делать анимацию - чтобы был расчет высоты промо блока -->
           <article class="cart">
             <a href="#">
               <button class="add_to_cart_round">+</button>
@@ -437,7 +456,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -451,7 +470,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -465,7 +484,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -479,7 +498,7 @@
               </div>
             </a>
           </article>
-          <article class="cart promo_cart one">
+          <article class="cart promo_cart one fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -497,7 +516,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -511,7 +530,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -525,7 +544,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -539,7 +558,7 @@
               </div>
             </a>
           </article>
-          <article class="cart promo_cart two">
+          <article class="cart promo_cart two fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -557,7 +576,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -571,7 +590,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -585,7 +604,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -599,7 +618,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -613,7 +632,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -627,7 +646,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -641,7 +660,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -655,7 +674,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">
@@ -669,7 +688,7 @@
               </div>
             </a>
           </article>
-          <article class="cart">
+          <article class="cart fade_in">
             <a href="#">
               <button class="add_to_cart_round">+</button>
               <div class="wrap_img">

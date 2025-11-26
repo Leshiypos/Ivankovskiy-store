@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/sliders.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
 
     <!-- Скрипты для поля ввода телефона -->
     <link
@@ -378,7 +386,7 @@
         <span>Delivery & returns</span>
       </div>
       <!-- Начало секция Банер -->
-      <section class="baner_section with_radius delivery_page">
+      <section class="baner_section with_radius delivery_page fade_in">
         <div class="wrap">
           <img
             src="./assets/images/baner_shiping.webp"
@@ -390,7 +398,7 @@
             alt=""
             class="video_cover mobile"
           />
-          <div class="header_block">
+          <div class="header_block fade_in">
             <div class="description_wrap">
               <h2>Delivery <br />& Returns</h2>
             </div>
@@ -399,7 +407,7 @@
       </section>
       <!-- КОнец секция Банер -->
 
-      <section class="delivery_section">
+      <section class="delivery_section fade_in">
         <div class="wrap three_columns">
           <div class="col text">
             <h3>Delivery</h3>
@@ -476,7 +484,7 @@
       </section>
 
       <!--Начало секция обратной связи -->
-      <section class="contact_us_section">
+      <section class="contact_us_section fade_in">
         <div class="wrap">
           <div class="col child_heights">
             <div class="wrap_img with_padding_mob">
