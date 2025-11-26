@@ -9,7 +9,7 @@
   justify-content: center;
   transform-origin: top center; // чтобы схлопывалось сверху
   transform: scaleY(1); // начальное состояние
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   .content_adv {
     @include fz_14;
     color: rgba(0, 0, 0, 0.4);
@@ -17,7 +17,7 @@
       color: #000;
     }
   }
-  .adv_close {
+  .btn_close {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -26,6 +26,11 @@
   &.desabled {
     transform: scaleY(0);
     height: 0;
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
   }
   @include tablet {
     display: none;

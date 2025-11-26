@@ -254,14 +254,29 @@ button {
   }
 }
 
+// Кнопка формы поиска
+.search_btn_header {
+  background: #000;
+  text-transform: uppercase;
+  border-radius: 7px;
+  font-weight: 400;
+  @include fz_12;
+  text-align: center;
+  color: #fff;
+  @include fluid-height(padding-top, 11);
+  @include fluid-height(padding-bottom, 11);
+  @include fluid-height(width, 150);
+  cursor: pointer;
+}
+
 button {
   // Кнопка закрытия блока рекламы
-  &.adv_close {
+  &.btn_close {
     border: none;
     background: transparent;
     outline: none;
     img {
-      @include fluid-height(width, 14);
+      @include fluid-height(width, 9);
       aspect-ratio: 1/1;
     }
   }

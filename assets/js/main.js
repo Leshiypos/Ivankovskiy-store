@@ -533,21 +533,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Кнопки
 
-// Конка закрытия Верхнего блока рекламы
+// Универсальная фукнция закрытия блоков
+// добавить атрибуты для кнопки data-btn-close и для закрываемого блока data-block-closable
 
-function closeBtnAdvertisingInit() {
-  const advBlock = document.querySelector(".advertising_block_header");
-  const btnClose = document.querySelector(
-    ".advertising_block_header .adv_close"
-  );
+function closeBlockInit() {
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    const btnClose = target.closest("[data-btn-close]");
+    const blockClosable = target.closest("[data-block-closable]");
 
-  if (!advBlock || !btnClose) return;
+    if (!btnClose || !blockClosable) return;
 
-  btnClose.addEventListener("click", () => {
-    advBlock.classList.add("desabled");
+    blockClosable.classList.add("desabled");
+  });
+}
+
+function openBlockInit() {
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    const btnClose = target.closest("[data-btn-open]");
+    if (!btnClose) return;
+    e.preventDefault();
+    const blockTag = btnClose.dataset.btnOpen;
+    console.log(blockTag);
+
+    if (!blockTag || blockTag == "") {
+      console.log(
+        "⚠️ Добавьте атрибуту [data-btn-open] кнопки значение метку открываемого окна"
+      );
+      return;
+    }
+    const blockOpen = document.querySelector(
+      `[data-block-closable=${blockTag}]`
+    );
+
+    if (!blockOpen) {
+      console.log(
+        `❌ Блок с отрибутом [data-block-closable=${blockTag}] отсутствует на странице`
+      );
+      return;
+    }
+
+    blockOpen.classList.remove("desabled");
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  closeBtnAdvertisingInit();
+  closeBlockInit();
+  openBlockInit();
 });
