@@ -271,14 +271,15 @@ header {
 // Мобильное меню
 
 .mobile_menu {
-  display: none;
-  position: absolute;
+  display: flex;
+  position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   padding: 20px 20px 66px 13px;
+  transition: top 1s ease;
   .wrap_menu {
     width: 100%;
   }
@@ -417,9 +418,7 @@ header {
     }
   }
 
-  &.opened {
-    @include tablet {
-      display: flex;
-    }
+  &.desabled {
+    top: -110%;
   }
 }

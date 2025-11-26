@@ -924,14 +924,15 @@ header {
       display: none; } }
 
 .mobile_menu {
-  display: none;
-  position: absolute;
+  display: flex;
+  position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
   background-color: white;
-  padding: 20px 20px 66px 13px; }
+  padding: 20px 20px 66px 13px;
+  transition: top 1s ease; }
   .mobile_menu .wrap_menu {
     width: 100%; }
   .mobile_menu .wrap_close {
@@ -1038,9 +1039,8 @@ header {
       background-color: white;
       padding: 5px;
       border-radius: 5px; }
-  @media screen and (max-width: 1000px) {
-    .mobile_menu.opened {
-      display: flex; } }
+  .mobile_menu.desabled {
+    top: -110%; }
 
 .video_cover {
   width: 100%;

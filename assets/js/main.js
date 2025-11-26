@@ -315,17 +315,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //   Мобильное меню
   // Открытие меню
-  let btnMenuMobOpen = document.getElementById("berger_btn_open_menu");
-  let btnMenuMobClose = document.getElementById("close_menu_btn");
-  const mobMenu = document.querySelector(".mobile_menu");
-  if (btnMenuMobOpen && mobMenu && btnMenuMobClose) {
-    btnMenuMobOpen.addEventListener("click", (e) => {
-      mobMenu.classList.add("opened");
-    });
-    btnMenuMobClose.addEventListener("click", (e) => {
-      mobMenu.classList.remove("opened");
-    });
-  }
+  //   let btnMenuMobOpen = document.getElementById("berger_btn_open_menu");
+  //   let btnMenuMobClose = document.getElementById("close_menu_btn");
+  //   const mobMenu = document.querySelector(".mobile_menu");
+  //   if (btnMenuMobOpen && mobMenu && btnMenuMobClose) {
+  //     btnMenuMobOpen.addEventListener("click", (e) => {
+  //       mobMenu.classList.add("opened");
+  //     });
+  //     btnMenuMobClose.addEventListener("click", (e) => {
+  //       mobMenu.classList.remove("opened");
+  //     });
+  //   }
   //   Функция создания кнопки назад
   function createBackBut(item) {
     const header = item.firstElementChild; // <a> или <h6>

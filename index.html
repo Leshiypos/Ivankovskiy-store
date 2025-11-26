@@ -61,7 +61,11 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+          <button
+            class="menu_btn burger_btn"
+            id="berger_btn_open_menu"
+            data-btn-open="mobile_menu"
+          >
             <img src="./assets/images/icons/burger_btn.svg" alt="" />
           </button>
           <button
@@ -229,10 +233,10 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu desabled" data-block-closable="mobile_menu">
         <div class="wrap_menu">
           <div class="wrap_close">
-            <button id="close_menu_btn" class="close_menu_btn">
+            <button id="close_menu_btn" class="close_menu_btn" data-btn-close>
               <img
                 src="./assets/images/icons/close_btn.svg"
                 alt="close_button"
@@ -1187,7 +1191,7 @@
 
     <footer class="main_page fade_in">
       <div class="logo">
-        <button class="menu_btn burger_btn">
+        <button class="menu_btn burger_btn" data-btn-open="mobile_menu">
           <img src="./assets/images/icons/burger_btn.svg" alt="" />
         </button>
         <a href="/">Ivankovskiy</a>
