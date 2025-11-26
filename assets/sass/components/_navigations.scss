@@ -33,10 +33,99 @@
 // Блок фильтров
 
 .filters_block {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 58px 24px 49px 24px;
+  z-index: 2;
+  .col {
+    position: relative;
+    &.sort_filter {
+      .dropdown_items {
+        right: 0;
+      }
+      input {
+        &[type="radio"] {
+          display: none;
+          &:checked + span {
+            color: #8d8d8d;
+          }
+        }
+      }
+      fieldset {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+      }
+      label {
+        // justify-content: flex-end;
+      }
+    }
+    .dropdown_items {
+      position: absolute;
+      top: 150%;
+      z-index: 99;
+      padding: 15px;
+      padding-top: 20px;
+      background-color: rgb(255, 255, 255);
+      min-width: 230px;
+      border: 1px solid #eae4e0;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+      &.desabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    fieldset {
+      @include fluid-height(margin-bottom, 32);
+      button {
+        @include fluid-height(margin-top, 24);
+        font-weight: 400;
+        @include fz_14;
+        text-transform: lowercase;
+        color: #0c0c0d;
+        border: none;
+        background: transparent;
+        padding-top: 5px;
+        border-top: 1px solid rgba(190, 190, 190, 1);
+        width: 100%;
+        text-align: left;
+      }
+    }
+    legend {
+      font-weight: 400;
+      @include fz_16;
+      text-transform: uppercase;
+    }
+    ul {
+      @include fluid-height(margin-top, 20);
+      li {
+        @include fluid-height(margin-bottom, 14);
+        font-weight: 300;
+        @include fz_16;
+        color: #353535;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    input {
+      &[type="checkbox"] {
+        @include fluid-height(width, 20);
+        @include fluid-height(height, 20);
+        border-radius: 4px;
+      }
+    }
+    label {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      @include fluid-height(gap, 16);
+    }
+  }
   @include desktop(1600) {
     margin: 58px 24px 49px 24px;
   }
@@ -48,6 +137,23 @@
   }
   @include tablet {
     margin: 36px 16px 32px;
+  }
+  @include tablet {
+    .col {
+      legend {
+        font-size: 16px;
+      }
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+      fieldset {
+        button {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 

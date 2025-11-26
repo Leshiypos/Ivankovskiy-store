@@ -33,10 +33,17 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button class="menu_btn burger_btn" id="berger_btn_open_menu">
+          <button
+            class="menu_btn burger_btn"
+            id="berger_btn_open_menu"
+            data-btn-open="mobile_menu"
+          >
             <img src="./assets/images/icons/burger_btn.svg" alt="" />
           </button>
-          <button class="menu_btn search_btn">
+          <button
+            class="menu_btn search_btn"
+            data-btn-open="search_block_header"
+          >
             <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
@@ -94,7 +101,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn desktop">
+            <li class="search_btn desktop" data-btn-open="search_block_header">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -198,10 +205,10 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu fade_in">
+      <nav class="mobile_menu desabled" data-block-closable="mobile_menu">
         <div class="wrap_menu">
           <div class="wrap_close">
-            <button id="close_menu_btn" class="close_menu_btn">
+            <button id="close_menu_btn" class="close_menu_btn" data-btn-close>
               <img
                 src="./assets/images/icons/close_btn.svg"
                 alt="close_button"
@@ -380,6 +387,7 @@
         </div>
       </nav>
     </header>
+
     <main class="catalog">
       <div class="breadcrumbs">
         <a href="index.html">Home</a> / <a href="">Jewelry</a> /
@@ -427,14 +435,243 @@
 
       <!-- Начало фильтры -->
       <div class="filters_block fade_in">
-        <button class="filters_but">
-          <img src="./assets/images/icons/filrets_icon.svg" alt="" />
-          <span>Filters</span>
-        </button>
-        <button class="sort_but">
-          <span>Sort by</span>
-          <img src="./assets/images/icons/arrow_down_black.svg" alt="" />
-        </button>
+        <div class="col cat_filter">
+          <button class="filters_but" data-btn-open="filters_block">
+            <img src="./assets/images/icons/filrets_icon.svg" alt="" />
+            <span>Filters</span>
+          </button>
+          <div
+            class="dropdown_items desabled"
+            data-block-closable="filters_block"
+            data-group="filters"
+          >
+            <div class="wrap">
+              <form id="filters" class="filters">
+                <!-- CATEGORIES -->
+                <fieldset class="filter-group" data-filter="categories">
+                  <legend class="filter-title">CATEGORIES</legend>
+
+                  <ul class="filter-list">
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="categories[]"
+                          value="earrings"
+                        />
+                        <span>Earrings</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="categories[]"
+                          value="rings"
+                        />
+                        <span>Rings</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="categories[]"
+                          value="bracelets"
+                        />
+                        <span>Bracelets</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="categories[]"
+                          value="necklaces"
+                        />
+                        <span>Necklaces</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <!-- COLLECTIONS -->
+                <fieldset class="filter-group" data-filter="collections">
+                  <legend class="filter-title">COLLECTIONS</legend>
+
+                  <ul class="filter-list">
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="eternal-geometry"
+                        />
+                        <span>Eternal Geometry</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="natures-essence"
+                        />
+                        <span>Nature’s Essence</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="mystic-horizons"
+                        />
+                        <span>Mystic Horizons</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="urban-symphony"
+                        />
+                        <span>Urban Symphony</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="celestial-dreams"
+                        />
+                        <span>Celestial Dreams</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="collections[]"
+                          value="timeless-heritage"
+                        />
+                        <span>Timeless Heritage</span>
+                      </label>
+                    </li>
+                  </ul>
+
+                  <button type="button" class="filter-more">
+                    view all (+8)
+                  </button>
+                </fieldset>
+
+                <!-- MATERIALS -->
+                <fieldset class="filter-group" data-filter="materials">
+                  <legend class="filter-title">MATERIALS</legend>
+
+                  <ul class="filter-list">
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="materials[]"
+                          value="silver"
+                        />
+                        <span>Silver</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="materials[]"
+                          value="gold"
+                        />
+                        <span>Gold</span>
+                      </label>
+                    </li>
+
+                    <li class="filter-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="materials[]"
+                          value="gemstones"
+                        />
+                        <span>Gemstones</span>
+                      </label>
+                    </li>
+                  </ul>
+
+                  <button type="button" class="filter-more">
+                    view more filtres (+4)
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col sort_filter">
+          <button class="sort_but" data-btn-open="sort_block">
+            <span>Sort by</span>
+            <img src="./assets/images/icons/arrow_down_black.svg" alt="" />
+          </button>
+          <div
+            class="dropdown_items desabled"
+            data-block-closable="sort_block"
+            data-group="filters"
+          >
+            <form id="sorting" class="sorting">
+              <fieldset class="sorting-group" data-filter="sort">
+                <ul class="sorting-list">
+                  <li>
+                    <label class="sort-option">
+                      <input
+                        type="radio"
+                        name="sort"
+                        value="featured"
+                        checked
+                      />
+                      <span>Featured</span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="sort-option">
+                      <input type="radio" name="sort" value="best-selling" />
+                      <span>Best selling</span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="sort-option">
+                      <input type="radio" name="sort" value="price-desc" />
+                      <span>Price, high to low</span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="sort-option">
+                      <input type="radio" name="sort" value="price-asc" />
+                      <span>Price, low to high</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div>
       <!-- Конец фильтры -->
 
@@ -733,11 +970,11 @@
 
     <footer class="main_page fade_in">
       <div class="logo">
-        <button class="menu_btn burger_btn">
+        <button class="menu_btn burger_btn" data-btn-open="mobile_menu">
           <img src="./assets/images/icons/burger_btn.svg" alt="" />
         </button>
         <a href="/">Ivankovskiy</a>
-        <button class="menu_btn search_btn">
+        <button class="menu_btn search_btn" data-btn-open="search_block_header">
           <img src="./assets/images/icons/search_btn.svg" alt="" />
         </button>
       </div>

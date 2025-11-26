@@ -139,6 +139,9 @@ section {
       h1 {
         font-size: 55px;
       }
+      .btn_more {
+        font-size: 16px;
+      }
     }
 
     .wrap {
@@ -401,6 +404,7 @@ section {
     margin-bottom: 0;
     gap: 10px;
     .btn_more {
+      @include fz_25;
       margin-bottom: 0px;
       color: rgba(255, 255, 255, 1);
     }
@@ -515,6 +519,11 @@ section {
     }
   }
   @include mobile(1050) {
+    .header_block {
+      .btn_more {
+        font-size: 16px;
+      }
+    }
     h2.medium_fs {
       br {
         display: none;

@@ -551,10 +551,10 @@ function closeBlockInit() {
 function openBlockInit() {
   document.addEventListener("click", (e) => {
     const target = e.target;
-    const btnClose = target.closest("[data-btn-open]");
-    if (!btnClose) return;
+    const btnOpen = target.closest("[data-btn-open]");
+    if (!btnOpen) return;
     e.preventDefault();
-    const blockTag = btnClose.dataset.btnOpen;
+    const blockTag = btnOpen.dataset.btnOpen;
     console.log(blockTag);
 
     if (!blockTag || blockTag == "") {
@@ -563,6 +563,7 @@ function openBlockInit() {
       );
       return;
     }
+
     const blockOpen = document.querySelector(
       `[data-block-closable=${blockTag}]`
     );
@@ -573,7 +574,29 @@ function openBlockInit() {
       );
       return;
     }
+    // Был ли этот блок ОТКРЫТ до клика?
+    const wasOpen = !blockOpen.classList.contains("desabled");
+    // Получаем метку группу окон
+    const gpoupTag = blockOpen.dataset.group;
+    // закрываем все окна в группе
+    if (gpoupTag && gpoupTag != "") {
+      const constBlocksGroup = document.querySelectorAll(
+        `[data-group="${gpoupTag}"]`
+      );
+      console.log(constBlocksGroup);
+      if (constBlocksGroup.length) {
+        constBlocksGroup.forEach((block) => {
+          block.classList.add("desabled");
+        });
+      }
+    }
 
+    // Если был открыт — мы его уже закрыли выше, и НИЧЕГО не открываем
+    if (wasOpen) {
+      return;
+    }
+
+    // Если был закрыт — открываем его
     blockOpen.classList.remove("desabled");
   });
 }

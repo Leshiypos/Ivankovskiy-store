@@ -15,8 +15,18 @@
     <header>
       <div class="top_header">
         <div class="mobile_btns">
-          <button id="berger_btn_open_menu" class="burger_btn">
-            <img src="./assets/images/icons/burger.svg" alt="" />
+          <button
+            class="menu_btn burger_btn"
+            id="berger_btn_open_menu"
+            data-btn-open="mobile_menu"
+          >
+            <img src="./assets/images/icons/burger_btn.svg" alt="" />
+          </button>
+          <button
+            class="menu_btn search_btn"
+            data-btn-open="search_block_header"
+          >
+            <img src="./assets/images/icons/search_btn.svg" alt="" />
           </button>
         </div>
 
@@ -73,7 +83,7 @@
         </div>
         <div class="icons_block">
           <ul>
-            <li class="search_btn">
+            <li class="search_btn desktop" data-btn-open="search_block_header">
               <a href=""
                 ><img
                   src="./assets/images/icons/search.svg"
@@ -95,7 +105,14 @@
                   src="./assets/images/icons/basket.svg"
                   alt="basket"
                   title="basket"
-              /></a>
+                />
+                <img
+                  src="./assets/images/icons/basket_mob.svg"
+                  alt="basket"
+                  title="basket"
+                  class="mobile"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -170,10 +187,10 @@
       </nav>
 
       <!-- Мобильное меню -->
-      <nav class="mobile_menu">
+      <nav class="mobile_menu desabled" data-block-closable="mobile_menu">
         <div class="wrap_menu">
           <div class="wrap_close">
-            <button id="close_menu_btn" class="close_menu_btn">
+            <button id="close_menu_btn" class="close_menu_btn" data-btn-close>
               <img
                 src="./assets/images/icons/close_btn.svg"
                 alt="close_button"
@@ -352,6 +369,7 @@
         </div>
       </nav>
     </header>
+
     <main class="cart_page">
       <div class="breadcrumbs">
         <a href="index.html"
@@ -522,11 +540,19 @@
       <!-- Конец секция Карзина -->
     </main>
 
-    <footer>
-      <div class="logo"><a href="/">Ivankovskiy</a></div>
+    <footer class="main_page fade_in">
+      <div class="logo">
+        <button class="menu_btn burger_btn" data-btn-open="mobile_menu">
+          <img src="./assets/images/icons/burger_btn.svg" alt="" />
+        </button>
+        <a href="/">Ivankovskiy</a>
+        <button class="menu_btn search_btn" data-btn-open="search_block_header">
+          <img src="./assets/images/icons/search_btn.svg" alt="" />
+        </button>
+      </div>
       <div class="footer_menu">
         <ul class="menu">
-          <li>
+          <li class="item_1">
             <a href="#">Shop</a>
             <ul class="sub_menu">
               <li><a href="#">Jewelry</a></li>
@@ -538,7 +564,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_2">
             <a href="#">Client care</a>
             <ul class="sub_menu">
               <li><a href="#">Product care & repair</a></li>
@@ -547,7 +573,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_3">
             <a href="#">Support</a>
             <ul class="sub_menu">
               <li><a href="#">Terms & Conditions</a></li>
@@ -555,7 +581,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_4">
             <a href="#">Contact us</a>
             <ul class="sub_menu">
               <li><a href="tel:+9721118054943">+972 (111) 805 4943</a></li>
@@ -566,7 +592,7 @@
             </ul>
           </li>
 
-          <li>
+          <li class="item_5">
             <a href="#">Social media</a>
             <ul class="sub_menu">
               <li><a href="#">Instagram</a></li>
