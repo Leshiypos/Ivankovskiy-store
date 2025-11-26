@@ -253,3 +253,16 @@ button {
     padding-bottom: 5px;
   }
 }
+
+button {
+  // Кнопка закрытия блока рекламы
+  &.adv_close {
+    border: none;
+    background: transparent;
+    outline: none;
+    img {
+      @include fluid-height(width, 14);
+      aspect-ratio: 1/1;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Верхний рекламный блок
+.advertising_block_header {
+  position: relative;
+
+  @include fluid-height(height, 37);
+  background: rgba(217, 217, 217, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top center; // чтобы схлопывалось сверху
+  transform: scaleY(1); // начальное состояние
+  transition: all 0.3s ease;
+  .content_adv {
+    @include fz_14;
+    color: rgba(0, 0, 0, 0.4);
+    span {
+      color: #000;
+    }
+  }
+  .adv_close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.desabled {
+    transform: scaleY(0);
+    height: 0;
+  }
+  @include tablet {
+    display: none;
+  }
+}

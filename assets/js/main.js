@@ -530,3 +530,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Кнопки
+
+// Конка закрытия Верхнего блока рекламы
+
+function closeBtnAdvertisingInit() {
+  const advBlock = document.querySelector(".advertising_block_header");
+  const btnClose = document.querySelector(
+    ".advertising_block_header .adv_close"
+  );
+
+  if (!advBlock || !btnClose) return;
+
+  btnClose.addEventListener("click", () => {
+    advBlock.classList.add("desabled");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  closeBtnAdvertisingInit();
+});
