@@ -26,6 +26,7 @@
     margin: 30px 19px;
   }
   @include mobile {
+    display: none;
     margin: 25px 19px;
   }
 }

@@ -154,6 +154,9 @@
           }
         }
         &.with_radius {
+          h2 {
+            font-size: 70px;
+          }
           .video_cover {
             border-radius: 0;
           }
@@ -495,6 +498,7 @@
     }
     .excerpt {
       @include fz_18_small;
+      font-weight: 500;
       display: flex;
       flex-flow: column nowrap;
       @include fluid-height(gap, 50);
@@ -561,6 +565,9 @@
     section {
       margin-left: 19px;
       margin-right: 19px;
+      &.news_section {
+        margin-right: 0;
+      }
     }
     h1 {
       font-weight: 400;
@@ -648,6 +655,17 @@
       }
       img {
         margin-bottom: 30px;
+      }
+    }
+  }
+  @include mobile {
+    .breadcrumbs {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      gap: 5px;
+      span {
+        margin-left: 5px;
       }
     }
   }

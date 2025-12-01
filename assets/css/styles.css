@@ -439,6 +439,7 @@ button.btn_close {
       margin: 30px 19px; } }
   @media screen and (max-width: 560px) {
     .breadcrumbs {
+      display: none;
       margin: 25px 19px; } }
 
 .filters_block {
@@ -1954,6 +1955,9 @@ section {
   .contact_us_section h2 {
     text-transform: none; }
   .contact_us_section .contact_us_form label {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 500;
+    color: #344054;
     display: flex;
     flex-flow: column nowrap;
     gap: 6px;
@@ -1972,6 +1976,8 @@ section {
           text-decoration: none; }
   .contact_us_section .contact_us_form input,
   .contact_us_section .contact_us_form textarea {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 500;
     padding: 12px 16px;
     border-radius: 12px;
     border: 1px solid #d0d5dd;
@@ -2788,6 +2794,8 @@ footer {
       height: auto; }
       .single_page .baner_section.delivery_page .wrap .video_cover {
         min-height: 370px; }
+    .single_page .baner_section.delivery_page.with_radius h2 {
+      font-size: 70px; }
     .single_page .baner_section.delivery_page.with_radius .video_cover {
       border-radius: 0; }
     .single_page .baner_section.delivery_page.with_radius .header_block {
@@ -3035,6 +3043,7 @@ footer {
   .single_news .promoted_product .excerpt {
     font-size: 18px;
     font-size: clamp(9px, calc( 9px + (18 - 9) * ((100vw - 1000px) / (1900 - 1000)) ), 18px);
+    font-weight: 500;
     display: flex;
     flex-flow: column nowrap;
     color: #858585; }
@@ -3099,6 +3108,8 @@ footer {
   .single_news section {
     margin-left: 19px;
     margin-right: 19px; }
+    .single_news section.news_section {
+      margin-right: 0; }
   .single_news h1 {
     font-weight: 400;
     font-size: 35px;
@@ -3167,6 +3178,14 @@ footer {
     margin-bottom: 30px; }
   .single_news .main_content img {
     margin-bottom: 30px; } }
+@media screen and (max-width: 560px) {
+  .single_news .breadcrumbs {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 5px; }
+    .single_news .breadcrumbs span {
+      margin-left: 5px; } }
 
 .product_page_section {
   margin-left: 19px;
