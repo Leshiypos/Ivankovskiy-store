@@ -400,7 +400,7 @@ section {
   //   position: relative;
   &.with_radius {
     //max-height: 420px;
-    margin: 60px 30px 80px 30px;
+    margin: 60px 24px 80px 24px;
     .video_cover {
       border-radius: $radiusMidiPc;
     }
@@ -928,6 +928,7 @@ section {
       letter-spacing: -0.02em;
       color: #cecece;
       margin-bottom: 49px;
+      max-width: 330px;
       &::first-line {
         color: #000;
       }
@@ -1163,6 +1164,7 @@ section {
       border: 1px solid rgba(208, 213, 221, 1);
       font-size: 12px;
       width: 100%;
+      outline: none;
       &::placeholder {
         color: rgba(102, 112, 133, 1);
       }
@@ -1187,6 +1189,14 @@ section {
     }
     .submit_but {
       width: 100%;
+    }
+  }
+  @include desktop(1600) {
+    .contact_us_form {
+      textarea,
+      input {
+        border-radius: 9px;
+      }
     }
   }
   @include mobile(645) {
@@ -1387,7 +1397,7 @@ section {
       line-height: 130%;
       letter-spacing: -0.02em;
       color: #212121;
-      max-width: 58%;
+      max-width: 61%;
     }
     &.cell_3 {
       h3 {
@@ -1611,6 +1621,15 @@ section {
       color: #d2d2d2;
     }
   }
+  .description_mob {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+    color: #212121;
+    max-width: 320px;
+    display: none;
+  }
   .head_section {
     @extend %adaptiveMarginSection;
   }
@@ -1703,6 +1722,10 @@ section {
       font-size: 50px;
       line-height: 108%;
       max-width: 350px;
+      margin-bottom: 33px;
+    }
+    .description_mob {
+      display: block;
     }
     .background_section {
       img {

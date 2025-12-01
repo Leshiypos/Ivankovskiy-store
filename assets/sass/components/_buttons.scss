@@ -114,7 +114,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30;
   min-width: 200px;
   flex-flow: row nowrap;
   padding: 15px 20px;
@@ -127,6 +126,11 @@
   p {
     text-align: center;
     width: 100%;
+  }
+  img {
+    &.bottom {
+      transform: rotate(90deg);
+    }
   }
   &.dark {
     background-color: rgba(0, 0, 0, 1);
@@ -145,6 +149,9 @@
   @include tablet {
     min-width: 140px;
     font-size: 14px;
+    &.dark {
+      min-height: 59px;
+    }
   }
 }
 

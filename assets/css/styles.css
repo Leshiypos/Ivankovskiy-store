@@ -246,7 +246,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30;
   min-width: 200px;
   flex-flow: row nowrap;
   padding: 15px 20px;
@@ -260,6 +259,8 @@ a {
   .btn_filters_news p {
     text-align: center;
     width: 100%; }
+  .btn_filters_news img.bottom {
+    transform: rotate(90deg); }
   .btn_filters_news.dark {
     background-color: black;
     color: white; }
@@ -276,7 +277,9 @@ a {
   @media screen and (max-width: 1000px) {
     .btn_filters_news {
       min-width: 140px;
-      font-size: 14px; } }
+      font-size: 14px; }
+      .btn_filters_news.dark {
+        min-height: 59px; } }
 
 button.filters_but,
 button.sort_but {
@@ -1423,7 +1426,7 @@ section {
 .baner_section {
   color: white; }
   .baner_section.with_radius {
-    margin: 60px 30px 80px 30px; }
+    margin: 60px 24px 80px 24px; }
     .baner_section.with_radius .video_cover {
       border-radius: 12px; }
     .baner_section.with_radius .description_wrap {
@@ -1806,7 +1809,8 @@ section {
         line-height: 100%;
         letter-spacing: -0.02em;
         color: #cecece;
-        margin-bottom: 49px; }
+        margin-bottom: 49px;
+        max-width: 330px; }
         .subscribe_section h2::first-line {
           color: #000; }
       .subscribe_section .label-wrap {
@@ -1972,7 +1976,8 @@ section {
     border-radius: 12px;
     border: 1px solid #d0d5dd;
     font-size: 12px;
-    width: 100%; }
+    width: 100%;
+    outline: none; }
     .contact_us_section .contact_us_form input::placeholder,
     .contact_us_section .contact_us_form textarea::placeholder {
       color: #667085; }
@@ -1992,6 +1997,10 @@ section {
       outline: none; }
   .contact_us_section .contact_us_form .submit_but {
     width: 100%; }
+  @media screen and (min-width: 1000px) and (max-width: 1600px) {
+    .contact_us_section .contact_us_form textarea,
+    .contact_us_section .contact_us_form input {
+      border-radius: 9px; } }
   @media screen and (max-width: 645px) {
     .contact_us_section {
       margin-bottom: 113px; }
@@ -2142,7 +2151,7 @@ section {
     line-height: 130%;
     letter-spacing: -0.02em;
     color: #212121;
-    max-width: 58%; }
+    max-width: 61%; }
   .unique_patented_section .cell.cell_3 h3 {
     margin-top: 10%; }
   .unique_patented_section .cell.cell_4 {
@@ -2285,6 +2294,14 @@ section {
     margin-bottom: 7%; }
     .grow_section h2 span {
       color: #d2d2d2; }
+  .grow_section .description_mob {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+    color: #212121;
+    max-width: 320px;
+    display: none; }
   .grow_section .background_section {
     position: relative; }
     .grow_section .background_section img {
@@ -2387,7 +2404,10 @@ section {
         font-weight: 400;
         font-size: 50px;
         line-height: 108%;
-        max-width: 350px; }
+        max-width: 350px;
+        margin-bottom: 33px; }
+      .grow_section .description_mob {
+        display: block; }
       .grow_section .background_section img {
         margin-top: 10%;
         margin-bottom: 15%; }
@@ -2685,7 +2705,7 @@ footer {
     margin-top: 0; }
     .single_page .baner_section.delivery_page.with_radius .header_block {
       align-items: flex-end;
-      margin-left: 80px;
+      padding-left: 80px;
       margin-bottom: 65px; }
     .single_page .baner_section.delivery_page.with_radius h2 {
       font-size: 120px;
@@ -2724,7 +2744,7 @@ footer {
     color: #000; }
 @media screen and (min-width: 1000px) and (max-width: 1600px) {
   .single_page .baner_section.delivery_page.with_radius .header_block {
-    margin-left: 60px;
+    padding-left: 60px;
     margin-bottom: 50px; } }
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   .single_page .сontact_details {
@@ -2732,7 +2752,7 @@ footer {
   .single_page .contact_us_section {
     margin-bottom: 110px; }
   .single_page .baner_section.delivery_page.with_radius .header_block {
-    margin-left: 50px;
+    padding-left: 50px;
     margin-bottom: 40px; } }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
   .single_page .сontact_details {
@@ -2740,7 +2760,7 @@ footer {
   .single_page .contact_us_section {
     margin-bottom: 100px; }
   .single_page .baner_section.delivery_page.with_radius .header_block {
-    margin-left: 30px;
+    padding-left: 30px;
     margin-bottom: 35px; } }
 @media screen and (max-width: 1000px) {
   .single_page .baner_section.contacts_page {
@@ -2762,6 +2782,8 @@ footer {
   .single_page .baner_section.delivery_page {
     margin: 0;
     margin-bottom: 72px; }
+    .single_page .baner_section.delivery_page .description_wrap {
+      width: 100%; }
     .single_page .baner_section.delivery_page .wrap {
       height: auto; }
       .single_page .baner_section.delivery_page .wrap .video_cover {
@@ -2911,7 +2933,7 @@ footer {
     margin-left: 0;
     margin-bottom: 15px; }
   .news_page .post_h1_title {
-    max-width: 430px;
+    max-width: 271px;
     font-weight: 500;
     font-size: 18px;
     line-height: 189%;
