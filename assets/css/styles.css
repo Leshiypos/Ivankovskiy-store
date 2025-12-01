@@ -365,7 +365,7 @@ button.menu_btn {
   width: 30px;
   height: 30px;
   font-weight: 300;
-  vertical-align: center;
+  vertical-align: middle;
   padding-bottom: 3px; }
   @media screen and (max-width: 560px) {
     .add_to_cart_round {
