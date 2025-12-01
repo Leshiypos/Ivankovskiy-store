@@ -41,6 +41,9 @@ footer {
     }
     .sub_menu {
       margin-top: 24px;
+      .mobile {
+        display: none;
+      }
     }
 
     @include tablet-range(1000, 1440) {
@@ -74,6 +77,14 @@ footer {
       justify-content: flex-start;
       & > li {
         max-width: 175px;
+      }
+      .sub_menu {
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: inline;
+        }
       }
     }
   }

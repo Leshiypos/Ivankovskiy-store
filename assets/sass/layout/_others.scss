@@ -1,7 +1,7 @@
 // Верхний рекламный блок
 .advertising_block_header {
   position: relative;
-
+  font-family: "HelveticaNeueCyr", Arial, sans-serif;
   @include fluid-height(height, 37);
   background: rgba(217, 217, 217, 0.4);
   display: flex;
