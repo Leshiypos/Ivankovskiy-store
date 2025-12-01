@@ -99,7 +99,7 @@
         }
       }
       .description_wrap {
-        max-width: 300px;
+        @include fluid-height(max-width, 280);
         color: rgb(255, 255, 255);
         position: absolute;
         bottom: 48px;

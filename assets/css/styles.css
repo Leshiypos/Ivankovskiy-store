@@ -280,6 +280,7 @@ a {
 
 button.filters_but,
 button.sort_but {
+  color: #141414;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -659,7 +660,7 @@ button.btn_close {
     .error_page header .contact_us_btn a {
       font-size: 14px;
       text-transform: uppercase;
-      font-weight: 600; }
+      font-weight: 500; }
       .error_page header .contact_us_btn a:hover {
         color: #144918;
         text-decoration: underline; }
@@ -723,7 +724,9 @@ button.btn_close {
       margin-left: -350px;
       padding-left: 5%;
       padding-right: 50px;
-      white-space: nowrap; }
+      white-space: nowrap;
+      backdrop-filter: blur(2px);
+      letter-spacing: -0.03em; }
   .cont_error_page .desc_block {
     position: absolute;
     bottom: 90px;
@@ -1197,7 +1200,8 @@ section {
     .video_baner .header_block .description_wrap {
       max-width: 60%; }
     .video_baner .header_block.large_title {
-      gap: 30px; }
+      gap: 30px;
+      padding-right: 1.7%; }
       .video_baner .header_block.large_title .description_wrap {
         max-width: unset;
         gap: 30px; }
@@ -1349,11 +1353,13 @@ section {
       margin-bottom: 20px; } }
   @media screen and (max-width: 1000px) {
     .stripe_section {
+      margin-bottom: 50px;
       padding-right: 0; }
       .stripe_section .header_block {
         padding-right: 13px; }
       .stripe_section article.cart .description_wrap {
-        margin-left: 4px; } }
+        margin-left: 4px;
+        display: none; } }
   @media screen and (max-width: 560px) {
     .stripe_section {
       margin-bottom: 45px; }
@@ -1474,7 +1480,9 @@ section {
       @media screen and (max-width: 560px) {
         .baner_section h2.medium_fs {
           font-size: 50px;
-          margin-bottom: 0; } }
+          margin-bottom: 0; }
+          .baner_section h2.medium_fs br {
+            display: none; } }
   .baner_section .description {
     font-size: 40px;
     font-size: clamp(20px, calc( 20px + (40 - 20) * ((100vw - 1000px) / (1900 - 1000)) ), 40px);
@@ -1608,6 +1616,8 @@ section {
   display: flex;
   flex-direction: row;
   gap: 1%; }
+.news_section .news_slider {
+  border-radius: 12px 0 0 12px; }
 .news_section .single_news:hover .btn_read_card {
   opacity: 1; }
 .news_section .description_wrap {
@@ -1671,10 +1681,14 @@ section {
   .news_section .description_new {
     font-size: 10px; } }
 @media screen and (max-width: 1000px) {
-  .news_section h3 {
-    font-size: 24px; }
-  .news_section .description_new {
-    display: none; } }
+  .news_section {
+    margin-right: 0; }
+    .news_section .header_block {
+      margin-right: 13px; }
+    .news_section h3 {
+      font-size: 24px; }
+    .news_section .description_new {
+      display: none; } }
 @media screen and (max-width: 560px) {
   .news_section h3 {
     font-size: 20px;
@@ -2035,10 +2049,14 @@ section {
         width: 20%; }
   .story_section .wrap_img {
     overflow: hidden;
+    border-radius: 12px;
     border-radius: 12px; }
   .story_section img {
     width: 100%;
+    height: 100%;
     object-fit: cover; }
+    .story_section img.mobile {
+      display: none; }
   .story_section h2 {
     font-size: 80px;
     font-size: clamp(40px, calc( 40px + (80 - 40) * ((100vw - 1000px) / (1900 - 1000)) ), 80px);
@@ -2065,14 +2083,18 @@ section {
           gap: 40px !important; }
           .story_section .wrap > .col:last-child {
             flex-flow: column-reverse nowrap;
-            margin-top: 40px; } }
-  .story_section .caption {
-    width: 100% !important;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 190%;
-    letter-spacing: -0.02em;
-    color: #212121; }
+            margin-top: 40px; }
+      .story_section .caption {
+        width: 96%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 190%;
+        letter-spacing: -0.02em;
+        color: #212121; }
+      .story_section img.desktop {
+        display: none; }
+      .story_section img.mobile {
+        display: inline; } }
 
 .unique_patented_section {
   margin-top: 169px;
@@ -2546,6 +2568,7 @@ footer {
   gap: 10%;
   margin-top: 0;
   padding: 51px 35px 148px 35px;
+  padding-bottom: 4%;
   border-top: 1px solid #eae4e0; }
   footer.main_page {
     border-top: none; }
@@ -3494,11 +3517,16 @@ footer {
       .product_list article.cart.promo_cart img.promo_img {
         display: block; }
     .product_list article.cart.promo_cart .description_wrap {
-      max-width: 300px;
       color: white;
       position: absolute;
       bottom: 48px;
       left: 33px; }
+      @media screen and (min-width: 1001px) {
+        .product_list article.cart.promo_cart .description_wrap {
+          max-width: calc(100vw * (280 / 1920)); } }
+      @media screen and (max-width: 1000px) {
+        .product_list article.cart.promo_cart .description_wrap {
+          max-width: 280px; } }
 @media screen and (min-width: 1000px) and (max-width: 1900px) {
   .product_list article.cart .description_wrap {
     padding-top: 23px; }
