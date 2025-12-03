@@ -1355,6 +1355,8 @@ section {
   margin-bottom: 114px;
   @extend %adaptivePaddingSection;
   h2 {
+    position: relative;
+    z-index: 1;
     font-weight: 400;
     font-size: 120px;
     @include fz_120;
@@ -1489,6 +1491,9 @@ section {
     }
     .background_img {
       display: none;
+      &.video {
+        display: block;
+      }
       &.mobile {
         display: inline;
       }

@@ -975,7 +975,7 @@
             <!-- строка 1 -->
             <div class="cell cell_1"></div>
             <div class="cell background_wrap cell_2">
-              <img
+              <!-- <img
                 src="./assets/images/unique_background_cover.png"
                 class="background_img"
                 alt=""
@@ -984,7 +984,28 @@
                 src="./assets/images/unique_background_cover_no_line.png"
                 class="background_img mobile"
                 alt=""
-              />
+              /> -->
+              <video
+                class="background_img video"
+                muted=""
+                autoplay=""
+                loop=""
+                playsinline=""
+                preload="auto"
+              >
+                <!-- десктоп -->
+                <source
+                  src="./assets/Video/ring_prototype.mp4"
+                  type="video/mp4"
+                  media="(min-width: 721px)"
+                />
+                <!-- мобильный -->
+                <source
+                  src="./assets/Video/ring_prototype_mob.mp4"
+                  type="video/mp4"
+                  media="(max-width: 720px)"
+                />
+              </video>
             </div>
             <div class="cell cell_3">
               <div class="mob_centr">

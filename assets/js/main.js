@@ -518,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Расчет высоты помо карточки товара на странице товара
   if (window.innerWidth > 999) {
-    calcHeihgtPromoCard();
+    setTimeout(calcHeihgtPromoCard, 1000);
 
     let bFunc; // таймер
 

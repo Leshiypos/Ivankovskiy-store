@@ -2115,6 +2115,8 @@ section {
   margin-top: 169px;
   margin-bottom: 114px; }
   .unique_patented_section h2 {
+    position: relative;
+    z-index: 1;
     font-weight: 400;
     font-size: 120px;
     font-size: 120px;
@@ -2214,6 +2216,8 @@ section {
         padding-right: 0; }
       .unique_patented_section .background_img {
         display: none; }
+        .unique_patented_section .background_img.video {
+          display: block; }
         .unique_patented_section .background_img.mobile {
           display: inline; }
       .unique_patented_section .cell .descripion {
